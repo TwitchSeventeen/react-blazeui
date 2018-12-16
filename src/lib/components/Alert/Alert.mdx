@@ -1,0 +1,33 @@
+---
+name: Alert
+---
+
+import { Playground, PropsTable } from 'docz'
+import Alert from './index';
+
+# Alert
+
+## Properties
+<PropsTable of={Alert} />
+
+## Basic usage
+<Playground>
+    <Alert>lorem</Alert>
+</Playground>
+
+## Alert colours
+Use the **type** prop to provide styling to the alert.
+<Playground>
+    <Alert>Default</Alert>
+    <Alert type="brand">Brand</Alert>
+    <Alert type="info">Brand</Alert>
+    <Alert type="warning">Warning</Alert>
+    <Alert type="success">Success</Alert>
+    <Alert type="error">Error</Alert>
+</Playground>
+
+## Dismissable alerts
+Use the **dismissable** prop to add a close button to the alert. The **onDismiss** prop is a function called when the user clicks it.
+<Playground>
+    <Alert type="info" dismissable onDismiss={this.onDismiss}>Brand</Alert>
+</Playground>
