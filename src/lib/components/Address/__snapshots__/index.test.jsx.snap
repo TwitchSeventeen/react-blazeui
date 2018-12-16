@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Address renders correctly 1`] = `
+<address
+  className="c-address"
+>
+  10010 The Street,
+  <br />
+   Binary Town,
+  <br />
+   Offandon City,
+</address>
+`;
