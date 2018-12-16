@@ -1,0 +1,37 @@
+{
+  "config": {
+    "title": "Create React Library",
+    "description": "React NPM library starter kit based on Facebook's create react app",
+    "menu": [],
+    "ordering": "descending",
+    "repository": "https://github.com/DimiMikadze/create-react-library",
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "indexHtml": "src/demo/index.html"
+  },
+  "entries": {
+    "src/lib/components/Alert/Alert.mdx": {
+      "name": "Alert",
+      "id": "511ade35bb46d929f09e2f3817bd34b4",
+      "filepath": "src/lib/components/Alert/Alert.mdx",
+      "link": "https://github.com/DimiMikadze/create-react-library/edit/master/src/lib/components/Alert/Alert.mdx",
+      "slug": "src-lib-components-alert-alert",
+      "route": "/src-lib-components-alert-alert",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "alert",
+          "value": "Alert"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        }
+      ]
+    }
+  }
+}

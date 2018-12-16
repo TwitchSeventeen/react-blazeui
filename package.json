@@ -21,6 +21,8 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.6",
+    "docz": "^0.12.17",
+    "docz-theme-default": "^0.12.17",
     "react-test-renderer": "^16.6.3"
   },
   "devDependencies": {
