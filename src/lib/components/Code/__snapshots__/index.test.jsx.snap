@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Code renders correctly 1`] = `
+<code
+  className="u-code"
+>
+  lorem ipsum dolor
+</code>
+`;
+
+exports[`Code renders correctly a multi-line code snippet 1`] = `
+<code
+  className="u-code u-code--multiline"
+>
+  lorem ipsum dolor sit amet
+</code>
+`;

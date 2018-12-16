@@ -1,0 +1,30 @@
+---
+name: Code
+---
+
+import { Playground, PropsTable } from 'docz'
+import Code from './index';
+
+# Code
+
+Used to display a snippet of code.
+
+## Properties
+<PropsTable of={Code} />
+
+## Basic usage
+By default the code snippet is displayed inline.
+<Playground>
+    <Code>
+        lorem ipsum dolor
+    </Code>
+</Playground>
+
+## Multiline
+To display a block-level code snippet, use the **multiline** prop.
+<Playground>
+    <Code multiline >
+        hello <br />
+        world
+    </Code>
+</Playground>
