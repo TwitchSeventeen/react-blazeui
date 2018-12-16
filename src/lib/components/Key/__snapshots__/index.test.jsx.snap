@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Key renders correctly 1`] = `
+<kbd
+  className="u-kbd"
+>
+  key
+</kbd>
+`;
