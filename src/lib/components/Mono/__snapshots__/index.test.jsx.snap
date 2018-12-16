@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mono renders correctly 1`] = `
+<span
+  className="u-text--mono"
+>
+  lorem ipsum dolor
+</span>
+`;
