@@ -1,0 +1,28 @@
+---
+name: Divider
+---
+
+import { Playground, PropsTable } from 'docz'
+import Divider from './index';
+
+# Divider
+
+Used to separate sections of the page.
+
+## Properties
+<PropsTable of={Divider} />
+
+## Basic usage
+<Playground>
+    <Divider>
+        Demo
+    </Divider>
+</Playground>
+
+## Line style
+Use the **type** prop to specify the style of line. It can be either _solid_ (default) or _dashed_.
+<Playground>
+    <Divider type="dashed">
+        Demo
+    </Divider>
+</Playground>
