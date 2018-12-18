@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Code renders correctly 1`] = `
+<div
+  className="c-divider c-divider--solid"
+>
+  <div
+    className="c-divider__content"
+  >
+    lorem ipsum dolor
+  </div>
+</div>
+`;
+
+exports[`Code renders correctly a multi-line code snippet 1`] = `
+<div
+  className="c-divider c-divider--solid"
+>
+  <div
+    className="c-divider__content"
+  >
+    lorem ipsum dolor sit amet
+  </div>
+</div>
+`;

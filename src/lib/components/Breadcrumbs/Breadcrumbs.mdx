@@ -1,0 +1,33 @@
+---
+name: Breadcrumbs
+---
+
+import { Playground, PropsTable } from 'docz'
+import Breadcrumbs from './index';
+
+# Breadcrumbs
+
+Breadcrumbs are useful to indicate the navigational route into a website.
+
+## Properties
+### Breadcrumbs
+<PropsTable of={Breadcrumbs} />
+
+### Breadcrumbs.Item
+<PropsTable of={Breadcrumbs.Item} />
+
+## Basic usage
+Use the **active** prop to style the active item. Every other item will get a divider placed after its child.
+<Playground>
+    <Breadcrumbs>
+        <Breadcrumbs.Item>
+            <a class="c-link" href="#">lorem</a>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item>
+            <a class="c-link" href="#">ipsum</a>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item active>
+            dolor
+        </Breadcrumbs.Item>
+    </Breadcrumbs>
+</Playground>

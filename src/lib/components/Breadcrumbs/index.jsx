@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Item from './Item';
 
 function Breadcrumbs (props) {
@@ -11,6 +12,17 @@ function Breadcrumbs (props) {
       </nav>
   );
 }
+
+Breadcrumbs.propTypes = {
+  /**
+   * This element can have children
+   */
+  children: PropTypes.node,
+};
+
+Breadcrumbs.defaultProps = {
+  children: null,
+};
 
 Breadcrumbs.Item = Item;
 

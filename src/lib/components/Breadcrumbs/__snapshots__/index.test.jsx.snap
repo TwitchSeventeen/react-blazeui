@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs renders correctly 1`] = `
+<nav
+  aria-label="Breadcrumb"
+>
+  <ol
+    className="c-breadcrumbs"
+  >
+    <Item
+      active={false}
+    >
+      <a
+        href="#"
+      >
+        lorem
+      </a>
+    </Item>
+    <Item
+      active={false}
+    >
+      <a
+        href="#"
+      >
+        ipsum
+      </a>
+    </Item>
+    <Item
+      active={true}
+    >
+      dolor
+    </Item>
+  </ol>
+</nav>
+`;
