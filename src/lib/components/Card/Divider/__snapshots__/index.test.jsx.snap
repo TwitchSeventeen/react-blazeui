@@ -8,3 +8,12 @@ exports[`Card.Divider renders correctly 1`] = `
   lorem
 </div>
 `;
+
+exports[`Card.Divider renders correctly with a colour 1`] = `
+<div
+  className="c-card__item c-card__item--divider c-card__item--brand"
+  role={null}
+>
+  lorem
+</div>
+`;

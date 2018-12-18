@@ -18,4 +18,16 @@ describe('Card.Item', () => {
     const tree = renderer.getRenderOutput();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders correctly with a colour', () => {
+    const renderer = new ShallowRenderer();
+    renderer.render(
+        <Item type="success">
+          <p>lorem</p>
+        </Item>
+    );
+
+    const tree = renderer.getRenderOutput();
+    expect(tree).toMatchSnapshot();
+  });
 });

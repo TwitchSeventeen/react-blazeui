@@ -18,4 +18,16 @@ describe('Card.Divider', () => {
     const tree = renderer.getRenderOutput();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders correctly with a colour', () => {
+    const renderer = new ShallowRenderer();
+    renderer.render(
+        <Divider type="brand">
+          lorem
+        </Divider>
+    );
+
+    const tree = renderer.getRenderOutput();
+    expect(tree).toMatchSnapshot();
+  });
 });

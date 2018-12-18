@@ -9,19 +9,6 @@ import Card from './index';
 
 Cards are a common minimalistic design tool used to segregate sections of your content.
 
-## Properties
-### Card
-<PropsTable of={Card} />
-
-### Card.Body
-<PropsTable of={Card.Body} />
-
-### Card.Item
-<PropsTable of={Card.Item} />
-
-### Card.Divider
-<PropsTable of={Card.Divider} />
-
 ## Basic Card
 <Playground>
     <Card>
@@ -53,3 +40,40 @@ Cards are a common minimalistic design tool used to segregate sections of your c
         </Card.Divider>
     </Card>
 </Playground>
+
+## Colours
+Use the **type** prop to change background colours.
+<Playground>
+    <Card>
+        <Card.Divider type="brand">
+            Header
+        </Card.Divider>
+        <Card.Item type="info">
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Item>
+        <Card.Divider type="warning">
+            Divider
+        </Card.Divider>
+        <Card.Item type="success">
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Item>
+        <Card.Divider type="error">
+            Footer
+        </Card.Divider>
+    </Card>
+</Playground>
+
+## Properties
+### Card
+<PropsTable of={Card} />
+
+### Card.Body
+<PropsTable of={Card.Body} />
+
+### Card.Item
+<PropsTable of={Card.Item} />
+
+### Card.Divider
+<PropsTable of={Card.Divider} />
