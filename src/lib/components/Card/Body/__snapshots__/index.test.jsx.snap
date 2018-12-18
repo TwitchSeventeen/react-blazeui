@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card.Body renders correctly 1`] = `
+<div
+  className="c-card__body"
+>
+  <p>
+    lorem
+  </p>
+</div>
+`;

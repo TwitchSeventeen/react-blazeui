@@ -1,0 +1,55 @@
+---
+name: Card
+---
+
+import { Playground, PropsTable } from 'docz'
+import Card from './index';
+
+# Card
+
+Cards are a common minimalistic design tool used to segregate sections of your content.
+
+## Properties
+### Card
+<PropsTable of={Card} />
+
+### Card.Body
+<PropsTable of={Card.Body} />
+
+### Card.Item
+<PropsTable of={Card.Item} />
+
+### Card.Divider
+<PropsTable of={Card.Divider} />
+
+## Basic Card
+<Playground>
+    <Card>
+        <Card.Body>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Body>
+    </Card>
+</Playground>
+
+## Dividers
+<Playground>
+    <Card>
+        <Card.Divider>
+            Header
+        </Card.Divider>
+        <Card.Item>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Item>
+        <Card.Divider>
+            Divider
+        </Card.Divider>
+        <Card.Item>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Item>
+        <Card.Divider>
+            Footer
+        </Card.Divider>
+    </Card>
+</Playground>
