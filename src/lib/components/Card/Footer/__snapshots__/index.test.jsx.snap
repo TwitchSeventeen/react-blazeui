@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card.Footer renders correctly 1`] = `
+<footer
+  className="c-card__footer"
+>
+  lorem
+</footer>
+`;
+
+exports[`Card.Footer renders correctly as a block 1`] = `
+<footer
+  className="c-card__footer c-card__footer--block"
+>
+  lorem
+</footer>
+`;
