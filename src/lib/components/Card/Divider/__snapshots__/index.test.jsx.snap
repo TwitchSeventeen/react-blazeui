@@ -9,6 +9,13 @@ exports[`Card.Divider renders correctly 1`] = `
 </div>
 `;
 
+exports[`Card.Divider renders correctly as a separator 1`] = `
+<div
+  className="c-card__divider"
+  role="separator"
+/>
+`;
+
 exports[`Card.Divider renders correctly with a colour 1`] = `
 <div
   className="c-card__item c-card__item--divider c-card__item--brand"

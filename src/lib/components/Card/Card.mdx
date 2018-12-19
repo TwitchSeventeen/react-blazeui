@@ -70,21 +70,107 @@ Use the header, body and footer components to construct some nice cards.
 
 <Playground>
     <Card>
+        <Card.Header>
+            <h2 className="c-heading">
+                Heading
+                <div className="c-heading__sub">Sub-heading</div>
+            </h2>
+        </Card.Header>
         <Card.Body>
             <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
         </Card.Body>
         <Card.Footer>
-            <div class="c-input-group">
-                <button class="c-button c-button--block c-button--brand">Button</button>
-                <button class="c-button c-button--block c-button--info">Button</button>
+            <div className="c-input-group">
+                <button className="c-button c-button--block c-button--brand">Button</button>
+                <button className="c-button c-button--block c-button--info">Button</button>
             </div>
         </Card.Footer>
+    </Card>
+</Playground>
+
+## Block Footer
+You can push the footer buttons right to the edges of the card using the **block** prop.
+
+<Playground>
+    <Card>
+        <Card.Header>
+            <h2 className="c-heading">
+                Heading
+                <div className="c-heading__sub">Sub-heading</div>
+            </h2>
+        </Card.Header>
+        <Card.Body>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Body>
+        <Card.Footer block>
+            <div className="c-input-group">
+                <button className="c-button c-button--block c-button--brand">Button</button>
+                <button className="c-button c-button--block c-button--info">Button</button>
+            </div>
+        </Card.Footer>
+    </Card>
+</Playground>
+
+## With Images
+Images are best placed within the card at the same level as the header, body and footer
+
+<Playground>
+    <Card>
+        <img alt="placeholder" class="o-image" src="https://source.unsplash.com/random/1024x500" />
+        <Card.Header>
+            <h2 className="c-heading">
+                Heading
+                <div className="c-heading__sub">Sub-heading</div>
+            </h2>
+        </Card.Header>
+        <Card.Body>
+            <p>Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+        </Card.Body>
+        <Card.Footer block>
+            <div className="c-input-group">
+                <button className="c-button c-button--block c-button--brand">Button</button>
+                <button className="c-button c-button--block c-button--info">Button</button>
+            </div>
+        </Card.Footer>
+    </Card>
+</Playground>
+
+## Card Items
+<Playground>
+    <Card>
+        <Card.Item>Item 1</Card.Item>
+        <Card.Item>Item 2</Card.Item>
+        <Card.Divider>
+            Divider
+        </Card.Divider>
+        <Card.Item>Item 3</Card.Item>
+        <Card.Item>Item 4</Card.Item>
+    </Card>
+</Playground>
+
+## Grouped Items
+Grouping card items couldn't be easier. Add the **grouped** prop which will remove the item borders. Then insert a Card.Divider component into the list, which creates a horizontal line.
+<Playground>
+    <Card grouped>
+        <Card.Item>Item 1</Card.Item>
+        <Card.Item>Item 2</Card.Item>
+        <Card.Divider separator />
+        <Card.Item>Item 3</Card.Item>
+        <Card.Item>Item 4</Card.Item>
+        <Card.Item>Item 5</Card.Item>
+        <Card.Divider separator />
+        <Card.Item>Item 6</Card.Item>
+        <Card.Item>Item 7</Card.Item>
+        <Card.Item>Item 8</Card.Item>
     </Card>
 </Playground>
 
 ## Properties
 ### Card
 <PropsTable of={Card} />
+
+### Card.Header
+<PropsTable of={Card.Header} />
 
 ### Card.Body
 <PropsTable of={Card.Body} />

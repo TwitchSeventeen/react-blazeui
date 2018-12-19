@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Divider (props) {
-  const { children, type } = props;
+  const { children, type, separator } = props;
   const classes = classNames('c-card__item', 'c-card__item--divider', { [`c-card__item--${type}`]: type });
+
+  if(separator) {
+    return (
+        <div role="separator" className="c-card__divider" />
+    );
+  }
+
   return (
       <div role={type ? null : 'separator'} className={classes}>
         { children }
@@ -26,12 +33,17 @@ Divider.propTypes = {
     'warning',
     'success',
     'error',
-  ])
+  ]),
+  /**
+   * Creates a horizontal line
+   */
+  separator: PropTypes.bool,
 };
 
 Divider.defaultProps = {
   children: null,
   type: null,
+  separator: false,
 };
 
 export default Divider;

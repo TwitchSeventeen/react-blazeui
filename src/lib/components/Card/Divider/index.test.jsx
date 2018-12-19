@@ -30,4 +30,14 @@ describe('Card.Divider', () => {
     const tree = renderer.getRenderOutput();
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders correctly as a separator', () => {
+    const renderer = new ShallowRenderer();
+    renderer.render(
+        <Divider separator />
+    );
+
+    const tree = renderer.getRenderOutput();
+    expect(tree).toMatchSnapshot();
+  });
 });
