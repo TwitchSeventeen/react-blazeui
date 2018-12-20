@@ -1,0 +1,70 @@
+---
+name: Badge
+---
+
+import { Playground, PropsTable } from 'docz'
+import Badge from './index';
+
+# Badge
+
+They're useful when you want to add additional info. Like a version number of a project or for status messages for individual items.
+
+<Playground>
+    <Badge>34 unread messages</Badge>
+</Playground>
+
+## Colours
+Badges come as default, brand, info, warning, success and error
+
+To use, add the **type** prop:
+
+<Playground>
+    <Badge>Default</Badge>
+    <br />
+    <Badge type="brand">Brand</Badge>
+    <br />
+    <Badge type="info">Info</Badge>
+    <br />
+    <Badge type="warning">Warning</Badge>
+    <br />
+    <Badge type="success">Success</Badge>
+    <br />
+    <Badge type="error">Error</Badge>
+</Playground>
+
+## Rounded
+Make your badges rounded with the **rounded** prop.
+
+<Playground>
+    <Badge rounded>Default</Badge>
+    <br />
+    <Badge type="brand" rounded>Brand</Badge>
+    <br />
+    <Badge type="info" rounded>Info</Badge>
+    <br />
+    <Badge type="warning" rounded>Warning</Badge>
+    <br />
+    <Badge type="success" rounded>Success</Badge>
+    <br />
+    <Badge type="error" rounded>Error</Badge>
+</Playground>
+
+## Ghost
+Remove your badges bodies with the **ghost** prop.
+
+<Playground>
+    <Badge rounded ghost>Default</Badge>
+    <br />
+    <Badge type="brand" rounded ghost>Brand</Badge>
+    <br />
+    <Badge type="info" rounded ghost>Info</Badge>
+    <br />
+    <Badge type="warning" rounded ghost>Warning</Badge>
+    <br />
+    <Badge type="success" rounded ghost>Success</Badge>
+    <br />
+    <Badge type="error" rounded ghost>Error</Badge>
+</Playground>
+
+## Properties
+<PropsTable of={Badge} />

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge renders correctly 1`] = `
+<span
+  className="c-badge"
+>
+  lorem
+</span>
+`;
+
+exports[`Badge renders correctly with a type 1`] = `
+<span
+  className="c-badge c-badge--success"
+>
+  lorem
+</span>
+`;
+
+exports[`Badge renders correctly with rounded corners 1`] = `
+<span
+  className="c-badge c-badge--error c-badge--rounded"
+>
+  lorem
+</span>
+`;
+
+exports[`Badge renders correctly with rounded corners 2`] = `
+<span
+  className="c-badge c-badge--ghost"
+>
+  lorem
+</span>
+`;
