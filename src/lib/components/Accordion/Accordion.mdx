@@ -1,0 +1,35 @@
+---
+name: Accordion
+---
+
+import { Playground, PropsTable } from 'docz';
+import Accordion from './index';
+
+# Accordion
+<Playground>
+    <Accordion>
+        <Accordion.Title active>
+            Heading one
+        </Accordion.Title>
+          <Accordion.Content>
+            This is the body
+          </Accordion.Content>
+          
+          <Accordion.Title>
+            Heading two
+          </Accordion.Title>
+          <Accordion.Content>
+            This is the second body
+          </Accordion.Content>
+    </Accordion>
+</Playground>
+
+## Properties
+### Accordion
+<PropsTable of={Accordion} />
+
+### Accordion.Title
+<PropsTable of={Accordion.Title} />
+
+### Accordion.Content
+<PropsTable of={Accordion.Content} />

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Item (props) {
-  const { children, type } = props;
-  const classes = classNames('c-card__item', { [`c-card__item--${type}`]: type });
+  const { children, type, className } = props;
+  const classes = classNames('c-card__item', { [`c-card__item--${type}`]: type }, className);
   return (
       <div className={classes}>
         { children }
@@ -17,6 +17,10 @@ Item.propTypes = {
    * This element can have children
    */
   children: PropTypes.node,
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
   /**
    * The card colouring
    */
@@ -32,6 +36,7 @@ Item.propTypes = {
 Item.defaultProps = {
   children: null,
   type: null,
+  className: null,
 };
 
 export default Item;

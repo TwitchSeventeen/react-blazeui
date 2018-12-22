@@ -4,5 +4,5 @@ export default {
   themeConfig: {
     mode: 'light',
     showPlaygroundEditor: true,
-  }
+  },
 }

@@ -8,8 +8,8 @@ import Footer from './Footer';
 import classNames from 'classnames';
 
 function Card (props) {
-  const { children, grouped } = props;
-  const classes = classNames('c-card', { 'c-card--grouped': grouped });
+  const { children, grouped, className } = props;
+  const classes = classNames('c-card', { 'c-card--grouped': grouped }, className);
   return (
       <div className={classes}>
         { children }
@@ -26,9 +26,14 @@ Card.propTypes = {
    * Defined a grouped card
    */
   grouped: PropTypes.bool,
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
 };
 
 Card.defaultProps = {
+  className: null,
   children: null,
   grouped: false,
 };
