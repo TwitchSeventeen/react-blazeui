@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders correctly 1`] = `
+<button
+  aria-expanded="true"
+  className="c-card__control"
+  onClick={[Function]}
+  role="heading"
+  type="button"
+>
+  lorem ipsum dolor
+</button>
+`;
