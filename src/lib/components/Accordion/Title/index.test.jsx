@@ -1,4 +1,5 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Title from './index';
 
@@ -17,6 +18,18 @@ describe('Title', () => {
 
     const tree = renderer.getRenderOutput();
     expect(tree).toMatchSnapshot();
+  });
+
+  /**
+   * handleClick
+   */
+  it('can handle handleClick', () => {
+    const onClickProp = jest.fn();
+    const wrapper = shallow(<Title active onClick={onClickProp}/>);
+
+    wrapper.instance().handleClick();
+
+    expect(onClickProp).toHaveBeenCalled();
   });
 });
 
