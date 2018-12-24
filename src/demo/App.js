@@ -1,7 +1,7 @@
 import React from 'react';
 import Example from '../lib';
 import { SecondExample } from '../lib';
-import { Alert, Breadcrumbs, Accordion, Container } from '../lib';
+import { Alert, Breadcrumbs, Accordion, Container, Grid } from '../lib';
 
 class App extends React.Component {
   constructor (props) {
@@ -50,6 +50,26 @@ class App extends React.Component {
               This is the second body
             </Accordion.Content>
           </Accordion>
+
+
+
+          <Grid>
+            <Grid.Cell>lorem</Grid.Cell>
+            <Grid.Cell>lorem</Grid.Cell>
+            <Grid.Cell>lorem</Grid.Cell>
+          </Grid>
+
+          <Grid className="demo" small="full" medium="fit" large="full">
+            <Grid.Cell>
+              <div className="text">first</div>
+            </Grid.Cell>
+            <Grid.Cell>
+              <div className="text">second</div>
+            </Grid.Cell>
+            <Grid.Cell>
+              <div className="text">third</div>
+            </Grid.Cell>
+          </Grid>
 
         </Container>
     );

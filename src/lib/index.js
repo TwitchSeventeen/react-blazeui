@@ -7,6 +7,7 @@ import Alert from './components/Alert';
 import Address from './components/Address';
 import Breadcrumbs from './components/Breadcrumbs';
 import Container from './components/Container';
+import Grid from './components/Grid';
 import Highlight from './components/Highlight';
 import Loud from './components/Loud';
 import Quiet from './components/Quiet';
@@ -19,6 +20,7 @@ export {
   Alert,
   Address,
   Container,
+  Grid,
   Breadcrumbs,
   Highlight,
   Loud,

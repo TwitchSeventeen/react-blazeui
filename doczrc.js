@@ -15,5 +15,15 @@ export default {
     {
       name: 'Typography',
     }
-  ]
+  ],
+  htmlContext: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href: '/public/demo.css',
+        },
+      ],
+    },
+  }
 }

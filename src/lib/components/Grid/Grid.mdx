@@ -1,0 +1,252 @@
+---
+name: Grid
+menu: Objects
+---
+
+import { Playground, PropsTable } from 'docz'
+import Grid from './index';
+
+# Grid
+
+The grid is the easiest way to produce a fluid responsive layout. Its easy to use and very flexible.
+
+Colour key:
+<ul>
+    <li class="key key-grid">grids are pink</li>
+    <li class="key key-cell">cells are blue</li>
+    <li class="key key-padding">padding is green</li>
+</ul>
+
+## Basic Grid
+Use the Grid component to wrap your Grid.Cell components
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Widths
+Use the **width** prop to apply widths to your cells. If you add a width to one cell the other cells will automatically take up the rest of the space equally.
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell width={50}>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+Use the **full** prop on the Grid to make all the cells full width.
+<Playground>
+    <Grid full className="demo">
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Offsets
+To "push" a cell horizontally across the Grid use the **offset** prop. Use in-conjunction with **widths** to perfectly align your cells.
+
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell width={20}>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell width={20} offset={60}>
+            <div className="text">second</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Wrapping
+A grid is essentially a row of cells. However cells can wrap onto the next line within the Grid.
+
+Here we have 2 cells, 50% and 66.6666% wide, but the Grid is only 100% wide...eek!
+
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell width={50}>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell width={66}>
+            <div className="text">second</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+To solve this we can wrap the cells within the Grid by adding the **wrap** prop.
+
+<Playground>
+    <Grid wrap className="demo">
+        <Grid.Cell width={50}>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell width={66}>
+            <div className="text">second</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Nesting
+You can nest grids inside cells with relative ease...with nesting you're into advanced territory!
+
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell>
+            <Grid>
+                <Grid.Cell>
+                    <div className="text">first</div>
+                </Grid.Cell>
+                <Grid.Cell>
+                    <div className="text">second</div>
+                </Grid.Cell>
+            </Grid>
+            <Grid>
+                <Grid.Cell>
+                    <div className="text">third</div>
+                </Grid.Cell>
+                <Grid.Cell>
+                    <div className="text">fourth</div>
+                </Grid.Cell>
+            </Grid>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">fifth</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Vertical Alignment
+### Per Grid
+If one of your Cells is tall you can add the **align** prop to the Grid.
+
+_top_, _center_, and _bottom_ are supported.
+
+<Playground>
+    <Grid className="demo" align="bottom">
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">third</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">fourth
+            <br/>fourth
+            <br/>fourth
+            <br/>fourth
+            <br/>fourth
+            <br/>
+            </div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+### Per Cell
+You can override the vertical alignment of all the cells in the grid by specifying per cell.
+
+_top_, _center_, and _bottom_ are supported.
+
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell align="top">
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell align="center">
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell align="bottom">
+            <div className="text">third</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">fourth
+            <br/>fourth
+            <br/>fourth
+            <br/>fourth
+            <br/>fourth
+            <br/>
+            </div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Responsiveness
+The Grid can be instructed to go full width at certain break points to maximise the screen space and help produce great user experiences on all sorts of devices.
+
+The Grid has props for each breakpoint that take a value of either _'fit'_ or _'full'_.
+
+
+**NOTE**: To avoid conflicting with JavaScript, the Blaze UI _super_ breakpoint has been renamed to _huge_.
+
+<Playground>
+    <Grid className="demo" small="full" medium="fit" large="full">
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+The above example will display the Cells full width for small and large size screens. For medium screens the Cells will adjust to fit the available space. Try it out, either resize your browser or rotate your phone into landscape.
+
+Because they use viewport media queries, simply resizing the example box won't work.
+
+## Responsive Cells
+As well as Grid level responsiveness you also have control over the Cells within a Grid.
+
+Individual Cells can change width at specific break points by using props.
+
+<Playground>
+    <Grid wrap className="demo">
+        <Grid.Cell width={100} small={33}>
+            <div className="text">small</div>
+        </Grid.Cell>
+        <Grid.Cell width={100} medium={33}>
+            <div className="text">medium</div>
+        </Grid.Cell>
+        <Grid.Cell width={100} large={33}>
+            <div className="text">large</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+As the viewport increases in size the Cells go from 100% wide to 33% wide one after another, rather than all at once.
+
+The props apply to the screen sizes _**and up**_, in a mobile first manner. In other words:
+
+Set Cell width to 33% when screen width is greater than or equal to _xsmall_ | _small_ | _medium_ | _large_ | _xlarge_ | _huge_
+
+## Properties
+### Grid
+<PropsTable of={Grid} />
+
+### Cell
+<PropsTable of={Grid.Cell} />
