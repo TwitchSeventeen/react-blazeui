@@ -1,7 +1,7 @@
 import React from 'react';
 import Example from '../lib';
 import { SecondExample } from '../lib';
-import { Alert, Breadcrumbs, Accordion } from '../lib';
+import { Alert, Breadcrumbs, Accordion, Container } from '../lib';
 
 class App extends React.Component {
   constructor (props) {
@@ -24,7 +24,7 @@ class App extends React.Component {
   {
     const {activeItem} = this.state;
     return (
-        <div>
+        <Container>
           <Example/>
           <SecondExample/>
 
@@ -51,7 +51,7 @@ class App extends React.Component {
             </Accordion.Content>
           </Accordion>
 
-        </div>
+        </Container>
     );
   }
 }

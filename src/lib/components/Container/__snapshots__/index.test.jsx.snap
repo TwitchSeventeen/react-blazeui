@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders correctly 1`] = `
+<div
+  className="o-container o-container--xlarge"
+>
+  lorem ipsum dolor
+</div>
+`;
+
+exports[`Container renders correctly a large container 1`] = `
+<div
+  className="o-container o-container--large"
+>
+  lorem ipsum dolor sit amet
+</div>
+`;

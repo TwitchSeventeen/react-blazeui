@@ -6,6 +6,7 @@ import Accordion from './components/Accordion';
 import Alert from './components/Alert';
 import Address from './components/Address';
 import Breadcrumbs from './components/Breadcrumbs';
+import Container from './components/Container';
 import Highlight from './components/Highlight';
 import Loud from './components/Loud';
 import Quiet from './components/Quiet';
@@ -17,6 +18,7 @@ export {
   Accordion,
   Alert,
   Address,
+  Container,
   Breadcrumbs,
   Highlight,
   Loud,

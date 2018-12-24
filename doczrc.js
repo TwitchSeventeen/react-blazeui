@@ -5,4 +5,15 @@ export default {
     mode: 'light',
     showPlaygroundEditor: true,
   },
+  menu: [
+    {
+      name: 'Objects',
+    },
+    {
+      name: 'Components',
+    },
+    {
+      name: 'Typography',
+    }
+  ]
 }
