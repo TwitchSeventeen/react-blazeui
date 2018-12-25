@@ -4,12 +4,13 @@ import classNames from 'classnames';
 import Cell from './Cell';
 
 function Grid (props) {
-  const { align, children, className, full, wrap, xsmall, small, medium, large, xlarge, huge } = props;
+  const { align, children, className, full, wrap, xsmall, small, medium, large, xlarge, huge, noGutter } = props;
   const classes = classNames(
       'o-grid',
       { ['o-grid--full']: full },
       { ['o-grid--wrap']: wrap },
       { [`o-grid--${align}`]: align },
+      { ['o-grid--no-gutter']: noGutter },
       { [`o-grid--xsmall-${xsmall}`]: xsmall },
       { [`o-grid--small-${small}`]: small },
       { [`o-grid--medium-${medium}`]: medium },
@@ -92,6 +93,10 @@ Grid.propTypes = {
     'fit',
     'full',
   ]),
+  /**
+   * Specifies no spacing between Cells
+   */
+  noGutter: PropTypes.bool,
 };
 
 Grid.defaultProps = {
@@ -106,6 +111,7 @@ Grid.defaultProps = {
   large: null,
   xlarge: null,
   huge: null,
+  noGutter: false,
 };
 
 Grid.Cell = Cell;

@@ -244,6 +244,58 @@ The props apply to the screen sizes _**and up**_, in a mobile first manner. In o
 
 Set Cell width to 33% when screen width is greater than or equal to _xsmall_ | _small_ | _medium_ | _large_ | _xlarge_ | _huge_
 
+## Gutters
+Grid comes with a gutter around each grid Cell; some padding either side.
+
+Sometimes you want your Cells to be flush with each other. To turn off all gutters use the Grid **noGutter** prop.
+
+<Playground>
+    <Grid className="demo" noGutter>
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+...or Cell specific **noGutter**.
+
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell>
+            <div className="text">second</div>
+        </Grid.Cell>
+        <Grid.Cell noGutter>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
+## Fixed widths
+Usually Cells in a Grid will be _**fluid and responsive**_. If however you want to set a Cell to a fixed width add the **fixedWidth** prop and give it a specific width.
+
+<Playground>
+    <Grid className="demo">
+        <Grid.Cell>
+            <div className="text">first</div>
+        </Grid.Cell>
+        <Grid.Cell fixedWidth style={{ width: '200px' }}>
+            <div className="text">static width of 200px</div>
+        </Grid.Cell>
+        <Grid.Cell noGutter>
+            <div className="text">third</div>
+        </Grid.Cell>
+    </Grid>
+</Playground>
+
 ## Properties
 ### Grid
 <PropsTable of={Grid} />
