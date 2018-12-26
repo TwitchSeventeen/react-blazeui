@@ -2,7 +2,17 @@
 
 exports[`Grid renders correctly 1`] = `
 <div
+  align={null}
   className="o-grid"
+  full={false}
+  huge={null}
+  large={null}
+  medium={null}
+  noGutter={false}
+  small={null}
+  wrap={false}
+  xlarge={null}
+  xsmall={null}
 >
   lorem
 </div>
@@ -10,7 +20,17 @@ exports[`Grid renders correctly 1`] = `
 
 exports[`Grid renders correctly with full width children 1`] = `
 <div
+  align={null}
   className="o-grid o-grid--full"
+  full={true}
+  huge={null}
+  large={null}
+  medium={null}
+  noGutter={false}
+  small={null}
+  wrap={false}
+  xlarge={null}
+  xsmall={null}
 >
   <Cell
     align={null}
@@ -49,7 +69,17 @@ exports[`Grid renders correctly with full width children 1`] = `
 
 exports[`Grid renders correctly with responsive props 1`] = `
 <div
+  align={null}
   className="o-grid o-grid--xsmall-fit o-grid--small-full o-grid--medium-fit o-grid--large-full o-grid--xlarge-fit o-grid--super-full"
+  full={false}
+  huge="full"
+  large="full"
+  medium="fit"
+  noGutter={false}
+  small="full"
+  wrap={false}
+  xlarge="fit"
+  xsmall="fit"
 >
   <Cell
     align={null}
@@ -88,7 +118,17 @@ exports[`Grid renders correctly with responsive props 1`] = `
 
 exports[`Grid renders correctly with wrapped children 1`] = `
 <div
+  align={null}
   className="o-grid o-grid--wrap"
+  full={false}
+  huge={null}
+  large={null}
+  medium={null}
+  noGutter={false}
+  small={null}
+  wrap={true}
+  xlarge={null}
+  xsmall={null}
 >
   <Cell
     align={null}
