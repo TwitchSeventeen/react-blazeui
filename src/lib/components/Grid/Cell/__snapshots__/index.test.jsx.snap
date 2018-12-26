@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders correctly 1`] = `
+<div
+  align={null}
+  className="o-grid__cell"
+  fixedWidth={false}
+  huge={null}
+  large={null}
+  medium={null}
+  noGutter={false}
+  offset={null}
+  small={null}
+  width={null}
+  xlarge={null}
+  xsmall={null}
+>
+  lorem
+</div>
+`;
+
+exports[`Cell renders correctly with correct alignment 1`] = `
+<div
+  className="o-grid demo"
+>
+  <Cell
+    align="top"
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={null}
+    medium={null}
+    noGutter={false}
+    offset={null}
+    small={null}
+    width={null}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      first
+    </div>
+  </Cell>
+  <Cell
+    align="center"
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={null}
+    medium={null}
+    noGutter={false}
+    offset={null}
+    small={null}
+    width={null}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      second
+    </div>
+  </Cell>
+  <Cell
+    align="bottom"
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={null}
+    medium={null}
+    noGutter={false}
+    offset={null}
+    small={null}
+    width={null}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      third
+    </div>
+  </Cell>
+  <Cell
+    align={null}
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={null}
+    medium={null}
+    noGutter={false}
+    offset={null}
+    small={null}
+    width={null}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      fourth
+      <br />
+      fourth
+      <br />
+      fourth
+      <br />
+      fourth
+      <br />
+      fourth
+      <br />
+    </div>
+  </Cell>
+</div>
+`;
+
+exports[`Cell renders correctly with responsive props 1`] = `
+<div
+  className="o-grid o-grid--wrap demo"
+>
+  <Cell
+    align={null}
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={null}
+    medium={null}
+    noGutter={false}
+    offset={null}
+    small={33}
+    width={100}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      small
+    </div>
+  </Cell>
+  <Cell
+    align={null}
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={null}
+    medium={33}
+    noGutter={false}
+    offset={null}
+    small={null}
+    width={100}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      medium
+    </div>
+  </Cell>
+  <Cell
+    align={null}
+    className={null}
+    fixedWidth={false}
+    huge={null}
+    large={33}
+    medium={null}
+    noGutter={false}
+    offset={null}
+    small={null}
+    width={100}
+    xlarge={null}
+    xsmall={null}
+  >
+    <div
+      className="text"
+    >
+      large
+    </div>
+  </Cell>
+</div>
+`;

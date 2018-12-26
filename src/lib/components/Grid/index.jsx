@@ -20,7 +20,7 @@ function Grid (props) {
       className
   );
   return (
-      <div className={classes}>
+      <div {...props} className={classes}>
         { children }
       </div>
   );

@@ -87,7 +87,7 @@ Cell.propTypes = {
    */
   noGutter: PropTypes.bool,
   /**
-   * Specifies this Cell was a fixed width
+   * Specifies this Cell has a fixed width
    */
   fixedWidth: PropTypes.bool,
 };
