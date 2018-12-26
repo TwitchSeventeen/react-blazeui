@@ -1,0 +1,38 @@
+---
+name: Input
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Input from './index';
+
+# Input
+
+From single input controls like text boxes to full form patterns.
+
+## Text Input
+<Playground>
+    <Input placeholder="Type in here..." />
+    <br />
+    <br />
+    <Input.Textarea placeholder="Type in here..."></Input.Textarea>
+    <br />
+    <br />
+    <Input.Select>
+        <option>Choose me...</option>
+    </Input.Select>
+</Playground>
+
+## Colours
+<Playground>
+    <Input placeholder="success" success />
+    <br />
+    <br />
+    <Input placeholder="error" error />
+    <br />
+    <br />
+    <Input placeholder="disabled" disabled />
+</Playground>
+
+## Properties
+<PropsTable of={Input} />
