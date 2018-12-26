@@ -57,7 +57,7 @@ exports[`List renders correctly an inline list 1`] = `
 `;
 
 exports[`List renders correctly an ordered list 1`] = `
-<ul
+<ol
   className="c-list c-list--ordered"
   inline={false}
   ordered={true}
@@ -81,7 +81,7 @@ exports[`List renders correctly an ordered list 1`] = `
   >
     dolor
   </Item>
-</ul>
+</ol>
 `;
 
 exports[`List renders correctly an unstyled list 1`] = `
