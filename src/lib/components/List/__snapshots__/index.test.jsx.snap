@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders correctly 1`] = `
+<ul
+  className="c-list"
+  inline={false}
+  ordered={false}
+  unstyled={false}
+>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    lorem
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    ipsum
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    dolor
+  </Item>
+</ul>
+`;
+
+exports[`List renders correctly an inline list 1`] = `
+<ul
+  className="c-list c-list--inline"
+  inline={true}
+  ordered={false}
+  unstyled={false}
+>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    lorem
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    ipsum
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    dolor
+  </Item>
+</ul>
+`;
+
+exports[`List renders correctly an ordered list 1`] = `
+<ul
+  className="c-list c-list--ordered"
+  inline={false}
+  ordered={true}
+  unstyled={false}
+>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    lorem
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    ipsum
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    dolor
+  </Item>
+</ul>
+`;
+
+exports[`List renders correctly an unstyled list 1`] = `
+<ul
+  className="c-list c-list--unstyled"
+  inline={false}
+  ordered={false}
+  unstyled={true}
+>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    lorem
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    ipsum
+  </Item>
+  <Item
+    className={null}
+    unstyled={false}
+  >
+    dolor
+  </Item>
+</ul>
+`;

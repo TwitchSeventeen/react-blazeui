@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item renders correctly 1`] = `
+<li
+  className="c-list__item"
+  unstyled={false}
+>
+  ipsum
+</li>
+`;
+
+exports[`Item renders correctly an unstyled Item 1`] = `
+<li
+  className="c-list__item c-list__item--unstyled"
+  unstyled={true}
+>
+  ipsum
+</li>
+`;

@@ -1,0 +1,86 @@
+---
+name: List
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import List from './index';
+
+# List
+
+Ordered, un-ordered, indented, you're covered when it comes to making lists.
+
+<Playground>
+    <List>
+        <List.Item>Lorem ipsum dolor sit amet</List.Item>
+        <List.Item>Consectetur adipiscing elit</List.Item>
+        <List.Item>Nulla volutpat aliquam velit
+            <List>
+                <List.Item>Phasellus iaculis neque</List.Item>
+                <List.Item>Purus sodales ultricies</List.Item>
+                <List.Item>Vestibulum laoreet porttitor sem</List.Item>
+                <List.Item>Ac tristique libero volutpat at</List.Item>
+            </List>
+        </List.Item>
+        <List.Item>Faucibus porta lacus fringilla vel</List.Item>
+    </List>
+</Playground>
+
+## Ordered
+The **ordered** prop will apply correct numbering to ordered lists and nested lists.
+
+<Playground>
+    <List ordered>
+        <List.Item>Lorem ipsum dolor sit amet</List.Item>
+        <List.Item>Consectetur adipiscing elit</List.Item>
+        <List.Item>Nulla volutpat aliquam velit
+            <List ordered>
+                <List.Item>Phasellus iaculis neque</List.Item>
+                <List.Item>Purus sodales ultricies
+                    <List ordered>
+                        <List.Item>Lorem ipsum dolor sit amet</List.Item>
+                        <List.Item>Consectetur adipiscing elit</List.Item>
+                    </List>
+                </List.Item>
+                <List.Item>Vestibulum laoreet porttitor sem</List.Item>
+                <List.Item>Ac tristique libero volutpat at</List.Item>
+            </List>
+        </List.Item>
+        <List.Item>Faucibus porta lacus fringilla vel</List.Item>
+    </List>
+</Playground>
+
+## Un-styled
+Applying the **unstyled** prop to a List will remove the bullet points.
+
+You can also remove bullet points on individual Items by adding the **unstyled** prop.
+
+<Playground>
+    <List unstyled>
+        <List.Item>This list is unstyled</List.Item>
+        <List.Item>Consectetur adipiscing elit</List.Item>
+        <List.Item>Nulla volutpat aliquam velit
+            <List>
+                <List.Item>Phasellus iaculis neque</List.Item>
+                <List.Item>Purus sodales ultricies</List.Item>
+                <List.Item unstyled>This is an unstyled item</List.Item>
+                <List.Item>Ac tristique libero volutpat at</List.Item>
+            </List>
+        </List.Item>
+        <List.Item>Faucibus porta lacus fringilla vel</List.Item>
+    </List>
+</Playground>
+
+## Inline
+To make your list items flow left to right apply the **inline** prop.
+
+<Playground>
+    <List inline>
+        <List.Item>Lorem</List.Item>
+        <List.Item>ipsum</List.Item>
+        <List.Item>dolor</List.Item>
+    </List>
+</Playground>
+
+## Properties
+<PropsTable of={List} />
