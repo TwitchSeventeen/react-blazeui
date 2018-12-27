@@ -1,6 +1,4 @@
 import React from 'react';
-import Example from '../lib';
-import { SecondExample } from '../lib';
 import { Alert, Breadcrumbs, Accordion, Container, Grid } from '../lib';
 
 class App extends React.Component {
@@ -25,8 +23,6 @@ class App extends React.Component {
     const {activeItem} = this.state;
     return (
         <Container>
-          <Example/>
-          <SecondExample/>
 
           <Breadcrumbs>
             <Breadcrumbs.Item><a className="c-link">Home</a></Breadcrumbs.Item>

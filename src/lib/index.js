@@ -1,5 +1,5 @@
-import Example from './components/Example';
-import SecondExample from './components/SecondExample';
+import './css/blaze.css';
+import './css/all.min.css';
 
 import Abbr from './components/Abbr';
 import Accordion from './components/Accordion';
@@ -12,8 +12,6 @@ import Highlight from './components/Highlight';
 import Loud from './components/Loud';
 import Quiet from './components/Quiet';
 
-export default Example;
-
 export {
   Abbr,
   Accordion,
@@ -25,5 +23,4 @@ export {
   Highlight,
   Loud,
   Quiet,
-  SecondExample,
 };

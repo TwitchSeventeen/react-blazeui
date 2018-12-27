@@ -1,0 +1,70 @@
+---
+name: Icon
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Icon from './index';
+
+# Icon
+
+The Icon component is used to display an icon. The complete (free) version of Font Awesome 5.6.3 has been included.
+
+**NOTE:** The Icon component is not part of Blaze UI.
+
+## Basic usage
+<Playground>
+    <Icon name="calendar-alt" />
+</Playground>
+
+## Size
+Use the **size** prop to set the Icon size.
+<Playground>
+    <Icon name="calendar-alt" size="xs" /> xs <br />
+    <Icon name="calendar-alt" size="sm" /> sm <br />
+    <Icon name="calendar-alt" size="lg" /> lg <br />
+    <Icon name="calendar-alt" size="2x" /> 2x <br />
+    <Icon name="calendar-alt" size="3x" /> 3x <br />
+    <Icon name="calendar-alt" size="4x" /> 4x <br />
+    <Icon name="calendar-alt" size="5x" /> 5x <br />
+    <Icon name="calendar-alt" size="6x" /> 6x <br />
+    <Icon name="calendar-alt" size="7x" /> 7x <br />
+    <Icon name="calendar-alt" size="8x" /> 8x <br />
+    <Icon name="calendar-alt" size="9x" /> 9x <br />
+    <Icon name="calendar-alt" size="10x" /> 10x <br />
+</Playground>
+
+## Flip
+Flip the Icon using the **flipped** prop
+<Playground>
+    <Icon name="snowman" flipped="vertical" size="3x" />
+</Playground>
+
+## Rotate
+Rotate the Icon using the **rotate** prop
+<Playground>
+    <Icon name="snowman" rotate={90} size="3x" />
+    <Icon name="snowman" rotate={180} size="3x" />
+    <Icon name="snowman" rotate={270} size="3x" />
+</Playground>
+
+## Spin
+Spin the Icon using the **spin** prop.
+
+Use the **pulse** prop to spin the Icon with 8 steps.
+<Playground>
+    <Icon name="spinner" spin size="3x" />
+    <br />
+    <Icon name="spinner" pulse size="3x" />
+</Playground>
+
+## Type
+The **type** prop specifies the style of icon. By default it's _'fas'_ (Solid). 
+<Playground>
+    <Icon name="spinner" size="3x" />
+    <br />
+    <Icon name="android" type="fab" size="3x" />
+</Playground>
+
+## Properties
+<PropsTable of={Icon} />

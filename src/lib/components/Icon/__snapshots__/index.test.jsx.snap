@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders correctly 1`] = `
+<i
+  className="c-icon fa-spinner fas"
+  flipped={null}
+  name="spinner"
+  pulse={false}
+  rotate={null}
+  size={null}
+  spin={false}
+  type="fas"
+/>
+`;
