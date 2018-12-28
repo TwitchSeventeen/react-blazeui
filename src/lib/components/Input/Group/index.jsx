@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Group (props) {
-  const { className, children, stacked, rounded } = props;
+  const { className, children, stacked, rounded, roundedLeft, roundedRight } = props;
   const classes = classNames(
       'c-input-group',
       { 'c-input-group--stacked': stacked },
       { 'c-input-group--rounded': rounded },
+      { 'c-input-group--rounded-left': roundedLeft },
+      { 'c-input-group--rounded-right': roundedRight },
       className
   );
 
@@ -32,9 +34,17 @@ Group.propTypes = {
    */
   stacked: PropTypes.bool,
   /**
-   * Defines a rounded group of Inputs
+   * Defines a group with rounded corners
    */
   rounded: PropTypes.bool,
+  /**
+   * Defines a group with rounded left corners
+   */
+  roundedLeft: PropTypes.bool,
+  /**
+   * Defines a group with rounded right corners
+   */
+  roundedRight: PropTypes.bool,
 };
 
 Group.defaultProps = {
@@ -42,6 +52,8 @@ Group.defaultProps = {
   children: null,
   stacked: false,
   rounded: false,
+  roundedLeft: false,
+  roundedRight: false,
 };
 
 export default Group;

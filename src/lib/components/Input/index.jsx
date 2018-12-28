@@ -5,6 +5,8 @@ import Textarea from './Textarea';
 import Select from './Select';
 import Field from './Field';
 import Group from './Group';
+import Checkbox from './Checkbox';
+import Label from './Label';
 
 function Input (props) {
   const { className, success, error, size } = props;
@@ -63,5 +65,7 @@ Input.Textarea = Textarea;
 Input.Select = Select;
 Input.Field = Field;
 Input.Group = Group;
+Input.Checkbox = Checkbox;
+Input.Label = Label;
 
 export default Input;

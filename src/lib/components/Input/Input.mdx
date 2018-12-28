@@ -6,6 +6,7 @@ menu: Components
 import { Playground, PropsTable } from 'docz'
 import Input from './index';
 import Icon from '../Icon';
+import Button from '../Button';
 
 # Input
 
@@ -83,13 +84,13 @@ Use an Input.Field with the **iconLeft** and **iconRight** props to add Icons.
 <Playground>
     <Input.Group>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
     </Input.Group>
 </Playground>
@@ -99,13 +100,13 @@ Use the **fixed** prop to fix the width of the field without it breaking the lay
 <Playground>
     <Input.Group>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
         <Input.Field fixed style={{ width: '50%' }}>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
     </Input.Group>
 </Playground>
@@ -114,16 +115,96 @@ Use the **fixed** prop to fix the width of the field without it breaking the lay
 <Playground>
     <Input.Group stacked>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
         <Input.Field>
-            <Input />
+            <Input placeholder="Input.Group" />
         </Input.Field>
     </Input.Group>
 </Playground>
+
+### Buttons
+<Playground>
+    <Input.Group>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+        <Button type="brand">Action</Button>
+    </Input.Group>
+    <br />
+    <br />
+    <Input.Group>
+        <Button type="brand">Action</Button>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+    </Input.Group>
+    <br />
+    <br />
+    <Input.Group>
+        <Button type="brand">Action</Button>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+        <Button type="brand">Action</Button>
+    </Input.Group>
+</Playground>
+
+### Rounded
+<Playground>
+    <Input.Group rounded>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+    </Input.Group>
+    <br />
+    <br />
+    <Input.Group rounded>
+        <Button type="brand">Action</Button>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+        <Button type="brand">Action</Button>
+    </Input.Group>
+    <br />
+    <br />
+    <Input.Group roundedLeft>
+        <Button type="brand">Action</Button>
+        <Input.Field>
+            <Input placeholder="Input.Group" />
+        </Input.Field>
+        <Button type="brand">Action</Button>
+    </Input.Group>
+</Playground>
+
+## Checkboxes and Radios
+Place your checkboxes and radios within Labels and add the **choice** prop.
+
+<Playground>
+
+<Input.Label choice>
+    <Input.Checkbox /> Tick the box
+</Input.Label>
+
+<Input.Label choice>
+    <Input.Checkbox name="radios" radio checked /> Yes
+</Input.Label>
+
+<Input.Label choice>
+    <Input.Checkbox name="radios" radio /> No
+</Input.Label>
+
+</Playground>
+
 
 ## Properties
 ### Input
