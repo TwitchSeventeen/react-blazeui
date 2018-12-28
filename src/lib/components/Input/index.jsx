@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Textarea from './Textarea';
 import Select from './Select';
+import Field from './Field';
+import Group from './Group';
 
 function Input (props) {
-  const { className, success, error } = props;
+  const { className, success, error, size } = props;
   const classes = classNames(
       'c-field',
       { 'c-field--success': success },
       { 'c-field--error': error },
+      { [`u-${size}`]: size },
       className
   );
 
@@ -24,7 +27,7 @@ Input.propTypes = {
    */
   className: PropTypes.string,
   /**
-   *
+   * The type of input
    */
   type: PropTypes.string,
   /**
@@ -35,6 +38,17 @@ Input.propTypes = {
    * Defines error styling
    */
   error: PropTypes.bool,
+  /**
+   * Size of the input
+   */
+  size: PropTypes.oneOf([
+      'xsmall',
+      'small',
+      'medium',
+      'large',
+      'xlarge',
+      'super',
+  ])
 };
 
 Input.defaultProps = {
@@ -42,9 +56,12 @@ Input.defaultProps = {
   success: false,
   error: false,
   type: 'text',
+  size: null,
 };
 
 Input.Textarea = Textarea;
 Input.Select = Select;
+Input.Field = Field;
+Input.Group = Group;
 
 export default Input;

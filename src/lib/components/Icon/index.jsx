@@ -17,7 +17,7 @@ function Icon (props) {
   );
 
   return (
-      <i {...props} className={classes} />
+      <i {...props} className={classes} aria-hidden={true} />
   );
 }
 

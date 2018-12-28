@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz'
 import Input from './index';
+import Icon from '../Icon';
 
 # Input
 
@@ -34,5 +35,102 @@ From single input controls like text boxes to full form patterns.
     <Input placeholder="disabled" disabled />
 </Playground>
 
+## Icons
+Use an Input.Field with the **iconLeft** and **iconRight** props to add Icons.
+<Playground>
+    
+    <Input.Field iconLeft>
+        <Icon name="calendar-alt" />
+        <Input />
+    </Input.Field>
+    <br />
+    <br />
+    <Input.Field iconRight>
+        <Input />
+        <Icon name="search" />
+    </Input.Field>
+    <br />
+    <br />
+    <Input.Field iconLeft iconRight>
+        <Icon name="user" />
+        <Input success />
+        <Icon name="check" />
+    </Input.Field>
+</Playground>
+
+## Sizes
+<Playground>
+    <Input placeholder="xsmall" size="xsmall" />
+    <br />
+    <br />
+    <Input placeholder="small" size="small" />
+    <br />
+    <br />
+    <Input placeholder="medium" size="medium" />
+    <br />
+    <br />
+    <Input placeholder="large" size="large" />
+    <br />
+    <br />
+    <Input placeholder="xlarge" size="xlarge" />
+    <br />
+    <br />
+    <Input placeholder="super" size="super" /> 
+</Playground>
+
+## Input Groups
+### Inline
+<Playground>
+    <Input.Group>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+    </Input.Group>
+</Playground>
+
+### Fixed Width
+Use the **fixed** prop to fix the width of the field without it breaking the layout of the group.
+<Playground>
+    <Input.Group>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+        <Input.Field fixed style={{ width: '50%' }}>
+            <Input />
+        </Input.Field>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+    </Input.Group>
+</Playground>
+
+### Stacked
+<Playground>
+    <Input.Group stacked>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+        <Input.Field>
+            <Input />
+        </Input.Field>
+    </Input.Group>
+</Playground>
+
 ## Properties
+### Input
 <PropsTable of={Input} />
+
+### Input.Field
+<PropsTable of={Input.Field} />
+
+### Input.Group
+<PropsTable of={Input.Group} />

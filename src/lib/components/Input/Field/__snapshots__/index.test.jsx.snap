@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field renders correctly 1`] = `
+<div
+  className="o-field"
+  fixed={false}
+  iconLeft={false}
+  iconRight={false}
+>
+  lorem ipsum dolor
+</div>
+`;
