@@ -36,7 +36,7 @@ Alert.propTypes = {
    */
   onDismiss: PropTypes.func,
   /**
-   * The type of button
+   * The type of alert
    */
   type: PropTypes.oneOf([
       'brand',

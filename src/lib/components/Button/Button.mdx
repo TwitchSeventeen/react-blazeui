@@ -1,0 +1,130 @@
+---
+name: Button
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Button from './index';
+
+# Button
+
+Probably the first thing people look at when choosing a UI toolkit. The common button!
+
+## Button Colours 
+Use the type prop to provide styling to the alert.
+<Playground>
+    <Button>Default</Button>
+    <br /><br />
+    <Button type="brand">Brand</Button>
+    <br /><br />
+    <Button type="info">Brand</Button>
+    <br /><br />
+    <Button type="warning">Warning</Button>
+    <br /><br />
+    <Button type="success">Success</Button>
+    <br /><br />
+    <Button type="error">Error</Button>
+</Playground>
+
+## Button Groups
+To group related buttons together you can use the Button.Group element. This will bunch the buttons together and remove the spacing between them.
+<Playground>
+    <Button.Group>
+        <Button type="brand">Button</Button>
+        <Button>Button</Button>
+    </Button.Group>
+</Playground>
+
+Adding the **rounded** prop will make the first and last buttons rounded.
+<Playground>
+    <Button.Group rounded>
+        <Button type="brand">Button</Button>
+        <Button>Button</Button>
+        <Button type="info">Button</Button>
+    </Button.Group>
+</Playground>
+
+## Button Sizes 
+Adding a **size** utility prop will change the size of the button.
+<Playground>
+    <Button size="xsmall">xsmall</Button>
+    <Button size="small">small</Button>
+    <Button size="medium">medium</Button>
+    <Button size="large">large</Button>
+    <Button size="xlarge">xlarge</Button>
+    <Button size="super">super</Button>
+</Playground>
+
+## Full Width Buttons  
+<Playground>
+    <Button size="xsmall" fluid>xsmall</Button>
+    <Button size="small" fluid>small</Button>
+    <Button size="medium" fluid>medium</Button>
+    <Button size="large" fluid>large</Button>
+    <Button size="xlarge" fluid>xlarge</Button>
+    <Button size="super" fluid>super</Button>
+</Playground>
+
+## Ghost Buttons
+Use the type prop to provide styling to the alert.
+<Playground>
+    <Button size="xsmall" ghost>xsmall</Button>
+    <br /><br />
+    <Button size="small" ghost>small</Button>
+    <br /><br />
+    <Button size="medium" ghost>medium</Button>
+    <br /><br />
+    <Button size="large" ghost>large</Button>
+    <br /><br />
+    <Button size="xlarge" ghost>xlarge</Button>
+    <br /><br />
+    <Button size="super" ghost>super</Button>
+</Playground>
+
+## Ghost Colours
+<Playground>
+    <Button ghost>Default</Button>
+    <br /><br />
+    <Button type="brand" ghost>Brand</Button>
+    <br /><br />
+    <Button type="info" ghost>Brand</Button>
+    <br /><br />
+    <Button type="warning" ghost>Warning</Button>
+    <br /><br />
+    <Button type="success" ghost>Success</Button>
+    <br /><br />
+    <Button type="error" ghost>Error</Button>
+</Playground>
+
+## Rounded Buttons
+<Playground>
+    <Button ghost rounded>Default</Button>
+    <br /><br />
+    <Button type="brand" ghost rounded>Brand</Button>
+    <br /><br />
+    <Button type="info" ghost rounded>Brand</Button>
+    <br /><br />
+    <Button type="warning" ghost rounded>Warning</Button>
+    <br /><br />
+    <Button type="success" ghost rounded>Success</Button>
+    <br /><br />
+    <Button type="error" ghost rounded>Error</Button>
+</Playground>
+
+## Active state
+<Playground>
+    <Button.Group>
+        <Button type="info" active>Button 1</Button>
+        <Button type="info">Button 2</Button>
+    </Button.Group>
+</Playground>
+
+## Button Type
+By default buttons are rendered with a HTML type of _button_. Use the **buttonType** prop to change this to _submit_ or _reset_.
+
+## Properties
+### Button
+<PropsTable of={Button} />
+
+### Button.Group
+<PropsTable of={Button.Group} />
