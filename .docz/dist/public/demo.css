@@ -1,0 +1,30 @@
+
+.key {
+    font-weight: bold;
+}
+
+.key-grid {
+    color: #ff69b4;
+}
+
+.key-cell {
+    color: #00bfff;
+}
+
+.key-padding {
+    color: #66bb6a;
+}
+
+
+.demo {
+    border: 2px solid #ff69b4;
+}
+
+.demo .o-grid__cell {
+    border: 2px solid #00bfff;
+    background-color: #b2f5b5;
+}
+
+.text {
+   background-color: #fff;
+}

@@ -1,0 +1,74 @@
+---
+name: Custom Build
+menu: Getting Started
+route: /custom-build
+---
+
+## Custom Build
+
+react-blazeui was created using [create-react-library](https://github.com/DimiMikadze/create-react-library)
+
+### Clone the repo
+
+```shell
+$ git clone https://github.com/TwitchSeventeen/react-blazeui.git
+```
+
+### Install dependencies
+```shell
+$ npm install 
+// or yarn install
+```
+
+### Start development server
+```shell
+$ npm start
+// or yarn start
+```
+
+The dev server will start on [http://localhost:3000](http://localhost:3000)
+
+### File structure
+Library files are located inside `src/lib`
+
+#### Components
+Component files are inside `src/lib/components/*name*`
+
+Each directory contains: 
+- The component (`index.jsx`)
+- Testing file (`index.test.jsx`), snapshots are under the `__snapshots__` directory
+- Documentation (`name.mdx`)
+
+Any sub-components e.g. **Card.Body** follow the same file structure.
+
+#### Demo
+Demo files are in `src/demo`
+
+### Testing
+
+To run tests:
+```shell
+$ npm run test
+// or yarn run test
+```
+
+To run tests with code coverage:
+```shell
+$ npm run coverage
+```
+
+### Run a build
+```shell
+$ npm run build
+// or yarn run build
+```
+
+Production build is in the `build` directory.
+
+### Run the styleguide
+This styleguide is generated with [docz](https://www.docz.site/). It uses the `.mdx` files located under each component and in `src/docs`
+
+To run the styleguide dev server:
+```shell
+yarn docz dev
+```
