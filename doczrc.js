@@ -7,6 +7,10 @@ export default {
   },
   menu: [
     {
+      name: 'Getting Started',
+      menu: ['Install', 'Custom Build']
+    },
+    {
       name: 'Objects',
     },
     {
