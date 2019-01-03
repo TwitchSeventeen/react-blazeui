@@ -23,6 +23,7 @@
     "classnames": "^2.2.6",
     "docz": "^0.12.17",
     "docz-theme-default": "^0.13.7",
+    "react-hot-loader": "^4.6.3",
     "react-test-renderer": "^16.6.3"
   },
   "devDependencies": {
