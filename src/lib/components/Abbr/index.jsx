@@ -7,6 +7,7 @@ function Abbr (props) {
   const classes = classNames('u-text--help', className);
   return (
       <abbr
+          {...props}
           className={classes}
           title={title}
       >

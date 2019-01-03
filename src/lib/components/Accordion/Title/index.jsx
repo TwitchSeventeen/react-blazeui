@@ -24,6 +24,7 @@ class Title extends React.Component {
     const classes = classNames('c-card__control', className);
     return (
         <button
+            {...this.props}
             type="button"
             role="heading"
             aria-expanded={active.toString()}

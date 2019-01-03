@@ -9,7 +9,10 @@ function Accordion (props) {
   const { children, className } = props;
   const classes = classNames('c-card--accordion', className);
   return (
-      <Card className={classes}>
+      <Card
+          {...props}
+          className={classes}
+      >
         { children }
       </Card>
   );

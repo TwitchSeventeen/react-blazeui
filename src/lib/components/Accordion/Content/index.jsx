@@ -7,7 +7,10 @@ function Content (props) {
   const { children, className, } = props;
   const classes = classNames('c-card__item--pane', className);
   return (
-      <Card.Item className={classes}>
+      <Card.Item
+          {...props}
+          className={classes}
+      >
         { children }
       </Card.Item>
   );
