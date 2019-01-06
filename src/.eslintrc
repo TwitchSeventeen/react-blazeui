@@ -1,3 +1,7 @@
 {
-  "extends": ["airbnb"]
+  "extends": ["airbnb"],
+  "rules": {
+    // questionable rule implementation
+    "react/button-has-type": 0
+  }
 }

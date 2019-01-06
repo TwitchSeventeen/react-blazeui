@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Body (props) {
+function Body(props) {
   const { children } = props;
   return (
-      <div className="c-card__body">
-        { children }
-      </div>
+    <div className="c-card__body">
+      { children }
+    </div>
   );
 }
 

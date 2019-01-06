@@ -19,20 +19,20 @@ class Title extends React.Component {
     onClick(event, this.props);
   }
 
-  render () {
+  render() {
     const { children, className, active } = this.props;
     const classes = classNames('c-card__control', className);
     return (
-        <button
-            {...this.props}
-            type="button"
-            role="heading"
-            aria-expanded={active.toString()}
-            className={classes}
-            onClick={this.handleClick}
-        >
-          {children}
-        </button>
+      <button
+        {...this.props}
+        type="button"
+        role="heading"
+        aria-expanded={active.toString()}
+        className={classes}
+        onClick={this.handleClick}
+      >
+        {children}
+      </button>
     );
   }
 }
@@ -54,8 +54,8 @@ Title.propTypes = {
    * The index of the title in the accordion
    */
   index: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string
+    PropTypes.number,
+    PropTypes.string,
   ]),
   /**
    * Function called when button is clicked

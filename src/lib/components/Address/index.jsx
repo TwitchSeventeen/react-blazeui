@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Address (props) {
+function Address(props) {
   const { children, className } = props;
   const classes = classNames('c-address', className);
   return (
-      <address {...props} className={classes}>
-        { children }
-      </address>
+    <address {...props} className={classes}>
+      { children }
+    </address>
   );
 }
 

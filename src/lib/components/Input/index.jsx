@@ -8,18 +8,20 @@ import Group from './Group';
 import Checkbox from './Checkbox';
 import Label from './Label';
 
-function Input (props) {
-  const { className, success, error, size } = props;
+function Input(props) {
+  const {
+    className, success, error, size,
+  } = props;
   const classes = classNames(
-      'c-field',
-      { 'c-field--success': success },
-      { 'c-field--error': error },
-      { [`u-${size}`]: size },
-      className
+    'c-field',
+    { 'c-field--success': success },
+    { 'c-field--error': error },
+    { [`u-${size}`]: size },
+    className,
   );
 
   return (
-      <input {...props} className={classes} />
+    <input {...props} className={classes} />
   );
 }
 
@@ -44,13 +46,13 @@ Input.propTypes = {
    * Size of the input
    */
   size: PropTypes.oneOf([
-      'xsmall',
-      'small',
-      'medium',
-      'large',
-      'xlarge',
-      'super',
-  ])
+    'xsmall',
+    'small',
+    'medium',
+    'large',
+    'xlarge',
+    'super',
+  ]),
 };
 
 Input.defaultProps = {

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Header (props) {
+function Header(props) {
   const { children } = props;
   return (
-      <header className="c-card__header">
-        { children }
-      </header>
+    <header className="c-card__header">
+      { children }
+    </header>
   );
 }
 

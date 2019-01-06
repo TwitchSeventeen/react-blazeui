@@ -1,6 +1,6 @@
 {
   "name": "react-blazeui",
-  "description": "React NPM library starter kit based on Facebook's create react app",
+  "description": "Blaze UI components built with React JS",
   "main": "build/index.js",
   "scripts": {
     "start": "node scripts/start.js",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/TwitchSeventeen/react-blazeui.git"
   },
-  "author": "Luke Owen <dimi@udilia.com>",
+  "author": "Luke Owen <hello@lukeowen.co.uk>",
   "bugs": {
     "url": "https://github.com/TwitchSeventeen/react-blazeuiissues"
   },

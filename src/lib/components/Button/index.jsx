@@ -3,23 +3,25 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Group from '../Input/Group';
 
-function Button (props) {
-  const { children, className, buttonType, type, size, fluid, ghost, rounded, active } = props;
+function Button(props) {
+  const {
+    children, className, buttonType, type, size, fluid, ghost, rounded, active,
+  } = props;
   const classes = classNames(
-      'c-button',
-      { [`c-button--${type}`]: (type && !ghost) },
-      { 'c-button--ghost': (!type && ghost) },
-      { [`c-button--ghost-${type}`]: (type && ghost) },
-      { 'c-button--block': fluid },
-      { 'c-button--rounded': rounded },
-      { 'c-button--active': active },
-      { [`u-${size}`]: size },
-      className
+    'c-button',
+    { [`c-button--${type}`]: (type && !ghost) },
+    { 'c-button--ghost': (!type && ghost) },
+    { [`c-button--ghost-${type}`]: (type && ghost) },
+    { 'c-button--block': fluid },
+    { 'c-button--rounded': rounded },
+    { 'c-button--active': active },
+    { [`u-${size}`]: size },
+    className,
   );
   return (
-      <button {...props} type={buttonType} className={classes}>
-        { children }
-      </button>
+    <button {...props} type={buttonType} className={classes}>
+      { children }
+    </button>
   );
 }
 
@@ -36,9 +38,9 @@ Button.propTypes = {
    * The type of HTML button
    */
   buttonType: PropTypes.oneOf([
-      'button',
-      'submit',
-      'reset',
+    'button',
+    'submit',
+    'reset',
   ]),
   /**
    * The type of button
@@ -73,6 +75,10 @@ Button.propTypes = {
    * Defines an active state
    */
   active: PropTypes.bool,
+  /**
+   * Defines an ghost state
+   */
+  ghost: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -83,6 +89,8 @@ Button.defaultProps = {
   fluid: false,
   rounded: false,
   active: false,
+  className: null,
+  ghost: false,
 };
 
 Button.Group = Group;

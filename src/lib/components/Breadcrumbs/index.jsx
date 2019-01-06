@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Item from './Item';
 
-function Breadcrumbs (props) {
+function Breadcrumbs(props) {
   const { children } = props;
   return (
-      <nav aria-label="Breadcrumb">
-        <ol className="c-breadcrumbs">
-          { children }
-        </ol>
-      </nav>
+    <nav aria-label="Breadcrumb">
+      <ol className="c-breadcrumbs">
+        { children }
+      </ol>
+    </nav>
   );
 }
 

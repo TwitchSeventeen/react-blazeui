@@ -2,20 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Badge (props) {
-  const { children, type, rounded, ghost } = props;
+function Badge(props) {
+  const {
+    children, type, rounded, ghost,
+  } = props;
   const classes = classNames(
-      'c-badge',
-      { [`c-badge--${type}`]: type },
-      { 'c-badge--rounded': rounded },
-      { 'c-badge--ghost': ghost }
-      );
+    'c-badge',
+    { [`c-badge--${type}`]: type },
+    { 'c-badge--rounded': rounded },
+    { 'c-badge--ghost': ghost },
+  );
 
   return (
     <span className={classes}>
       { children }
     </span>
-  )
+  );
 }
 
 Badge.propTypes = {
@@ -40,7 +42,7 @@ Badge.propTypes = {
     'warning',
     'success',
     'error',
-  ])
+  ]),
 };
 
 Badge.defaultProps = {

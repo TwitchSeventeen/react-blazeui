@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Divider (props) {
+function Divider(props) {
   const { children, type, separator } = props;
   const classes = classNames('c-card__item', 'c-card__item--divider', { [`c-card__item--${type}`]: type });
 
-  if(separator) {
+  if (separator) {
     return (
-        <div role="separator" className="c-card__divider" />
+      <div role="separator" className="c-card__divider" />
     );
   }
 
   return (
-      <div role={type ? null : 'separator'} className={classes}>
-        { children }
-      </div>
+    <div role={type ? null : 'separator'} className={classes}>
+      { children }
+    </div>
   );
 }
 
