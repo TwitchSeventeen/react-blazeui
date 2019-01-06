@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Key (props) {
+function Key(props) {
   const { children } = props;
   return (
-      <kbd className="u-kbd">
-        { children }
-      </kbd>
+    <kbd className="u-kbd">
+      { children }
+    </kbd>
   );
 }
 

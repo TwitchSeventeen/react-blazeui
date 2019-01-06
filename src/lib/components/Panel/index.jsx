@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Panel (props) {
+function Panel(props) {
   const { children, className } = props;
   const classes = classNames(
-      'o-panel-container',
-      className
+    'o-panel-container',
+    className,
   );
   return (
-     <div {...props} className={classes}>
-        <div className="o-panel">
-          { children }
-        </div>
-     </div>
+    <div {...props} className={classes}>
+      <div className="o-panel">
+        { children }
+      </div>
+    </div>
   );
 }
 

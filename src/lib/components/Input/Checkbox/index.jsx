@@ -2,22 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Checkbox (props) {
-  const { className, success, error, radio } = props;
+function Checkbox(props) {
+  const {
+    className, success, error, radio,
+  } = props;
   const classes = classNames(
-      { 'c-field--success': success },
-      { 'c-field--error': error },
-      className
+    { 'c-field--success': success },
+    { 'c-field--error': error },
+    className,
   );
 
-  if(radio) {
+  if (radio) {
     return (
-        <input {...props} className={classes} type="radio" />
-    )
+      <input {...props} className={classes} type="radio" />
+    );
   }
 
   return (
-      <input {...props} className={classes} type="checkbox" />
+    <input {...props} className={classes} type="checkbox" />
   );
 }
 
@@ -42,6 +44,9 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
   className: null,
+  success: false,
+  error: false,
+  radio: false,
 };
 
 export default Checkbox;

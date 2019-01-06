@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Loud (props) {
+function Loud(props) {
   const { children } = props;
   return (
-      <span className="u-text--loud">
-        { children }
-      </span>
+    <span className="u-text--loud">
+      { children }
+    </span>
   );
 }
 

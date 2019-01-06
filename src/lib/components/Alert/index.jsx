@@ -53,6 +53,7 @@ Alert.defaultProps = {
   children: null,
   dismissable: false,
   onDismiss: null,
+  type: null,
 };
 
 export default Alert;

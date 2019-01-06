@@ -2,19 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Select (props) {
-  const { children, className, success, error } = props;
+function Select(props) {
+  const {
+    children, className, success, error,
+  } = props;
   const classes = classNames(
-      'c-field',
-      { 'c-field--success': success },
-      { 'c-field--error': error },
-      className
+    'c-field',
+    { 'c-field--success': success },
+    { 'c-field--error': error },
+    className,
   );
 
   return (
-      <select {...props} className={classes}>
-        { children }
-      </select>
+    <select {...props} className={classes}>
+      { children }
+    </select>
   );
 }
 
@@ -40,6 +42,8 @@ Select.propTypes = {
 Select.defaultProps = {
   children: null,
   className: null,
+  success: false,
+  error: false,
 };
 
 export default Select;

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Highlight (props) {
+function Highlight(props) {
   const { children } = props;
   return (
-      <span className="u-text--highlight">
-        { children }
-      </span>
+    <span className="u-text--highlight">
+      { children }
+    </span>
   );
 }
 

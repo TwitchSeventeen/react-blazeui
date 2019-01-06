@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Divider (props) {
+function Divider(props) {
   const { children, type } = props;
   const classes = classNames('c-divider', { [`c-divider--${type}`]: type });
   return (
-      <div className={classes}>
-        <div className="c-divider__content">
-          { children }
-        </div>
+    <div className={classes}>
+      <div className="c-divider__content">
+        { children }
       </div>
+    </div>
   );
 }
 
@@ -23,8 +23,8 @@ Divider.propTypes = {
    * Defines the line style of the divider
    */
   type: PropTypes.oneOf([
-      'solid',
-      'dashed',
+    'solid',
+    'dashed',
   ]),
 };
 

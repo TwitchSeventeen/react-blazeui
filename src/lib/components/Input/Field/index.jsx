@@ -2,20 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Field (props) {
-  const { className, iconLeft, iconRight, children, fixed } = props;
+function Field(props) {
+  const {
+    className, iconLeft, iconRight, children, fixed,
+  } = props;
   const classes = classNames(
-      'o-field',
-      { 'o-field--icon-left': iconLeft },
-      { 'o-field--icon-right': iconRight },
-      { 'o-field--fixed': fixed },
-      className
+    'o-field',
+    { 'o-field--icon-left': iconLeft },
+    { 'o-field--icon-right': iconRight },
+    { 'o-field--fixed': fixed },
+    className,
   );
 
   return (
-      <div {...props} className={classes}>
-        { children }
-      </div>
+    <div {...props} className={classes}>
+      { children }
+    </div>
   );
 }
 

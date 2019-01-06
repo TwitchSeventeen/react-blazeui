@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Item (props) {
+function Item(props) {
   const { children, className, unstyled } = props;
   const classes = classNames(
-      'c-list__item',
-      { 'c-list__item--unstyled': unstyled },
-      className
+    'c-list__item',
+    { 'c-list__item--unstyled': unstyled },
+    className,
   );
 
   return (
-      <li {...props} className={classes}>
-        { children }
-      </li>
+    <li {...props} className={classes}>
+      { children }
+    </li>
   );
 }
 

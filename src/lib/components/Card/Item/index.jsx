@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Item (props) {
+function Item(props) {
   const { children, type, className } = props;
   const classes = classNames('c-card__item', { [`c-card__item--${type}`]: type }, className);
   return (
-      <div className={classes}>
-        { children }
-      </div>
+    <div className={classes}>
+      { children }
+    </div>
   );
 }
 
@@ -30,7 +30,7 @@ Item.propTypes = {
     'warning',
     'success',
     'error',
-  ])
+  ]),
 };
 
 Item.defaultProps = {

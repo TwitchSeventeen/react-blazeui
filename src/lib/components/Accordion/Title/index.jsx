@@ -26,7 +26,6 @@ class Title extends React.Component {
       <button
         {...this.props}
         type="button"
-        role="heading"
         aria-expanded={active.toString()}
         className={classes}
         onClick={this.handleClick}

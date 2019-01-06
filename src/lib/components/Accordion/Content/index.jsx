@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '../../Card';
 import classNames from 'classnames';
+import Card from '../../Card';
 
-function Content (props) {
-  const { children, className, } = props;
+function Content(props) {
+  const { children, className } = props;
   const classes = classNames('c-card__item--pane', className);
   return (
-      <Card.Item
-          {...props}
-          className={classes}
-      >
-        { children }
-      </Card.Item>
+    <Card.Item
+      {...props}
+      className={classes}
+    >
+      { children }
+    </Card.Item>
   );
 }
 

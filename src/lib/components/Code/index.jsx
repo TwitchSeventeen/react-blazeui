@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Code (props) {
+function Code(props) {
   const { children, multiline } = props;
   const classes = classNames('u-code', { 'u-code--multiline': multiline });
   return (
-      <code className={classes}>
-        { children }
-      </code>
+    <code className={classes}>
+      { children }
+    </code>
   );
 }
 

@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Item (props) {
+function Item(props) {
   const { children, active } = props;
   return (
-      <li
-          className="c-breadcrumbs__crumb"
-          aria-current={ active ? 'page' : null }
-      >
-          { children }
-      </li>
+    <li
+      className="c-breadcrumbs__crumb"
+      aria-current={active ? 'page' : null}
+    >
+      { children }
+    </li>
   );
 }
 

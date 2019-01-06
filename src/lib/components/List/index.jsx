@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Item from './Item';
 
-function List (props) {
-  const { children, className, ordered, unstyled, inline } = props;
+function List(props) {
+  const {
+    children, className, ordered, unstyled, inline,
+  } = props;
   const classes = classNames(
-      'c-list',
-      { 'c-list--ordered': ordered },
-      { 'c-list--unstyled': unstyled },
-      { 'c-list--inline': inline },
-      className
+    'c-list',
+    { 'c-list--ordered': ordered },
+    { 'c-list--unstyled': unstyled },
+    { 'c-list--inline': inline },
+    className,
   );
 
   if (ordered) {
@@ -22,9 +24,9 @@ function List (props) {
   }
 
   return (
-      <ul {...props} className={classes}>
-        { children }
-      </ul>
+    <ul {...props} className={classes}>
+      { children }
+    </ul>
   );
 }
 
