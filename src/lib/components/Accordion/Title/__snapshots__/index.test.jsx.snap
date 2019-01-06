@@ -7,7 +7,6 @@ exports[`Title renders correctly 1`] = `
   className="c-card__control"
   index={null}
   onClick={[Function]}
-  role="heading"
   type="button"
 >
   lorem ipsum dolor
