@@ -2,7 +2,6 @@
 
 exports[`Title renders correctly 1`] = `
 <button
-  active={true}
   aria-expanded="true"
   className="c-card__control"
   index={null}
