@@ -9,6 +9,7 @@ function Grid(props) {
   } = props;
   const classes = classNames(
     'o-grid',
+    'u-text',
     { 'o-grid--full': full },
     { 'o-grid--wrap': wrap },
     { [`o-grid--${align}`]: align },

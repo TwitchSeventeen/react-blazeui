@@ -4,7 +4,11 @@ import classNames from 'classnames';
 
 function Container(props) {
   const { children, className, size } = props;
-  const classes = classNames('o-container', `o-container--${size}`, className);
+  const classes = classNames(
+    'u-text',
+    'o-container',
+    `o-container--${size}`, className,
+  );
   return (
     <div className={classes}>
       { children }
