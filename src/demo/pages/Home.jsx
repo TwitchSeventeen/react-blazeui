@@ -1,6 +1,8 @@
 import React from 'react';
+import styles from './styles.module.css';
+import Layout from '../layout/Layout';
 import {
-  Breadcrumbs, Accordion, Container, Grid,
+  Accordion, Container, Grid, Icon,
 } from '../../lib';
 
 class Home extends React.Component {
@@ -23,50 +25,52 @@ class Home extends React.Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Container>
-        <Breadcrumbs>
-          <Breadcrumbs.Item><a href="/" className="c-link">Home</a></Breadcrumbs.Item>
-          <Breadcrumbs.Item><a href="/lorem" className="c-link">lorem</a></Breadcrumbs.Item>
-          <Breadcrumbs.Item active>ipsum</Breadcrumbs.Item>
-        </Breadcrumbs>
+      <Layout>
+
+        <div className={styles.homeHero}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi et i
+        </div>
+
+        <Container>
+          <Grid>
+            <Grid.Cell width={33} className="text-center">
+              <Icon name="globe-europe" size="5x" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi et i
+              </p>
+            </Grid.Cell>
+            <Grid.Cell width={33} className="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi et i
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi et i
+            </Grid.Cell>
+            <Grid.Cell width={33} className="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi et i
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi et i
+            </Grid.Cell>
+          </Grid>
+        </Container>
 
 
-        <Accordion>
-          <Accordion.Title active={activeItem === 0} index={0} onClick={this.handleClick}>
+        <Container>
+
+          <Accordion>
+            <Accordion.Title active={activeItem === 0} index={0} onClick={this.handleClick}>
               Heading one
-          </Accordion.Title>
-          <Accordion.Content>
+            </Accordion.Title>
+            <Accordion.Content>
               This is the body
-          </Accordion.Content>
+            </Accordion.Content>
 
-          <Accordion.Title active={activeItem === 1} index={1} onClick={this.handleClick}>
+            <Accordion.Title active={activeItem === 1} index={1} onClick={this.handleClick}>
               Heading two
-          </Accordion.Title>
-          <Accordion.Content>
+            </Accordion.Title>
+            <Accordion.Content>
               This is the second body
-          </Accordion.Content>
-        </Accordion>
+            </Accordion.Content>
+          </Accordion>
 
-
-        <Grid>
-          <Grid.Cell>lorem</Grid.Cell>
-          <Grid.Cell>lorem</Grid.Cell>
-          <Grid.Cell>lorem</Grid.Cell>
-        </Grid>
-
-        <Grid className="demo" small="full" medium="fit" large="full">
-          <Grid.Cell>
-            <div className="text">first</div>
-          </Grid.Cell>
-          <Grid.Cell>
-            <div className="text">second</div>
-          </Grid.Cell>
-          <Grid.Cell>
-            <div className="text">third</div>
-          </Grid.Cell>
-        </Grid>
-
-      </Container>
+        </Container>
+      </Layout>
     );
   }
 }
