@@ -4,6 +4,10 @@
     // questionable rule implementation
     "react/button-has-type": 0,
 
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+
     // Allow children in inputs
     "jsx-a11y/label-has-for": [ 2, {
       "allowChildren": true
