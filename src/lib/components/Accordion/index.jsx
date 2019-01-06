@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Card from '../Card';
 import Title from './Title';
 import Content from './Content';
-import classNames from 'classnames';
 
-function Accordion (props) {
+function Accordion(props) {
   const { children, className } = props;
   const classes = classNames('c-card--accordion', className);
   return (
-      <Card
-          {...props}
-          className={classes}
-      >
-        { children }
-      </Card>
+    <Card
+      {...props}
+      className={classes}
+    >
+      { children }
+    </Card>
   );
 }
 

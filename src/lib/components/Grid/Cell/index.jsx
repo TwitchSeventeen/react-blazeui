@@ -2,26 +2,41 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function Cell (props) {
-  const { align, children, className, offset, width, xsmall, small, medium, large, xlarge, huge, noGutter, fixedWidth } = props;
+function Cell(props) {
+  const {
+    align,
+    children,
+    className,
+    offset,
+    width,
+    xsmall,
+    small,
+    medium,
+    large,
+    xlarge,
+    huge,
+    noGutter,
+    fixedWidth,
+  } = props;
   const classes = classNames(
-      'o-grid__cell',
-      { [`o-grid__cell--width-${width}`]: width },
-      { [`o-grid__cell--offset-${offset}`]: offset },
-      { [`o-grid__cell--${align}`]: align },
-      { ['o-grid__cell--no-gutter']: noGutter },
-      { ['o-grid__cell--width-fixed']: fixedWidth },
-      { [`o-grid__cell--width-${xsmall}@xsmall`]: xsmall },
-      { [`o-grid__cell--width-${small}@small`]: small },
-      { [`o-grid__cell--width-${medium}@medium`]: medium },
-      { [`o-grid__cell--width-${large}@large`]: large },
-      { [`o-grid__cell--width-${xlarge}@xlarge`]: xlarge },
-      { [`o-grid__cell--width-${huge}@super`]: huge },
-      className);
+    'o-grid__cell',
+    { [`o-grid__cell--width-${width}`]: width },
+    { [`o-grid__cell--offset-${offset}`]: offset },
+    { [`o-grid__cell--${align}`]: align },
+    { 'o-grid__cell--no-gutter': noGutter },
+    { 'o-grid__cell--width-fixed': fixedWidth },
+    { [`o-grid__cell--width-${xsmall}@xsmall`]: xsmall },
+    { [`o-grid__cell--width-${small}@small`]: small },
+    { [`o-grid__cell--width-${medium}@medium`]: medium },
+    { [`o-grid__cell--width-${large}@large`]: large },
+    { [`o-grid__cell--width-${xlarge}@xlarge`]: xlarge },
+    { [`o-grid__cell--width-${huge}@super`]: huge },
+    className,
+  );
   return (
-      <div {...props} className={classes}>
-        { children }
-      </div>
+    <div {...props} className={classes}>
+      { children }
+    </div>
   );
 }
 
