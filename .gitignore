@@ -10,6 +10,9 @@
 # testing
 /coverage
 
+# styleguide
+./docz/cache
+
 # misc
 .DS_Store
 .env.local
