@@ -6,3 +6,24 @@
 
 
 react-blazeui is an _unofficial_ implementation of [Blaze UI](https://www.blazeui.com/) components built with React JS.
+
+## Install
+```shell
+$ npm install --save react-blazeui
+```
+
+## Usage
+
+Import the stylesheet into your project.
+```jsx
+import 'react-blazeui/build/static/css/index.css';
+```
+
+Import the components to wherever you need them. 
+```jsx
+import { Container, Grid } from 'react-blazeui';
+```
+
+## License
+
+Licensed under the MIT License - see [LICENSE.md](LICENSE.md)
