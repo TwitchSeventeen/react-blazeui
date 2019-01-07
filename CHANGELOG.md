@@ -1,3 +1,12 @@
+### v0.1.4 - Mon 7th Jan '18
+* Added u-text class to Container and Grid components
+* Added Routing to demo app
+* Added function omitOwnProps to remove component props before spreading
+* Updated README
+
+* **Bug:**
+Fixed demo app
+
 ### v0.1.3 - Sun 6th Jan '18
 * Updated failing tests
 
