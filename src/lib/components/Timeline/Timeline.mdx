@@ -1,0 +1,69 @@
+---
+name: Timeline
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Timeline from './index';
+import Quiet from '../Quiet';
+
+# Timeline
+Timelines are good to illustrate a connected set of events that have happened or are planned to happen.
+
+## Standard
+<Playground>
+    <Timeline>
+        <Timeline.Item>
+            Nothing
+        </Timeline.Item>
+        <Timeline.Item>
+            Big Bang
+        </Timeline.Item>
+        <Timeline.Item>
+            Galaxies go everywhere
+        </Timeline.Item>
+        <Timeline.Item>
+            Solar systems form
+        </Timeline.Item>
+        <Timeline.Item>
+            Earth appears
+        </Timeline.Item>
+        <Timeline.Item>
+            Human infestation occurs!
+        </Timeline.Item>
+        <Timeline.Item last>
+            All this has happened before, and will happen again
+        </Timeline.Item>
+    </Timeline>
+</Playground>
+
+## Colours
+<Playground>
+    <Timeline>
+        <Timeline.Item>
+            Nothing
+        </Timeline.Item>
+        <Timeline.Item type="brand">
+            Big Bang
+        </Timeline.Item>
+        <Timeline.Item type="info">
+            Galaxies go everywhere
+        </Timeline.Item>
+        <Timeline.Item type="warning">
+            Solar systems form
+        </Timeline.Item>
+        <Timeline.Item type="success">
+            Earth appears
+        </Timeline.Item>
+        <Timeline.Item type="error">
+            Human infestation occurs!
+        </Timeline.Item>
+        <Timeline.Item last>
+            All this has happened before, and will happen again
+        </Timeline.Item>
+    </Timeline>
+</Playground>
+
+## Properties
+### Timeline
+<PropsTable of={Timeline} />
