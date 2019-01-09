@@ -4,11 +4,15 @@ import classNames from 'classnames';
 import omitOwnProps from '../../../utils/omitOwnProps';
 
 function Item(props) {
-  const { children, className, last, type } = props;
+  const {
+    children, className, last, type, loading, left,
+  } = props;
   const classes = classNames(
     'c-timeline-item',
     { 'c-timeline-item--last': last },
     { [`c-timeline-item--${type}`]: type },
+    { 'c-timeline-item--loading': loading },
+    { 'c-timeline-item--left': left },
     className,
   );
   const spreadProps = omitOwnProps(props);
@@ -44,6 +48,14 @@ Item.propTypes = {
     'success',
     'error',
   ]),
+  /**
+   * Defines an item that hasn't happened yet
+   */
+  loading: PropTypes.bool,
+  /**
+   * Displays an item on the left side of the Timeline
+   */
+  left: PropTypes.bool,
 };
 
 Item.defaultProps = {
@@ -51,6 +63,8 @@ Item.defaultProps = {
   className: null,
   last: false,
   type: null,
+  loading: false,
+  left: false,
 };
 
 export default Item;

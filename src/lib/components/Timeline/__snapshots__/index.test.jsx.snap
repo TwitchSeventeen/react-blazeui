@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline renders correctly 1`] = `
+<ul
+  className="o-timeline"
+>
+  <Item
+    className={null}
+    last={false}
+    left={false}
+    loading={false}
+    type={null}
+  >
+    lorem ipsum dolor
+  </Item>
+</ul>
+`;
+
+exports[`Timeline renders correctly with a loading item 1`] = `
+<ul
+  className="o-timeline o-timeline--loading"
+>
+  <Item
+    className={null}
+    last={false}
+    left={false}
+    loading={false}
+    type={null}
+  >
+    lorem ipsum dolor
+  </Item>
+  <Item
+    className={null}
+    last={false}
+    left={false}
+    loading={true}
+    type={null}
+  >
+    lorem ipsum dolor
+  </Item>
+</ul>
+`;
+
+exports[`Timeline renders correctly with left Items 1`] = `
+<ul
+  className="o-timeline o-timeline--alternate"
+>
+  <Item
+    className={null}
+    last={false}
+    left={false}
+    loading={false}
+    type={null}
+  >
+    lorem ipsum dolor
+  </Item>
+  <Item
+    className={null}
+    last={false}
+    left={true}
+    loading={false}
+    type={null}
+  >
+    lorem ipsum dolor
+  </Item>
+</ul>
+`;

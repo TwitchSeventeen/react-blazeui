@@ -1,5 +1,6 @@
 ---
 name: Timeline
+route: /components/timeline
 menu: Components
 ---
 
@@ -64,6 +65,76 @@ Timelines are good to illustrate a connected set of events that have happened or
     </Timeline>
 </Playground>
 
+## Loading last item
+
+Use the **loading** prop on both the _Timeline_ and _Timeline.Item_ components to indicate the last item hasn't happened yet.
+<Playground>
+    <Timeline loading>
+        <Timeline.Item>
+            Nothing
+        </Timeline.Item>
+        <Timeline.Item>
+            Big Bang
+        </Timeline.Item>
+        <Timeline.Item>
+            Galaxies go everywhere
+        </Timeline.Item>
+        <Timeline.Item>
+            Solar systems form
+        </Timeline.Item>
+        <Timeline.Item>
+            Earth appears
+        </Timeline.Item>
+        <Timeline.Item>
+            Human infestation occurs!
+        </Timeline.Item>
+        <Timeline.Item last>
+            All this has happened before, and will happen again
+        </Timeline.Item>
+        <Timeline.Item loading>
+            ...Evolution
+        </Timeline.Item>
+    </Timeline>
+</Playground>
+
+## Alternating items
+
+Use the **left** prop on a _Timeline.Item_ to put it on the left side of the Timeline.
+
+Make sure to put the **alternate** prop on the _Timeline_ as well.
+
+<Playground>
+    <Timeline loading alternate>
+        <Timeline.Item>
+            Nothing
+        </Timeline.Item>
+        <Timeline.Item type="brand">
+            Big Bang
+        </Timeline.Item>
+        <Timeline.Item type="info" left>
+            Galaxies go everywhere
+        </Timeline.Item>
+        <Timeline.Item type="warning">
+            Solar systems form
+        </Timeline.Item>
+        <Timeline.Item type="success" left>
+            Earth appears
+        </Timeline.Item>
+        <Timeline.Item type="error">
+            Human infestation occurs!
+        </Timeline.Item>
+        <Timeline.Item last left>
+            All this has happened before, and will happen again
+        </Timeline.Item>
+        <Timeline.Item loading>
+            ...Evolution
+        </Timeline.Item>
+    </Timeline>
+</Playground>
+
 ## Properties
 ### Timeline
 <PropsTable of={Timeline} />
+
+### Timeline.Item
+<PropsTable of={Timeline.Item} />
