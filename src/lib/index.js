@@ -23,6 +23,7 @@ import Loud from './components/Loud';
 import Mono from './components/Mono';
 import Panel from './components/Panel';
 import Quiet from './components/Quiet';
+import Timeline from './components/Timeline';
 
 export {
   Abbr,
@@ -47,4 +48,5 @@ export {
   Mono,
   Panel,
   Quiet,
+  Timeline,
 };
