@@ -5,7 +5,9 @@ import omitOwnProps from '../../utils/omitOwnProps';
 import Item from './Item';
 
 function Timeline(props) {
-  const { children, className, loading, alternate } = props;
+  const {
+    children, className, loading, alternate,
+  } = props;
   const classes = classNames(
     'o-timeline',
     { 'o-timeline--loading': loading },

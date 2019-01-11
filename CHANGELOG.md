@@ -1,3 +1,6 @@
+### v0.1.8 - Fri 11th Jan '18
+* Added export for Timeline
+
 ### v0.1.7 - Fri 11th Jan '18
 * Refactored omitOwnProps to remove lodash dependency
     * Was preventing webpack from importing components
