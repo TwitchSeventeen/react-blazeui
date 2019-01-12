@@ -1,6 +1,7 @@
 export default {
   indexHtml: 'src/demo/index.html',
   title: 'React Blaze UI',
+  hashRouter: true,
   themeConfig: {
     mode: 'light',
     showPlaygroundEditor: true,
