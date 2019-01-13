@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import omitOwnProps from '../../utils/omitOwnProps';
 
 function Blockquote(props) {
   const { children, cite } = props;
+  const spreadProps = omitOwnProps(props);
   return (
-    <blockquote className="u-blockquote">
+    <blockquote {...spreadProps} className="u-blockquote">
       <div className="u-blockquote__body">
         { children }
       </div>

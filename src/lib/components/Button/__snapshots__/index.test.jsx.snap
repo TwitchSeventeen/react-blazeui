@@ -2,13 +2,7 @@
 
 exports[`Button renders correctly 1`] = `
 <button
-  active={false}
-  buttonType="button"
   className="c-button"
-  fluid={false}
-  ghost={false}
-  rounded={false}
-  size={null}
   type="button"
 >
   lorem ipsum dolor
@@ -17,13 +11,7 @@ exports[`Button renders correctly 1`] = `
 
 exports[`Button renders correctly a button with a type 1`] = `
 <button
-  active={false}
-  buttonType="button"
   className="c-button c-button--success"
-  fluid={false}
-  ghost={false}
-  rounded={false}
-  size={null}
   type="button"
 >
   lorem ipsum dolor
@@ -32,13 +20,7 @@ exports[`Button renders correctly a button with a type 1`] = `
 
 exports[`Button renders correctly a ghost button 1`] = `
 <button
-  active={false}
-  buttonType="button"
   className="c-button c-button--ghost"
-  fluid={false}
-  ghost={true}
-  rounded={false}
-  size={null}
   type="button"
 >
   lorem ipsum dolor
@@ -47,13 +29,7 @@ exports[`Button renders correctly a ghost button 1`] = `
 
 exports[`Button renders correctly a ghost button with a type 1`] = `
 <button
-  active={false}
-  buttonType="button"
   className="c-button c-button--ghost-success"
-  fluid={false}
-  ghost={true}
-  rounded={false}
-  size={null}
   type="button"
 >
   lorem ipsum dolor

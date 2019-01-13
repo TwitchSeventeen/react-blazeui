@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import omitOwnProps from '../../utils/omitOwnProps';
 
 /**
  * An alert message
@@ -13,9 +14,9 @@ function Alert(props) {
     children, dismissable, onDismiss, type,
   } = props;
   const classes = classNames('c-alert', { [`c-alert--${type}`]: type });
-
+  const spreadProps = omitOwnProps(props);
   return (
-    <div role="alert" className={classes}>
+    <div role="alert" {...spreadProps} className={classes}>
       {children}
       { dismissable
         && <button className="c-button c-button--close" onClick={onDismiss} type="button">&times;</button>

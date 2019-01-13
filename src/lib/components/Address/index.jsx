@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import omitOwnProps from '../../utils/omitOwnProps';
 
 function Address(props) {
   const { children, className } = props;
   const classes = classNames('c-address', className);
+  const spreadProps = omitOwnProps(props);
   return (
-    <address {...props} className={classes}>
+    <address {...spreadProps} className={classes}>
       { children }
     </address>
   );
