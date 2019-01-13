@@ -8,6 +8,10 @@
 
 react-blazeui is an _unofficial_ implementation of [Blaze UI](https://www.blazeui.com/) components built with React JS.
 
+
+* [Docs](http://docs.react-blazeui.io/#/)
+* [Components](http://react-blazeui.io/components)
+
 ## Install
 ```shell
 $ npm install --save react-blazeui
