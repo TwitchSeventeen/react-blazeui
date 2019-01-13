@@ -9,22 +9,48 @@ import Accordion from './index';
 
 # Accordion
 <Playground>
-    <Accordion>
-        <Accordion.Title active>
-            Heading one
-        </Accordion.Title>
-          <Accordion.Content>
-            This is the body
-          </Accordion.Content>
-          
-          <Accordion.Title>
-            Heading two
-          </Accordion.Title>
-          <Accordion.Content>
-            This is the second body
-          </Accordion.Content>
-    </Accordion>
+    {() => {
+        class TestAccordion extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = { activeItem: 0 };
+            this.handleClick = this.handleClick.bind(this);
+          }
+        
+          handleClick(event, titleProps) {
+            const { index } = titleProps;
+            const { activeItem } = this.state;
+            const newIndex = activeItem === index ? -1 : index;
+            this.setState({ activeItem: newIndex });
+          }
+        
+          render() {
+            const { activeItem } = this.state;
+            return (
+              <Accordion>
+                <Accordion.Title active={activeItem === 0} index={0} onClick={this.handleClick}>
+                    Heading one
+                </Accordion.Title>
+                <Accordion.Content>
+                    This is the body
+                </Accordion.Content>
+        
+                <Accordion.Title active={activeItem === 1} index={1} onClick={this.handleClick}>
+                    Heading two
+                </Accordion.Title>
+                <Accordion.Content>
+                    This is the second body
+                </Accordion.Content>
+              </Accordion>
+            );
+          }
+        }
+        return <TestAccordion />;
+    }}
+    
 </Playground>
+
+The example above includes the logic required to make the Accordion work.
 
 ## Properties
 ### Accordion
