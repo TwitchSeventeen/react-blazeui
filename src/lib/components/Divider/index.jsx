@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Divider(props) {
-  const { children, type, ...other } = props;
-  const classes = classNames('c-divider', { [`c-divider--${type}`]: type });
+  const { children, type, className, ...other } = props;
+  const classes = classNames('c-divider', { [`c-divider--${type}`]: type }, className);
   return (
     <div {...other} className={classes}>
       <div className="c-divider__content">
@@ -26,11 +26,16 @@ Divider.propTypes = {
     'solid',
     'dashed',
   ]),
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
 };
 
 Divider.defaultProps = {
   children: null,
   type: 'solid',
+  className: null,
 };
 
 export default Divider;
