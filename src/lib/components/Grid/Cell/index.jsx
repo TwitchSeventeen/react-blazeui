@@ -17,6 +17,7 @@ function Cell(props) {
     huge,
     noGutter,
     fixedWidth,
+    ...other
   } = props;
   const classes = classNames(
     'o-grid__cell',
@@ -34,7 +35,7 @@ function Cell(props) {
     className,
   );
   return (
-    <div {...props} className={classes}>
+    <div {...other} className={classes}>
       { children }
     </div>
   );

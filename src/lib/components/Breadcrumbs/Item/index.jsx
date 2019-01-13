@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import omitOwnProps from '../../../utils/omitOwnProps';
 
 function Item(props) {
-  const { children, active } = props;
-  const spreadProps = omitOwnProps(props);
+  const { children, active, ...other } = props;
   return (
     <li
-      {...spreadProps}
+      {...other}
       className="c-breadcrumbs__crumb"
       aria-current={active ? 'page' : null}
     >

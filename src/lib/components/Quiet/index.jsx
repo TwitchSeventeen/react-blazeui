@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Quiet(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <span className="u-text--quiet">
+    <span {...other} className="u-text--quiet">
       { children }
     </span>
   );

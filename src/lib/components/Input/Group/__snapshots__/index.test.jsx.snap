@@ -3,10 +3,6 @@
 exports[`Field.Group renders correctly 1`] = `
 <div
   className="c-input-group"
-  rounded={false}
-  roundedLeft={false}
-  roundedRight={false}
-  stacked={false}
 >
   lorem ipsum dolor
 </div>

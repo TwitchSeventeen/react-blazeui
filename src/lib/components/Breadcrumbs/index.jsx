@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Item from './Item';
-import omitOwnProps from '../../utils/omitOwnProps';
 
 
 function Breadcrumbs(props) {
-  const { children } = props;
-  const spreadProps = omitOwnProps(props);
+  const { children, ...other } = props;
   return (
-    <nav {...spreadProps} aria-label="Breadcrumb">
+    <nav {...other} aria-label="Breadcrumb">
       <ol className="c-breadcrumbs">
         { children }
       </ol>

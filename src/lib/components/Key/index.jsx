@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Key(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <kbd className="u-kbd">
+    <kbd {...other} className="u-kbd">
       { children }
     </kbd>
   );

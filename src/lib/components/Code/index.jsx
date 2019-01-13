@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Code(props) {
-  const { children, multiline } = props;
+  const { children, multiline, ...other } = props;
   const classes = classNames('u-code', { 'u-code--multiline': multiline });
   return (
-    <code className={classes}>
+    <code {...other} className={classes}>
       { children }
     </code>
   );

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Highlight(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <span className="u-text--highlight">
+    <span {...other} className="u-text--highlight">
       { children }
     </span>
   );

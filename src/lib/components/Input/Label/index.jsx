@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Label(props) {
   const {
-    className, choice, children, inputId,
+    className, choice, children, inputId, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,7 +14,7 @@ function Label(props) {
   );
 
   return (
-    <label {...props} className={classes} htmlFor={inputId}>
+    <label {...other} className={classes} htmlFor={inputId}>
       { children }
     </label>
   );

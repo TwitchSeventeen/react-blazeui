@@ -10,7 +10,7 @@ import Label from './Label';
 
 function Input(props) {
   const {
-    className, success, error, size,
+    className, success, error, size, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -21,7 +21,7 @@ function Input(props) {
   );
 
   return (
-    <input {...props} className={classes} />
+    <input {...other} className={classes} />
   );
 }
 

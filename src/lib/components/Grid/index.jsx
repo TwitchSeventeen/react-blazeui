@@ -5,7 +5,19 @@ import Cell from './Cell';
 
 function Grid(props) {
   const {
-    align, children, className, full, wrap, xsmall, small, medium, large, xlarge, huge, noGutter,
+    align,
+    children,
+    className,
+    full,
+    wrap,
+    xsmall,
+    small,
+    medium,
+    large,
+    xlarge,
+    huge,
+    noGutter,
+    ...other
   } = props;
   const classes = classNames(
     'o-grid',
@@ -23,7 +35,7 @@ function Grid(props) {
     className,
   );
   return (
-    <div {...props} className={classes}>
+    <div {...other} className={classes}>
       { children }
     </div>
   );

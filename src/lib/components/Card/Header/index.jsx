@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Header(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <header className="c-card__header">
+    <header {...other} className="c-card__header">
       { children }
     </header>
   );

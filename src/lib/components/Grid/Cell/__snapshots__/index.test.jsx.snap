@@ -2,18 +2,7 @@
 
 exports[`Cell renders correctly 1`] = `
 <div
-  align={null}
   className="o-grid__cell"
-  fixedWidth={false}
-  huge={null}
-  large={null}
-  medium={null}
-  noGutter={false}
-  offset={null}
-  small={null}
-  width={null}
-  xlarge={null}
-  xsmall={null}
 >
   lorem
 </div>
@@ -21,17 +10,7 @@ exports[`Cell renders correctly 1`] = `
 
 exports[`Cell renders correctly with correct alignment 1`] = `
 <div
-  align={null}
   className="o-grid u-text demo"
-  full={false}
-  huge={null}
-  large={null}
-  medium={null}
-  noGutter={false}
-  small={null}
-  wrap={false}
-  xlarge={null}
-  xsmall={null}
 >
   <Cell
     align="top"
@@ -127,17 +106,7 @@ exports[`Cell renders correctly with correct alignment 1`] = `
 
 exports[`Cell renders correctly with responsive props 1`] = `
 <div
-  align={null}
   className="o-grid u-text o-grid--wrap demo"
-  full={false}
-  huge={null}
-  large={null}
-  medium={null}
-  noGutter={false}
-  small={null}
-  wrap={true}
-  xlarge={null}
-  xsmall={null}
 >
   <Cell
     align={null}

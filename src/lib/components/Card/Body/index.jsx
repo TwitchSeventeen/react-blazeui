@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Body(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <div className="c-card__body">
+    <div {...other} className="c-card__body">
       { children }
     </div>
   );

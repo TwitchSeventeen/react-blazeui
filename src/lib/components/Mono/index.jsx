@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Mono(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <span className="u-text--mono">
+    <span {...other} className="u-text--mono">
       { children }
     </span>
   );

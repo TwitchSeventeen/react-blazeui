@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Checkbox(props) {
   const {
-    className, success, error, radio,
+    className, success, error, radio, ...other
   } = props;
   const classes = classNames(
     { 'c-field--success': success },
@@ -14,12 +14,12 @@ function Checkbox(props) {
 
   if (radio) {
     return (
-      <input {...props} className={classes} type="radio" />
+      <input {...other} className={classes} type="radio" />
     );
   }
 
   return (
-    <input {...props} className={classes} type="checkbox" />
+    <input {...other} className={classes} type="checkbox" />
   );
 }
 

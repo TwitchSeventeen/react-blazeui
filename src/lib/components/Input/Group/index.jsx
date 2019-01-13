@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Group(props) {
   const {
-    className, children, stacked, rounded, roundedLeft, roundedRight,
+    className, children, stacked, rounded, roundedLeft, roundedRight, ...other
   } = props;
   const classes = classNames(
     'c-input-group',
@@ -16,7 +16,7 @@ function Group(props) {
   );
 
   return (
-    <div {...props} className={classes}>
+    <div {...other} className={classes}>
       { children }
     </div>
   );

@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import omitOwnProps from '../../utils/omitOwnProps';
 
 function Badge(props) {
   const {
-    children, type, rounded, ghost,
+    children, type, rounded, ghost, ...other
   } = props;
-  const spreadProps = omitOwnProps(props);
   const classes = classNames(
     'c-badge',
     { [`c-badge--${type}`]: type },
@@ -16,7 +14,7 @@ function Badge(props) {
   );
 
   return (
-    <span {...spreadProps} className={classes}>
+    <span {...other} className={classes}>
       { children }
     </span>
   );

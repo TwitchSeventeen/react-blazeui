@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Footer(props) {
-  const { children, block } = props;
+  const { children, block, ...other } = props;
   const classes = classNames('c-card__footer', { 'c-card__footer--block': block });
   return (
-    <footer className={classes}>
+    <footer {...other} className={classes}>
       { children }
     </footer>
   );

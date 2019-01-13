@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import omitOwnProps from '../../../utils/omitOwnProps';
 
 class Title extends React.Component {
   constructor(props) {
@@ -22,13 +21,12 @@ class Title extends React.Component {
 
   render() {
     const {
-      children, className, active, index,
+      children, className, active, index, ...other
     } = this.props;
     const classes = classNames('c-card__control', className);
-    const spreadProps = omitOwnProps(this.props);
     return (
       <button
-        {...spreadProps}
+        {...other}
         type="button"
         aria-expanded={active.toString()}
         className={classes}

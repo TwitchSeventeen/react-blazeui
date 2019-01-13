@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Group from '../Input/Group';
-import omitOwnProps from '../../utils/omitOwnProps';
 
 function Button(props) {
   const {
-    children, className, buttonType, type, size, fluid, ghost, rounded, active,
+    children, className, buttonType, type, size, fluid, ghost, rounded, active, ...other
   } = props;
   const classes = classNames(
     'c-button',
@@ -19,9 +18,9 @@ function Button(props) {
     { [`u-${size}`]: size },
     className,
   );
-  const spreadProps = omitOwnProps(props);
+
   return (
-    <button {...spreadProps} type={buttonType} className={classes}>
+    <button {...other} type={buttonType} className={classes}>
       { children }
     </button>
   );

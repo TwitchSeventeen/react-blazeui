@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Divider(props) {
-  const { children, type } = props;
+  const { children, type, ...other } = props;
   const classes = classNames('c-divider', { [`c-divider--${type}`]: type });
   return (
-    <div className={classes}>
+    <div {...other} className={classes}>
       <div className="c-divider__content">
         { children }
       </div>

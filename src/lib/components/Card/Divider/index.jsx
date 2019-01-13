@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Divider(props) {
-  const { children, type, separator } = props;
+  const {
+    children, type, separator, ...other
+  } = props;
   const classes = classNames('c-card__item', 'c-card__item--divider', { [`c-card__item--${type}`]: type });
 
   if (separator) {
@@ -13,7 +15,7 @@ function Divider(props) {
   }
 
   return (
-    <div role={type ? null : 'separator'} className={classes}>
+    <div {...other} role={type ? null : 'separator'} className={classes}>
       { children }
     </div>
   );
