@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Item from './Item';
 
-
 function Breadcrumbs(props) {
   const { children, ...other } = props;
   return (

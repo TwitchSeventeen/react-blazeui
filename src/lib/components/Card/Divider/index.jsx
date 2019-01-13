@@ -4,13 +4,15 @@ import classNames from 'classnames';
 
 function Divider(props) {
   const {
-    children, type, separator, ...other
+    children, type, separator, className, ...other
   } = props;
-  const classes = classNames('c-card__item', 'c-card__item--divider', { [`c-card__item--${type}`]: type });
+  const classes = classNames('c-card__item', 'c-card__item--divider', { [`c-card__item--${type}`]: type }, className);
+
+  const separatorClasses = classNames('c-card__divider', className);
 
   if (separator) {
     return (
-      <div role="separator" className="c-card__divider" />
+      <div role="separator" className={separatorClasses} />
     );
   }
 

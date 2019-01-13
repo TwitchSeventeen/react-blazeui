@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Item(props) {
-  const { children, type, className, ...other } = props;
+  const {
+    children, type, className, ...other
+  } = props;
   const classes = classNames('c-card__item', { [`c-card__item--${type}`]: type }, className);
   return (
     <div {...other} className={classes}>
