@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Badge(props) {
   const {
-    children, type, rounded, ghost,
+    children, type, rounded, ghost, ...other
   } = props;
   const classes = classNames(
     'c-badge',
@@ -14,7 +14,7 @@ function Badge(props) {
   );
 
   return (
-    <span className={classes}>
+    <span {...other} className={classes}>
       { children }
     </span>
   );

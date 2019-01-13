@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import omitOwnProps from '../../../utils/omitOwnProps';
 
 function Item(props) {
   const {
-    children, className, last, type, loading, left,
+    children, className, last, type, loading, left, ...other
   } = props;
   const classes = classNames(
     'c-timeline-item',
@@ -15,9 +14,9 @@ function Item(props) {
     { 'c-timeline-item--left': left },
     className,
   );
-  const spreadProps = omitOwnProps(props);
+
   return (
-    <li {...spreadProps} className={classes}>
+    <li {...other} className={classes}>
       <div className="c-timeline-item__body">
         { children }
       </div>

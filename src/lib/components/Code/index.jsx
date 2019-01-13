@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Code(props) {
-  const { children, multiline } = props;
-  const classes = classNames('u-code', { 'u-code--multiline': multiline });
+  const { children, multiline, className, ...other } = props;
+  const classes = classNames('u-code', { 'u-code--multiline': multiline }, className);
   return (
-    <code className={classes}>
+    <code {...other} className={classes}>
       { children }
     </code>
   );
@@ -21,11 +21,16 @@ Code.propTypes = {
    * Defines a multi-line code snippet
    */
   multiline: PropTypes.bool,
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
 };
 
 Code.defaultProps = {
   children: null,
   multiline: false,
+  className: null,
 };
 
 export default Code;

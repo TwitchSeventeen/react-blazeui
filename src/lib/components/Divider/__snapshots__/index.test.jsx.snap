@@ -15,6 +15,7 @@ exports[`Code renders correctly 1`] = `
 exports[`Code renders correctly a multi-line code snippet 1`] = `
 <div
   className="c-divider c-divider--solid"
+  multiline={true}
 >
   <div
     className="c-divider__content"

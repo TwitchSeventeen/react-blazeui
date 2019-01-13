@@ -4,12 +4,5 @@ exports[`Icon renders correctly 1`] = `
 <i
   aria-hidden={true}
   className="c-icon fa-spinner fas"
-  flipped={null}
-  name="spinner"
-  pulse={false}
-  rotate={null}
-  size={null}
-  spin={false}
-  type="fas"
 />
 `;

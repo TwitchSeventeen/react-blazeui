@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Icon(props) {
   const {
-    className, name, type, size, flipped, rotate, spin, pulse,
+    className, name, type, size, flipped, rotate, spin, pulse, ...other
   } = props;
   const classes = classNames(
     'c-icon',
@@ -19,7 +19,7 @@ function Icon(props) {
   );
 
   return (
-    <i {...props} className={classes} aria-hidden />
+    <i {...other} className={classes} aria-hidden />
   );
 }
 

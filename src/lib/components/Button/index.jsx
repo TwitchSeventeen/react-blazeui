@@ -5,7 +5,7 @@ import Group from '../Input/Group';
 
 function Button(props) {
   const {
-    children, className, buttonType, type, size, fluid, ghost, rounded, active,
+    children, className, buttonType, type, size, fluid, ghost, rounded, active, ...other
   } = props;
   const classes = classNames(
     'c-button',
@@ -18,8 +18,9 @@ function Button(props) {
     { [`u-${size}`]: size },
     className,
   );
+
   return (
-    <button {...props} type={buttonType} className={classes}>
+    <button {...other} type={buttonType} className={classes}>
       { children }
     </button>
   );

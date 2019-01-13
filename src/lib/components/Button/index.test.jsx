@@ -10,9 +10,9 @@ describe('Button', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Button>
+      <Button>
           lorem ipsum dolor
-        </Button>
+      </Button>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,9 +22,9 @@ describe('Button', () => {
   it('renders correctly a ghost button', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Button ghost>
+      <Button ghost>
           lorem ipsum dolor
-        </Button>
+      </Button>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -34,9 +34,9 @@ describe('Button', () => {
   it('renders correctly a ghost button with a type', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Button ghost type="success">
+      <Button ghost type="success">
           lorem ipsum dolor
-        </Button>
+      </Button>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -46,9 +46,9 @@ describe('Button', () => {
   it('renders correctly a button with a type', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Button type="success">
+      <Button type="success">
           lorem ipsum dolor
-        </Button>
+      </Button>,
     );
 
     const tree = renderer.getRenderOutput();

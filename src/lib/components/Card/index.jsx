@@ -8,10 +8,12 @@ import Header from './Header';
 import Footer from './Footer';
 
 function Card(props) {
-  const { children, grouped, className } = props;
+  const {
+    children, grouped, className, ...other
+  } = props;
   const classes = classNames('c-card', { 'c-card--grouped': grouped }, className);
   return (
-    <div className={classes}>
+    <div {...other} className={classes}>
       { children }
     </div>
   );

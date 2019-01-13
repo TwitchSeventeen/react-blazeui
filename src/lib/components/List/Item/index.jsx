@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Item(props) {
-  const { children, className, unstyled } = props;
+  const {
+    children, className, unstyled, ...other
+  } = props;
   const classes = classNames(
     'c-list__item',
     { 'c-list__item--unstyled': unstyled },
@@ -11,7 +13,7 @@ function Item(props) {
   );
 
   return (
-    <li {...props} className={classes}>
+    <li {...other} className={classes}>
       { children }
     </li>
   );

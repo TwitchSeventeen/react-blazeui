@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import omitOwnProps from '../../utils/omitOwnProps';
 import Item from './Item';
 
 function Timeline(props) {
   const {
-    children, className, loading, alternate,
+    children, className, loading, alternate, ...other
   } = props;
   const classes = classNames(
     'o-timeline',
@@ -14,9 +13,9 @@ function Timeline(props) {
     { 'o-timeline--alternate': alternate },
     className,
   );
-  const spreadProps = omitOwnProps(props);
+
   return (
-    <ul {...spreadProps} className={classes}>
+    <ul {...other} className={classes}>
       { children }
     </ul>
   );

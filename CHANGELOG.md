@@ -1,3 +1,9 @@
+### v0.2.0 - Sun 13th Jan '18
+* All components spread props to children
+    * Including classnames
+* Accordion docs now has a functioning example
+* Documentation has proper routing
+
 ### v0.1.8 - Fri 11th Jan '18
 * Added export for Timeline
 

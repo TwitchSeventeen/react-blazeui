@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Card from '../../Card';
-import omitOwnProps from '../../../utils/omitOwnProps';
 
 function Content(props) {
-  const { children, className } = props;
+  const { children, className, ...other } = props;
   const classes = classNames('c-card__item--pane', className);
-  const spreadProps = omitOwnProps(props);
   return (
     <Card.Item
-      {...spreadProps}
+      {...other}
       className={classes}
     >
       { children }

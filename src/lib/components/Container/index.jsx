@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Container(props) {
-  const { children, className, size } = props;
+  const {
+    children, className, size, ...other
+  } = props;
   const classes = classNames(
     'u-text',
     'o-container',
     `o-container--${size}`, className,
   );
   return (
-    <div className={classes}>
+    <div {...other} className={classes}>
       { children }
     </div>
   );

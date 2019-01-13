@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Address(props) {
-  const { children, className } = props;
+  const { children, className, ...other } = props;
   const classes = classNames('c-address', className);
   return (
-    <address {...props} className={classes}>
+    <address {...other} className={classes}>
       { children }
     </address>
   );

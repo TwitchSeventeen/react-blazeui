@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Footer(props) {
-  const { children, block } = props;
-  const classes = classNames('c-card__footer', { 'c-card__footer--block': block });
+  const {
+    children, block, className, ...other
+  } = props;
+  const classes = classNames('c-card__footer', { 'c-card__footer--block': block }, className);
   return (
-    <footer className={classes}>
+    <footer {...other} className={classes}>
       { children }
     </footer>
   );
@@ -21,11 +23,16 @@ Footer.propTypes = {
    * This element can have children
    */
   children: PropTypes.node,
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
 };
 
 Footer.defaultProps = {
   block: false,
   children: null,
+  className: null,
 };
 
 export default Footer;

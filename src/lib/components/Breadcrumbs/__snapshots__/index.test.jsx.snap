@@ -9,6 +9,7 @@ exports[`Breadcrumbs renders correctly 1`] = `
   >
     <Item
       active={false}
+      className={null}
     >
       <a
         href="#"
@@ -18,6 +19,7 @@ exports[`Breadcrumbs renders correctly 1`] = `
     </Item>
     <Item
       active={false}
+      className={null}
     >
       <a
         href="#"
@@ -27,6 +29,7 @@ exports[`Breadcrumbs renders correctly 1`] = `
     </Item>
     <Item
       active={true}
+      className={null}
     >
       dolor
     </Item>

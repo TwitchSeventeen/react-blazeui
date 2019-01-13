@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Select(props) {
   const {
-    children, className, success, error,
+    children, className, success, error, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,7 +14,7 @@ function Select(props) {
   );
 
   return (
-    <select {...props} className={classes}>
+    <select {...other} className={classes}>
       { children }
     </select>
   );

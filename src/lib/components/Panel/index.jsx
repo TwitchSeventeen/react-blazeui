@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Panel(props) {
-  const { children, className } = props;
+  const { children, className, ...other } = props;
   const classes = classNames(
     'o-panel-container',
     className,
   );
   return (
-    <div {...props} className={classes}>
+    <div {...other} className={classes}>
       <div className="o-panel">
         { children }
       </div>

@@ -4,15 +4,13 @@ import classNames from 'classnames';
 import Card from '../Card';
 import Title from './Title';
 import Content from './Content';
-import omitOwnProps from '../../utils/omitOwnProps';
 
 function Accordion(props) {
-  const { children, className } = props;
+  const { children, className, ...other } = props;
   const classes = classNames('c-card--accordion', className);
-  const spreadProps = omitOwnProps(props);
   return (
     <Card
-      {...spreadProps}
+      {...other}
       className={classes}
     >
       { children }

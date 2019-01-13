@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Item from './Item';
 
 function Breadcrumbs(props) {
-  const { children } = props;
+  const { children, ...other } = props;
   return (
-    <nav aria-label="Breadcrumb">
+    <nav {...other} aria-label="Breadcrumb">
       <ol className="c-breadcrumbs">
         { children }
       </ol>

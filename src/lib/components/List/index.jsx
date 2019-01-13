@@ -5,7 +5,7 @@ import Item from './Item';
 
 function List(props) {
   const {
-    children, className, ordered, unstyled, inline,
+    children, className, ordered, unstyled, inline, ...other
   } = props;
   const classes = classNames(
     'c-list',
@@ -17,14 +17,14 @@ function List(props) {
 
   if (ordered) {
     return (
-      <ol {...props} className={classes}>
+      <ol {...other} className={classes}>
         { children }
       </ol>
     );
   }
 
   return (
-    <ul {...props} className={classes}>
+    <ul {...other} className={classes}>
       { children }
     </ul>
   );

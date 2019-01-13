@@ -10,12 +10,11 @@ import classNames from 'classnames';
  */
 function Alert(props) {
   const {
-    children, dismissable, onDismiss, type,
+    children, dismissable, onDismiss, type, ...other
   } = props;
   const classes = classNames('c-alert', { [`c-alert--${type}`]: type });
-
   return (
-    <div role="alert" className={classes}>
+    <div role="alert" {...other} className={classes}>
       {children}
       { dismissable
         && <button className="c-button c-button--close" onClick={onDismiss} type="button">&times;</button>

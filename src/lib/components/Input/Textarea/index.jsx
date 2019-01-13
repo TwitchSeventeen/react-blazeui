@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Textarea(props) {
   const {
-    children, className, success, error,
+    children, className, success, error, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,7 +14,7 @@ function Textarea(props) {
   );
 
   return (
-    <textarea {...props} className={classes}>
+    <textarea {...other} className={classes}>
       { children }
     </textarea>
   );

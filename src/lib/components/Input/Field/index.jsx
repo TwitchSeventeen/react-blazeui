@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Field(props) {
   const {
-    className, iconLeft, iconRight, children, fixed,
+    className, iconLeft, iconRight, children, fixed, ...other
   } = props;
   const classes = classNames(
     'o-field',
@@ -15,7 +15,7 @@ function Field(props) {
   );
 
   return (
-    <div {...props} className={classes}>
+    <div {...other} className={classes}>
       { children }
     </div>
   );
