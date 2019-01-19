@@ -42,12 +42,17 @@ Divider.propTypes = {
    * Creates a horizontal line
    */
   separator: PropTypes.bool,
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
 };
 
 Divider.defaultProps = {
   children: null,
   type: null,
   separator: false,
+  className: null,
 };
 
 export default Divider;

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 function Divider(props) {
-  const { children, type, className, ...other } = props;
+  const {
+    children, type, className, ...other
+  } = props;
   const classes = classNames('c-divider', { [`c-divider--${type}`]: type }, className);
   return (
     <div {...other} className={classes}>
