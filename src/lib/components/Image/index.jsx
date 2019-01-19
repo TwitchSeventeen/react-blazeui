@@ -13,6 +13,9 @@ function Image(props) {
 
   let source = src;
 
+  /**
+   * If using Unsplash, build up the slug based on props.
+   */
   if (!src) {
     const userProp = user ? `user/${user}/` : '';
     const likesProp = likes ? 'likes/' : '';
