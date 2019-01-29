@@ -20,6 +20,6 @@ exports[`Image renders correctly with a picture liked by a user 1`] = `
 <img
   alt="random placeholder image"
   className="o-image"
-  src="https://source.unsplash.com/user/twitchseventeen/50x100/likes/?lorem"
+  src="https://source.unsplash.com/user/twitchseventeen/likes/featured/?lorem"
 />
 `;
