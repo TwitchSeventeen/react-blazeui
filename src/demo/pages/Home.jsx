@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Breadcrumbs, Accordion, Container, Grid,
+  Breadcrumbs, Accordion, Container, Grid, Image,
 } from '../../lib';
 
 class Home extends React.Component {
@@ -49,7 +49,9 @@ class Home extends React.Component {
 
 
         <Grid>
-          <Grid.Cell>lorem</Grid.Cell>
+          <Grid.Cell>
+            <Image src="https://via.placeholder.com/150" />
+          </Grid.Cell>
           <Grid.Cell>lorem</Grid.Cell>
           <Grid.Cell>lorem</Grid.Cell>
         </Grid>

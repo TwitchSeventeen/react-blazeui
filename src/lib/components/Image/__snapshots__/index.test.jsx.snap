@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders correctly 1`] = `
+<img
+  alt="random placeholder image"
+  className="o-image"
+  src="https://source.unsplash.com/random/50x100/"
+/>
+`;
+
+exports[`Image renders correctly with a explicit picture 1`] = `
+<img
+  alt="alt text"
+  className="o-image"
+  src="https://via.placeholder.com/150"
+/>
+`;
+
+exports[`Image renders correctly with a picture liked by a user 1`] = `
+<img
+  alt="random placeholder image"
+  className="o-image"
+  src="https://source.unsplash.com/user/twitchseventeen/50x100/likes/?lorem"
+/>
+`;

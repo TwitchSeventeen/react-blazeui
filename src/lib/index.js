@@ -16,6 +16,7 @@ import Divider from './components/Divider';
 import Grid from './components/Grid';
 import Highlight from './components/Highlight';
 import Icon from './components/Icon';
+import Image from './components/Image';
 import Input from './components/Input';
 import Key from './components/Key';
 import List from './components/List';
@@ -41,6 +42,7 @@ export {
   Grid,
   Highlight,
   Icon,
+  Image,
   Input,
   Key,
   List,
