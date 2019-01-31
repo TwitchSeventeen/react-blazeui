@@ -1,0 +1,49 @@
+---
+name: Avatar
+route: /components/avatar
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Avatar from './index';
+
+# Avatar
+
+Avatars are useful for chat UIs, profile pictures and account photos.
+
+## Basic usage
+Use the **src** and **alt** prop to define the image to show. The **size** prop sets the size, medium is the default.
+<Playground>
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" size="super" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" size="xlarge" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" size="large" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" size="small" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" size="xsmall" />
+</Playground>
+
+## 2 Images
+You can add a smaller secondary image with the **src2** and **alt2** props.
+<Playground>
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" alt2="placeholder" src2="http://placehold.it/1024x963/BADA55/FFF" size="super" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" alt2="placeholder" src2="http://placehold.it/1024x963/BADA55/FFF" size="xlarge" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" alt2="placeholder" src2="http://placehold.it/1024x963/BADA55/FFF" size="large" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" alt2="placeholder" src2="http://placehold.it/1024x963/BADA55/FFF" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" alt2="placeholder" src2="http://placehold.it/1024x963/BADA55/FFF" size="small" />
+    <Avatar alt="placeholder" src="http://placehold.it/1024x963/3B6DC6/FFF" alt2="placeholder" src2="http://placehold.it/1024x963/BADA55/FFF" size="xsmall" />
+</Playground>
+
+
+## Initials
+Instead of showing images, you can show text using the **initials** prop.
+<Playground>
+    <Avatar initials="LO" size="super" />
+    <Avatar initials="LO" size="xlarge" />
+    <Avatar initials="LO" size="large" />
+    <Avatar initials="LO" />
+    <Avatar initials="LO" size="small" />
+    <Avatar initials="LO" size="xsmall" />
+</Playground>
+
+## Properties
+<PropsTable of={Avatar} />
