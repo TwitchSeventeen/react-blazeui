@@ -5,7 +5,7 @@ import Image from '../Image';
 
 function Avatar(props) {
   const {
-    initials, className, size, src, alt, src2, alt2,
+    initials, className, size, src, alt, src2, alt2, ...other
   } = props;
   const classes = classNames(
     'c-avatar',
@@ -13,7 +13,7 @@ function Avatar(props) {
     className,
   );
   return (
-    <div className={classes} data-text={initials}>
+    <div className={classes} data-text={initials} {...other}>
       { src
           && <Image className="c-avatar__img" src={src} alt={alt} />
         }
