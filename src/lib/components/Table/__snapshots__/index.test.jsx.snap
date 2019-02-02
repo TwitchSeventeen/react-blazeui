@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders a condensed table 1`] = `
+<table
+  className="c-table c-table--condensed"
+>
+  <Caption
+    className={null}
+  >
+    Small table and text
+  </Caption>
+  <Header
+    className={null}
+  >
+    <Row
+      className={null}
+      clickable={false}
+      disabled={false}
+      head={true}
+    >
+      <HeaderCell
+        className={null}
+      >
+        First name
+      </HeaderCell>
+      <HeaderCell
+        className={null}
+      >
+        Last name
+      </HeaderCell>
+      <HeaderCell
+        className={null}
+      >
+        Username
+      </HeaderCell>
+    </Row>
+  </Header>
+  <Body
+    className={null}
+  >
+    <Row
+      className={null}
+      clickable={false}
+      disabled={false}
+      head={false}
+    >
+      <Cell
+        className={null}
+      >
+        Jim
+      </Cell>
+      <Cell
+        className={null}
+      >
+        Kirk
+      </Cell>
+      <Cell
+        className={null}
+      >
+        @captaink
+      </Cell>
+    </Row>
+    <Row
+      className={null}
+      clickable={false}
+      disabled={false}
+      head={false}
+    >
+      <Cell
+        className={null}
+      >
+        Mr.
+      </Cell>
+      <Cell
+        className={null}
+      >
+        Spock
+      </Cell>
+      <Cell
+        className={null}
+      >
+        @science101
+      </Cell>
+    </Row>
+    <Row
+      className={null}
+      clickable={false}
+      disabled={false}
+      head={false}
+    >
+      <Cell
+        className={null}
+      >
+        Nyota
+      </Cell>
+      <Cell
+        className={null}
+      >
+        Uhura
+      </Cell>
+      <Cell
+        className={null}
+      >
+        @comms
+      </Cell>
+    </Row>
+  </Body>
+</table>
+`;
+
+exports[`Table renders correctly 1`] = `
+<table
+  className="c-table"
+>
+  lorem ipsum dolor
+</table>
+`;

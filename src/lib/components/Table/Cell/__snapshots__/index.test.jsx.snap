@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders correctly 1`] = `
+<td
+  className="c-table__cell"
+>
+  lorem ipsum dolor
+</td>
+`;

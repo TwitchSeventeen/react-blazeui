@@ -1,0 +1,167 @@
+---
+name: Table
+route: /components/table
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Table from './index';
+
+# Table
+
+Tables, great for displaying tabular data.
+
+## Basic Table
+<Playground>
+    <Table>
+        <Table.Caption>Basic table</Table.Caption>
+        <Table.Header>
+            <Table.Row head>
+                <Table.HeaderCell>First name</Table.HeaderCell>
+                <Table.HeaderCell>Last name</Table.HeaderCell>
+                <Table.HeaderCell>Username</Table.HeaderCell>
+            </Table.Row>
+        </Table.Header>
+        <Table.Body>
+            <Table.Row>
+                <Table.Cell>Jim</Table.Cell>
+                <Table.Cell>Kirk</Table.Cell>
+                <Table.Cell>@captaink</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Mr.</Table.Cell>
+                <Table.Cell>Spock</Table.Cell>
+                <Table.Cell>@science101</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Nyota</Table.Cell>
+                <Table.Cell>Uhura</Table.Cell>
+                <Table.Cell>@comms</Table.Cell>
+            </Table.Row>
+        </Table.Body>
+    </Table>
+</Playground>
+
+## Striped Table
+<Playground>
+    <Table striped>
+        <Table.Caption>Striped rows</Table.Caption>
+        <Table.Header>
+            <Table.Row head>
+                <Table.HeaderCell>First name</Table.HeaderCell>
+                <Table.HeaderCell>Last name</Table.HeaderCell>
+                <Table.HeaderCell>Username</Table.HeaderCell>
+            </Table.Row>
+        </Table.Header>
+        <Table.Body>
+            <Table.Row>
+                <Table.Cell>Jim</Table.Cell>
+                <Table.Cell>Kirk</Table.Cell>
+                <Table.Cell>@captaink</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Mr.</Table.Cell>
+                <Table.Cell>Spock</Table.Cell>
+                <Table.Cell>@science101</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Nyota</Table.Cell>
+                <Table.Cell>Uhura</Table.Cell>
+                <Table.Cell>@comms</Table.Cell>
+            </Table.Row>
+        </Table.Body>
+    </Table>
+</Playground>
+
+## Clickable Table
+<Playground>
+    <Table clickable>
+        <Table.Caption>Clickable table with disabled row</Table.Caption>
+        <Table.Header>
+            <Table.Row head>
+                <Table.HeaderCell>First name</Table.HeaderCell>
+                <Table.HeaderCell>Last name</Table.HeaderCell>
+                <Table.HeaderCell>Username</Table.HeaderCell>
+            </Table.Row>
+        </Table.Header>
+        <Table.Body>
+            <Table.Row disabled>
+                <Table.Cell>Jim</Table.Cell>
+                <Table.Cell>Kirk</Table.Cell>
+                <Table.Cell>@captaink</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Mr.</Table.Cell>
+                <Table.Cell>Spock</Table.Cell>
+                <Table.Cell>@science101</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Nyota</Table.Cell>
+                <Table.Cell>Uhura</Table.Cell>
+                <Table.Cell>@comms</Table.Cell>
+            </Table.Row>
+        </Table.Body>
+    </Table>
+</Playground>
+
+## Clickable Row
+<Playground>
+    <Table>
+        <Table.Caption>Clickable row, disabled row</Table.Caption>
+        <Table.Header>
+            <Table.Row head>
+                <Table.HeaderCell>First name</Table.HeaderCell>
+                <Table.HeaderCell>Last name</Table.HeaderCell>
+                <Table.HeaderCell>Username</Table.HeaderCell>
+            </Table.Row>
+        </Table.Header>
+        <Table.Body>
+            <Table.Row clickable>
+                <Table.Cell>Jim</Table.Cell>
+                <Table.Cell>Kirk</Table.Cell>
+                <Table.Cell>@captaink</Table.Cell>
+            </Table.Row>
+            <Table.Row disabled>
+                <Table.Cell>Mr.</Table.Cell>
+                <Table.Cell>Spock</Table.Cell>
+                <Table.Cell>@science101</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Nyota</Table.Cell>
+                <Table.Cell>Uhura</Table.Cell>
+                <Table.Cell>@comms</Table.Cell>
+            </Table.Row>
+        </Table.Body>
+    </Table>
+</Playground>
+
+## Condensed
+<Playground>
+    <Table condensed>
+        <Table.Caption>Small table and text</Table.Caption>
+        <Table.Header>
+            <Table.Row head>
+                <Table.HeaderCell>First name</Table.HeaderCell>
+                <Table.HeaderCell>Last name</Table.HeaderCell>
+                <Table.HeaderCell>Username</Table.HeaderCell>
+            </Table.Row>
+        </Table.Header>
+        <Table.Body>
+            <Table.Row>
+                <Table.Cell>Jim</Table.Cell>
+                <Table.Cell>Kirk</Table.Cell>
+                <Table.Cell>@captaink</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Mr.</Table.Cell>
+                <Table.Cell>Spock</Table.Cell>
+                <Table.Cell>@science101</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+                <Table.Cell>Nyota</Table.Cell>
+                <Table.Cell>Uhura</Table.Cell>
+                <Table.Cell>@comms</Table.Cell>
+            </Table.Row>
+        </Table.Body>
+    </Table>
+</Playground>

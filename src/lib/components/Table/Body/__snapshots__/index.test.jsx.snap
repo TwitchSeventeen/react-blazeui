@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body renders correctly 1`] = `
+<tbody
+  className="c-table__body"
+>
+  lorem ipsum dolor
+</tbody>
+`;
