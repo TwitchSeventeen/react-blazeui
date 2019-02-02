@@ -1,3 +1,7 @@
+### v0.2.3 - Sat 2nd Jan '19
+* Added new Table component
+* Added new Counter component
+
 ### v0.2.2 - Wed 30th Jan '19
 * Added new Image component
 * Updated dependencies
