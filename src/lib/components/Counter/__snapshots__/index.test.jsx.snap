@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter renders correctly 1`] = `
+<div
+  className="c-counter u-super u-text--mono"
+>
+  <CountUp
+    className="c-counter__amount"
+    decimal="."
+    decimals={0}
+    delay={null}
+    duration={null}
+    easingFn={null}
+    end={0}
+    formattingFn={null}
+    onEnd={[Function]}
+    onPauseResume={[Function]}
+    onReset={[Function]}
+    onStart={[Function]}
+    onUpdate={[Function]}
+    prefix=""
+    redraw={false}
+    separator=""
+    start={100}
+    suffix=""
+    useEasing={true}
+  />
+</div>
+`;
+
+exports[`Counter renders correctly with prefix and suffix 1`] = `
+<div
+  className="c-counter u-super u-text--mono"
+>
+  <span
+    className="c-counter__prefix"
+  >
+    £
+  </span>
+  <CountUp
+    className="c-counter__amount"
+    decimal="."
+    decimals={0}
+    delay={null}
+    duration={null}
+    easingFn={null}
+    end={0}
+    formattingFn={null}
+    onEnd={[Function]}
+    onPauseResume={[Function]}
+    onReset={[Function]}
+    onStart={[Function]}
+    onUpdate={[Function]}
+    prefix=""
+    redraw={false}
+    separator=""
+    start={100}
+    suffix=""
+    useEasing={true}
+  />
+  <span
+    className="c-counter__suffix u-text--quiet u-xsmall"
+  >
+     lorem
+  </span>
+</div>
+`;

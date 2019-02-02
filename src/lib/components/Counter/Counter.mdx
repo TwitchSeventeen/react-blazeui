@@ -1,0 +1,23 @@
+---
+name: Counter
+route: /components/counter
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Counter from './index';
+
+# Counter
+
+When you want to display a number with a bit more flair than usual.
+
+## Basic usage
+<Playground>
+    <Counter start={120} value={0} duration={10} decimals={2} delay={2} prefix="£" suffix=" in bank account" />
+</Playground>
+
+
+## Properties
+Under the hood this component uses [React CountUp](https://github.com/glennreyes/react-countup). 
+Any of its additional [props](https://github.com/glennreyes/react-countup#props) can be added and will be passed down the component.
+<PropsTable of={Counter} />
