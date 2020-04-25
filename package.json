@@ -9,7 +9,8 @@
     "demo": "node scripts/demo.js",
     "test": "node scripts/test.js --env=jsdom",
     "coverage": "jest --coverage",
-    "lint": "eslint ./src/lib"
+    "lint": "eslint ./src/lib",
+    "docz:dev": "docz dev"
   },
   "repository": {
     "type": "git",
