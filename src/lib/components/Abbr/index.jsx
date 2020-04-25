@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Abbr(props) {
   const {
-    children, title, className, ...other
+    children, title, className, dataName, ...other
   } = props;
   const classes = classNames('u-text--help', className);
   return (
@@ -12,6 +12,7 @@ function Abbr(props) {
       {...other}
       className={classes}
       title={title}
+      data-name={dataName}
     >
       { children }
     </abbr>
@@ -31,11 +32,17 @@ Abbr.propTypes = {
    * Title attribute for the abbreviation component
    */
   title: PropTypes.string.isRequired,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Abbr.defaultProps = {
   children: null,
   className: null,
+  dataName: 'abbr',
 };
 
 export default Abbr;

@@ -4,6 +4,7 @@ exports[`Abbr renders correctly 1`] = `
 <DocumentFragment>
   <abbr
     class="u-text--help"
+    data-name="abbr"
     title="Help text"
   >
     lorem ipsum dolor
