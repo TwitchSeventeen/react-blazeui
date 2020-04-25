@@ -1,23 +1,23 @@
 import React from 'react';
+import { render, cleanup } from '@testing-library/react';
 import { shallow } from 'enzyme';
-import ShallowRenderer from 'react-test-renderer/shallow';
 import Title from './index';
 
 describe('Title', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Title).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
         <Title active onClick={jest.fn()}>
           lorem ipsum dolor
         </Title>
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   /**

@@ -1,22 +1,22 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Content from './index';
 
 describe('Content', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Content).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
         <Content>
           lorem ipsum dolor
         </Content>
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 

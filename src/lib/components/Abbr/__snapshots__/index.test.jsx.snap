@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Abbr renders correctly 1`] = `
-<abbr
-  className="u-text--help"
-  title="Help text"
->
-  lorem ipsum dolor
-</abbr>
+<DocumentFragment>
+  <abbr
+    class="u-text--help"
+    title="Help text"
+  >
+    lorem ipsum dolor
+  </abbr>
+</DocumentFragment>
 `;

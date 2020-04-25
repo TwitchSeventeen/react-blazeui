@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Title renders correctly 1`] = `
-<button
-  aria-expanded="true"
-  className="c-card__control"
-  index={null}
-  onClick={[Function]}
-  type="button"
->
-  lorem ipsum dolor
-</button>
+<DocumentFragment>
+  <button
+    aria-expanded="true"
+    class="c-card__control"
+    type="button"
+  >
+    lorem ipsum dolor
+  </button>
+</DocumentFragment>
 `;

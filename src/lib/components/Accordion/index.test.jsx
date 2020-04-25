@@ -1,22 +1,22 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Accordion from './index';
 
 describe('Accordion', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Accordion).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
         <Accordion>
           lorem ipsum dolor
         </Accordion>
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
