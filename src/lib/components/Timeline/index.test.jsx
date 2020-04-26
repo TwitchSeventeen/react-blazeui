@@ -12,7 +12,7 @@ describe('Timeline', () => {
     renderer.render(
       <Timeline>
         <Timeline.Item>
-            lorem ipsum dolor
+          lorem ipsum dolor
         </Timeline.Item>
       </Timeline>,
     );
@@ -26,10 +26,10 @@ describe('Timeline', () => {
     renderer.render(
       <Timeline loading>
         <Timeline.Item>
-            lorem ipsum dolor
+          lorem ipsum dolor
         </Timeline.Item>
         <Timeline.Item loading>
-            lorem ipsum dolor
+          lorem ipsum dolor
         </Timeline.Item>
       </Timeline>,
     );

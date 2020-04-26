@@ -13,8 +13,7 @@ function Blockquote(props) {
         { children }
       </div>
       { cite
-          && <footer className="u-blockquote__footer">{ cite }</footer>
-        }
+          && <footer className="u-blockquote__footer">{ cite }</footer>}
     </blockquote>
   );
 }

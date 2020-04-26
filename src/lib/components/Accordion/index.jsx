@@ -6,7 +6,9 @@ import Title from './Title';
 import Content from './Content';
 
 function Accordion(props) {
-  const { children, className, dataName, ...other } = props;
+  const {
+    children, className, dataName, ...other
+  } = props;
   const classes = classNames('c-card--accordion', className);
   return (
     <Card

@@ -10,9 +10,9 @@ describe('Mono', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Mono>
-          lorem ipsum dolor
-        </Mono>
+      <Mono>
+        lorem ipsum dolor
+      </Mono>,
     );
 
     const tree = renderer.getRenderOutput();

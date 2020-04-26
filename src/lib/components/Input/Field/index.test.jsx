@@ -10,9 +10,9 @@ describe('Field', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Field>
-          lorem ipsum dolor
-        </Field>
+      <Field>
+        lorem ipsum dolor
+      </Field>,
     );
 
     const tree = renderer.getRenderOutput();

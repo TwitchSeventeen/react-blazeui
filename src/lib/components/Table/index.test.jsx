@@ -11,7 +11,7 @@ describe('Table', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Table>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Table>,
     );
 

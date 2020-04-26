@@ -10,9 +10,9 @@ describe('Blockquote', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Blockquote cite="~ Greg">
-          lorem ipsum dolor
-        </Blockquote>
+      <Blockquote cite="~ Greg">
+        lorem ipsum dolor
+      </Blockquote>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,9 +22,9 @@ describe('Blockquote', () => {
   it('renders correctly without a footer', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Blockquote>
-          lorem ipsum dolor
-        </Blockquote>
+      <Blockquote>
+        lorem ipsum dolor
+      </Blockquote>,
     );
 
     const tree = renderer.getRenderOutput();

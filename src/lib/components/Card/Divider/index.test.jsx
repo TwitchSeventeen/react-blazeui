@@ -10,9 +10,9 @@ describe('Card.Divider', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Divider>
-          lorem
-        </Divider>
+      <Divider>
+        lorem
+      </Divider>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,9 +22,9 @@ describe('Card.Divider', () => {
   it('renders correctly with a colour', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Divider type="brand">
-          lorem
-        </Divider>
+      <Divider type="brand">
+        lorem
+      </Divider>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -34,7 +34,7 @@ describe('Card.Divider', () => {
   it('renders correctly as a separator', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Divider separator />
+      <Divider separator />,
     );
 
     const tree = renderer.getRenderOutput();

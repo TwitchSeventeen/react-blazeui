@@ -11,7 +11,7 @@ describe('HeaderCell', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <HeaderCell>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </HeaderCell>,
     );
 

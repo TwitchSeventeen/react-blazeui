@@ -11,7 +11,7 @@ describe('Caption', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Caption>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Caption>,
     );
 

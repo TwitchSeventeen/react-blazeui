@@ -10,17 +10,17 @@ describe('Breadcrumbs', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Breadcrumbs>
-          <Breadcrumbs.Item>
-            <a href="#">lorem</a>
-          </Breadcrumbs.Item>
-          <Breadcrumbs.Item>
-            <a href="#">ipsum</a>
-          </Breadcrumbs.Item>
-          <Breadcrumbs.Item active>
-            dolor
-          </Breadcrumbs.Item>
-        </Breadcrumbs>
+      <Breadcrumbs>
+        <Breadcrumbs.Item>
+          <a href="/lorem">lorem</a>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item>
+          <a href="/ipsum">ipsum</a>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item active>
+          dolor
+        </Breadcrumbs.Item>
+      </Breadcrumbs>,
     );
 
     const tree = renderer.getRenderOutput();

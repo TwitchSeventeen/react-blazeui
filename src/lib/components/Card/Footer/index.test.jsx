@@ -10,9 +10,9 @@ describe('Card.Footer', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Footer>
-          lorem
-        </Footer>
+      <Footer>
+        lorem
+      </Footer>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,9 +22,9 @@ describe('Card.Footer', () => {
   it('renders correctly as a block', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Footer block>
-          lorem
-        </Footer>
+      <Footer block>
+        lorem
+      </Footer>,
     );
 
     const tree = renderer.getRenderOutput();

@@ -10,9 +10,9 @@ describe('Container', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Container>
-          lorem ipsum dolor
-        </Container>
+      <Container>
+        lorem ipsum dolor
+      </Container>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,10 +22,10 @@ describe('Container', () => {
   it('renders correctly a large container', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Container size="large">
-          lorem ipsum dolor
-          sit amet
-        </Container>
+      <Container size="large">
+        lorem ipsum dolor
+        sit amet
+      </Container>,
     );
 
     const tree = renderer.getRenderOutput();

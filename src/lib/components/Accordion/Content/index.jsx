@@ -4,7 +4,9 @@ import classNames from 'classnames';
 import Card from '../../Card';
 
 function Content(props) {
-  const { children, className, dataName, ...other } = props;
+  const {
+    children, className, dataName, ...other
+  } = props;
   const classes = classNames('c-card__item--pane', className);
   return (
     <Card.Item
@@ -12,6 +14,9 @@ function Content(props) {
       className={classes}
       data-name={dataName}
     >
+      lorem
+      {' '}
+      <p>lo</p>
       { children }
     </Card.Item>
   );

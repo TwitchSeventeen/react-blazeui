@@ -11,9 +11,9 @@ describe('Abbr', () => {
 
   it('renders correctly', () => {
     const { asFragment } = render(
-        <Abbr title="Help text">
-          lorem ipsum dolor
-        </Abbr>
+      <Abbr title="Help text">
+        lorem ipsum dolor
+      </Abbr>,
     );
 
     expect(asFragment()).toMatchSnapshot();

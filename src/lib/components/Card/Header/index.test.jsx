@@ -10,9 +10,9 @@ describe('Card.Header', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Header>
-          lorem
-        </Header>
+      <Header>
+        lorem
+      </Header>,
     );
 
     const tree = renderer.getRenderOutput();

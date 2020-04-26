@@ -11,12 +11,11 @@ describe('Accordion', () => {
 
   it('renders correctly', () => {
     const { asFragment } = render(
-        <Accordion>
-          lorem ipsum dolor
-        </Accordion>
+      <Accordion>
+        lorem ipsum dolor
+      </Accordion>,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 });
-

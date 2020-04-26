@@ -10,9 +10,9 @@ describe('Card', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Card>
-          <p>lorem</p>
-        </Card>
+      <Card>
+        <p>lorem</p>
+      </Card>,
     );
 
     const tree = renderer.getRenderOutput();

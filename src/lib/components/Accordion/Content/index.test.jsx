@@ -11,12 +11,11 @@ describe('Content', () => {
 
   it('renders correctly', () => {
     const { asFragment } = render(
-        <Content>
-          lorem ipsum dolor
-        </Content>
+      <Content>
+        lorem ipsum dolor
+      </Content>,
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 });
-

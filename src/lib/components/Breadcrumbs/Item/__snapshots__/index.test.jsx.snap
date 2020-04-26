@@ -6,7 +6,7 @@ exports[`Breadcrumbs.Item renders correctly 1`] = `
   className="c-breadcrumbs__crumb"
 >
   <a
-    href="#"
+    href="/lorem"
   >
     lorem
   </a>

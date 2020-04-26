@@ -10,9 +10,9 @@ describe('Field.Group', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Group>
-          lorem ipsum dolor
-        </Group>
+      <Group>
+        lorem ipsum dolor
+      </Group>,
     );
 
     const tree = renderer.getRenderOutput();

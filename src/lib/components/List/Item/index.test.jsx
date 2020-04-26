@@ -1,7 +1,6 @@
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Item from './index';
-import List from '../index';
 
 describe('Item', () => {
   it('should be defined', () => {
@@ -11,7 +10,7 @@ describe('Item', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Item>ipsum</Item>
+      <Item>ipsum</Item>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -21,7 +20,7 @@ describe('Item', () => {
   it('renders correctly an unstyled Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Item unstyled>ipsum</Item>
+      <Item unstyled>ipsum</Item>,
     );
 
     const tree = renderer.getRenderOutput();

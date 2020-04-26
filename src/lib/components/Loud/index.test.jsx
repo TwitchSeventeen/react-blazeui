@@ -10,9 +10,9 @@ describe('Loud', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Loud>
-          lorem ipsum dolor
-        </Loud>
+      <Loud>
+        lorem ipsum dolor
+      </Loud>,
     );
 
     const tree = renderer.getRenderOutput();

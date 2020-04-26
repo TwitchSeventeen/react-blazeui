@@ -10,9 +10,9 @@ describe('Highlight', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Highlight>
-          lorem ipsum dolor
-        </Highlight>
+      <Highlight>
+        lorem ipsum dolor
+      </Highlight>,
     );
 
     const tree = renderer.getRenderOutput();

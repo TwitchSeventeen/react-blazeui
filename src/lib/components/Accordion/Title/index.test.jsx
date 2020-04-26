@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, cleanup, getByTestId, fireEvent } from '@testing-library/react';
-import { shallow } from 'enzyme';
+import {
+  render, cleanup, getByTestId, fireEvent,
+} from '@testing-library/react';
 import Title from './index';
 
 describe('Title', () => {
@@ -12,9 +13,9 @@ describe('Title', () => {
 
   it('renders correctly', () => {
     const { asFragment } = render(
-        <Title active onClick={jest.fn()}>
-          lorem ipsum dolor
-        </Title>
+      <Title active onClick={jest.fn()}>
+        lorem ipsum dolor
+      </Title>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -27,13 +28,13 @@ describe('Title', () => {
     const onClick = jest.fn();
 
     render(
-        <Title
-            active
-            onClick={onClick}
-            data-testid="accordion-title"
-        >
-          lorem ipsum dolor
-        </Title>
+      <Title
+        active
+        onClick={onClick}
+        data-testid="accordion-title"
+      >
+        lorem ipsum dolor
+      </Title>,
     );
 
     const container = document.body;
@@ -43,4 +44,3 @@ describe('Title', () => {
     expect(onClick).toHaveBeenCalled();
   });
 });
-

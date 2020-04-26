@@ -17,8 +17,7 @@ function Alert(props) {
     <div role="alert" {...other} className={classes}>
       {children}
       { dismissable
-        && <button className="c-button c-button--close" onClick={onDismiss} type="button">&times;</button>
-      }
+        && <button className="c-button c-button--close" onClick={onDismiss} type="button">&times;</button>}
     </div>
   );
 }

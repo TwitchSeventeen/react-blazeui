@@ -10,11 +10,15 @@ describe('Address', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Address>
-          10010 The Street,
-          <br /> Binary Town,
-          <br /> Offandon City,
-        </Address>
+      <Address>
+        10010 The Street,
+        <br />
+        {' '}
+        Binary Town,
+        <br />
+        {' '}
+        Offandon City,
+      </Address>,
     );
 
     const tree = renderer.getRenderOutput();

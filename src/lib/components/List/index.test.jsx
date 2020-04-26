@@ -10,11 +10,11 @@ describe('List', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <List>
-          <List.Item>lorem</List.Item>
-          <List.Item>ipsum</List.Item>
-          <List.Item>dolor</List.Item>
-        </List>
+      <List>
+        <List.Item>lorem</List.Item>
+        <List.Item>ipsum</List.Item>
+        <List.Item>dolor</List.Item>
+      </List>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -24,11 +24,11 @@ describe('List', () => {
   it('renders correctly an ordered list', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <List ordered>
-          <List.Item>lorem</List.Item>
-          <List.Item>ipsum</List.Item>
-          <List.Item>dolor</List.Item>
-        </List>
+      <List ordered>
+        <List.Item>lorem</List.Item>
+        <List.Item>ipsum</List.Item>
+        <List.Item>dolor</List.Item>
+      </List>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -38,11 +38,11 @@ describe('List', () => {
   it('renders correctly an unstyled list', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <List unstyled>
-          <List.Item>lorem</List.Item>
-          <List.Item>ipsum</List.Item>
-          <List.Item>dolor</List.Item>
-        </List>
+      <List unstyled>
+        <List.Item>lorem</List.Item>
+        <List.Item>ipsum</List.Item>
+        <List.Item>dolor</List.Item>
+      </List>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -52,11 +52,11 @@ describe('List', () => {
   it('renders correctly an inline list', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <List inline>
-          <List.Item>lorem</List.Item>
-          <List.Item>ipsum</List.Item>
-          <List.Item>dolor</List.Item>
-        </List>
+      <List inline>
+        <List.Item>lorem</List.Item>
+        <List.Item>ipsum</List.Item>
+        <List.Item>dolor</List.Item>
+      </List>,
     );
 
     const tree = renderer.getRenderOutput();

@@ -11,6 +11,9 @@
     // Allow children in inputs
     "jsx-a11y/label-has-for": [ 2, {
       "allowChildren": true
-    }]
+    }],
+
+    // This is a library, props spreading is important
+    "react/jsx-props-no-spreading": 0
   }
 }

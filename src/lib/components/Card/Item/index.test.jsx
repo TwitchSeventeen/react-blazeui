@@ -10,9 +10,9 @@ describe('Card.Item', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Item>
-          <p>lorem</p>
-        </Item>
+      <Item>
+        <p>lorem</p>
+      </Item>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,9 +22,9 @@ describe('Card.Item', () => {
   it('renders correctly with a colour', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Item type="success">
-          <p>lorem</p>
-        </Item>
+      <Item type="success">
+        <p>lorem</p>
+      </Item>,
     );
 
     const tree = renderer.getRenderOutput();

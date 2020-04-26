@@ -11,7 +11,7 @@ describe('Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Item>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Item>,
     );
 
@@ -23,7 +23,7 @@ describe('Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Item last>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Item>,
     );
 
@@ -35,7 +35,7 @@ describe('Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Item type="success">
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Item>,
     );
 
@@ -47,7 +47,7 @@ describe('Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Item loading>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Item>,
     );
 
@@ -59,7 +59,7 @@ describe('Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Item left>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Item>,
     );
 

@@ -10,9 +10,9 @@ describe('Breadcrumbs.Item', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Item>
-          <a href="#">lorem</a>
-        </Item>
+      <Item>
+        <a href="/lorem">lorem</a>
+      </Item>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,9 +22,9 @@ describe('Breadcrumbs.Item', () => {
   it('renders correctly an active Item', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Item active>
-          lorem
-        </Item>
+      <Item active>
+        lorem
+      </Item>,
     );
 
     const tree = renderer.getRenderOutput();

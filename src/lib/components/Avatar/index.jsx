@@ -15,12 +15,10 @@ function Avatar(props) {
   return (
     <div className={classes} data-text={initials} {...other}>
       { src
-          && <Image className="c-avatar__img" src={src} alt={alt} />
-        }
+          && <Image className="c-avatar__img" src={src} alt={alt} />}
 
       { src2
-        && <Image className="c-avatar__img" src={src2} alt={alt2} />
-        }
+        && <Image className="c-avatar__img" src={src2} alt={alt2} />}
     </div>
   );
 }

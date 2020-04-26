@@ -11,7 +11,7 @@ describe('Row', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Row>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Row>,
     );
 

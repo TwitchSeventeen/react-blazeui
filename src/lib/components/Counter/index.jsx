@@ -18,8 +18,7 @@ function Counter(props) {
     <div className={classes}>
 
       { prefix
-            && <span className="c-counter__prefix">{prefix}</span>
-        }
+            && <span className="c-counter__prefix">{prefix}</span>}
 
       <CountUp
         {...other}
@@ -33,8 +32,7 @@ function Counter(props) {
       />
 
       { suffix
-        && <span className="c-counter__suffix u-text--quiet u-xsmall">{suffix}</span>
-        }
+        && <span className="c-counter__suffix u-text--quiet u-xsmall">{suffix}</span>}
 
     </div>
   );
@@ -87,6 +85,8 @@ Counter.defaultProps = {
   delay: null,
   prefix: null,
   suffix: null,
+  onStart: null,
+  onEnd: null,
 };
 
 export default Counter;

@@ -10,9 +10,9 @@ describe('Key', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Key>
-          key
-        </Key>
+      <Key>
+        key
+      </Key>,
     );
 
     const tree = renderer.getRenderOutput();

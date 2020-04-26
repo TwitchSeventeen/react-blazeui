@@ -10,9 +10,9 @@ describe('Code', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Code>
-          lorem ipsum dolor
-        </Code>
+      <Code>
+        lorem ipsum dolor
+      </Code>,
     );
 
     const tree = renderer.getRenderOutput();
@@ -22,10 +22,10 @@ describe('Code', () => {
   it('renders correctly a multi-line code snippet', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Code multiline>
-          lorem ipsum dolor
-          sit amet
-        </Code>
+      <Code multiline>
+        lorem ipsum dolor
+        sit amet
+      </Code>,
     );
 
     const tree = renderer.getRenderOutput();

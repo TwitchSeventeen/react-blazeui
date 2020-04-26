@@ -11,7 +11,7 @@ describe('Button', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Button>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Button>,
     );
 
@@ -23,7 +23,7 @@ describe('Button', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Button ghost>
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Button>,
     );
 
@@ -35,7 +35,7 @@ describe('Button', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Button ghost type="success">
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Button>,
     );
 
@@ -47,7 +47,7 @@ describe('Button', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
       <Button type="success">
-          lorem ipsum dolor
+        lorem ipsum dolor
       </Button>,
     );
 

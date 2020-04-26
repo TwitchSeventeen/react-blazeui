@@ -10,7 +10,7 @@ describe('Icon', () => {
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
     renderer.render(
-        <Icon name="spinner" />
+      <Icon name="spinner" />,
     );
 
     const tree = renderer.getRenderOutput();
