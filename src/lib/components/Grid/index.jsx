@@ -17,6 +17,7 @@ function Grid(props) {
     xlarge,
     huge,
     noGutter,
+    dataName,
     ...other
   } = props;
   const classes = classNames(
@@ -35,7 +36,11 @@ function Grid(props) {
     className,
   );
   return (
-    <div {...other} className={classes}>
+    <div
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </div>
   );
@@ -112,6 +117,11 @@ Grid.propTypes = {
    * Specifies no spacing between Cells
    */
   noGutter: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Grid.defaultProps = {
@@ -127,6 +137,7 @@ Grid.defaultProps = {
   xlarge: null,
   huge: null,
   noGutter: false,
+  dataName: 'grid',
 };
 
 Grid.Cell = Cell;

@@ -17,6 +17,7 @@ function Cell(props) {
     huge,
     noGutter,
     fixedWidth,
+    dataName,
     ...other
   } = props;
   const classes = classNames(
@@ -35,7 +36,11 @@ function Cell(props) {
     className,
   );
   return (
-    <div {...other} className={classes}>
+    <div
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </div>
   );
@@ -106,6 +111,11 @@ Cell.propTypes = {
    * Specifies this Cell has a fixed width
    */
   fixedWidth: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Cell.defaultProps = {
@@ -122,6 +132,7 @@ Cell.defaultProps = {
   huge: null,
   noGutter: false,
   fixedWidth: false,
+  dataName: 'grid-cell',
 };
 
 export default Cell;

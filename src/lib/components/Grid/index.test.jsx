@@ -1,49 +1,44 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Grid from './index';
 
 describe('Grid', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Grid).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<Grid>lorem</Grid>);
+    const { asFragment } = render(<Grid>lorem</Grid>);
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with full width children', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid full>
         <Grid.Cell>lorem</Grid.Cell>
         <Grid.Cell>ipsum</Grid.Cell>
       </Grid>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with wrapped children', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid wrap>
         <Grid.Cell width={50}>lorem</Grid.Cell>
         <Grid.Cell width={66}>ipsum</Grid.Cell>
       </Grid>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with responsive props', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid
         xsmall="fit"
         small="full"
@@ -57,17 +52,17 @@ describe('Grid', () => {
       </Grid>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly without gutters', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid noGutter>
         <Grid.Cell width={50}>lorem</Grid.Cell>
         <Grid.Cell width={50}>ipsum</Grid.Cell>
       </Grid>,
     );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

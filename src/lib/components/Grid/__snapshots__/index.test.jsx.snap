@@ -1,126 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid renders correctly 1`] = `
-<div
-  className="o-grid u-text"
->
-  lorem
-</div>
+<DocumentFragment>
+  <div
+    class="o-grid u-text"
+    data-name="grid"
+  >
+    lorem
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Grid renders correctly with full width children 1`] = `
-<div
-  className="o-grid u-text o-grid--full"
->
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={null}
-    xlarge={null}
-    xsmall={null}
+<DocumentFragment>
+  <div
+    class="o-grid u-text o-grid--full"
+    data-name="grid"
   >
-    lorem
-  </Cell>
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={null}
-    xlarge={null}
-    xsmall={null}
-  >
-    ipsum
-  </Cell>
-</div>
+    <div
+      class="o-grid__cell"
+      data-name="grid-cell"
+    >
+      lorem
+    </div>
+    <div
+      class="o-grid__cell"
+      data-name="grid-cell"
+    >
+      ipsum
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Grid renders correctly with responsive props 1`] = `
-<div
-  className="o-grid u-text o-grid--xsmall-fit o-grid--small-full o-grid--medium-fit o-grid--large-full o-grid--xlarge-fit o-grid--super-full"
->
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={50}
-    xlarge={null}
-    xsmall={null}
+<DocumentFragment>
+  <div
+    class="o-grid u-text o-grid--xsmall-fit o-grid--small-full o-grid--medium-fit o-grid--large-full o-grid--xlarge-fit o-grid--super-full"
+    data-name="grid"
   >
-    lorem
-  </Cell>
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={50}
-    xlarge={null}
-    xsmall={null}
-  >
-    ipsum
-  </Cell>
-</div>
+    <div
+      class="o-grid__cell o-grid__cell--width-50"
+      data-name="grid-cell"
+    >
+      lorem
+    </div>
+    <div
+      class="o-grid__cell o-grid__cell--width-50"
+      data-name="grid-cell"
+    >
+      ipsum
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Grid renders correctly with wrapped children 1`] = `
-<div
-  className="o-grid u-text o-grid--wrap"
->
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={50}
-    xlarge={null}
-    xsmall={null}
+<DocumentFragment>
+  <div
+    class="o-grid u-text o-grid--wrap"
+    data-name="grid"
   >
-    lorem
-  </Cell>
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={66}
-    xlarge={null}
-    xsmall={null}
+    <div
+      class="o-grid__cell o-grid__cell--width-50"
+      data-name="grid-cell"
+    >
+      lorem
+    </div>
+    <div
+      class="o-grid__cell o-grid__cell--width-66"
+      data-name="grid-cell"
+    >
+      ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Grid renders correctly without gutters 1`] = `
+<DocumentFragment>
+  <div
+    class="o-grid u-text o-grid--no-gutter"
+    data-name="grid"
   >
-    ipsum
-  </Cell>
-</div>
+    <div
+      class="o-grid__cell o-grid__cell--width-50"
+      data-name="grid-cell"
+    >
+      lorem
+    </div>
+    <div
+      class="o-grid__cell o-grid__cell--width-50"
+      data-name="grid-cell"
+    >
+      ipsum
+    </div>
+  </div>
+</DocumentFragment>
 `;

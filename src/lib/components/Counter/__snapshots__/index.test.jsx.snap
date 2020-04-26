@@ -1,67 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Counter renders correctly 1`] = `
-<div
-  className="c-counter u-super u-text--mono"
->
-  <CountUp
-    className="c-counter__amount"
-    decimal="."
-    decimals={0}
-    delay={null}
-    duration={null}
-    easingFn={null}
-    end={0}
-    formattingFn={null}
-    onEnd={null}
-    onPauseResume={[Function]}
-    onReset={[Function]}
-    onStart={null}
-    onUpdate={[Function]}
-    prefix=""
-    redraw={false}
-    separator=""
-    start={100}
-    suffix=""
-    useEasing={true}
-  />
-</div>
+<DocumentFragment>
+  <div
+    class="c-counter u-super u-text--mono"
+    data-name="counter"
+  >
+    <span
+      class="c-counter__amount"
+    >
+      100
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Counter renders correctly with prefix and suffix 1`] = `
-<div
-  className="c-counter u-super u-text--mono"
->
-  <span
-    className="c-counter__prefix"
+<DocumentFragment>
+  <div
+    class="c-counter u-super u-text--mono"
+    data-name="counter"
   >
-    £
-  </span>
-  <CountUp
-    className="c-counter__amount"
-    decimal="."
-    decimals={0}
-    delay={null}
-    duration={null}
-    easingFn={null}
-    end={0}
-    formattingFn={null}
-    onEnd={null}
-    onPauseResume={[Function]}
-    onReset={[Function]}
-    onStart={null}
-    onUpdate={[Function]}
-    prefix=""
-    redraw={false}
-    separator=""
-    start={100}
-    suffix=""
-    useEasing={true}
-  />
-  <span
-    className="c-counter__suffix u-text--quiet u-xsmall"
-  >
-     lorem
-  </span>
-</div>
+    <span
+      class="c-counter__prefix"
+    >
+      £
+    </span>
+    <span
+      class="c-counter__amount"
+    >
+      100
+    </span>
+    <span
+      class="c-counter__suffix u-text--quiet u-xsmall"
+    >
+       lorem
+    </span>
+  </div>
+</DocumentFragment>
 `;

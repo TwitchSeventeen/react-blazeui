@@ -1,172 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Cell renders correctly 1`] = `
-<div
-  className="o-grid__cell"
->
-  lorem
-</div>
+<DocumentFragment>
+  <div
+    class="o-grid__cell"
+    data-name="grid-cell"
+  >
+    lorem
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Cell renders correctly with correct alignment 1`] = `
-<div
-  className="o-grid u-text demo"
->
-  <Cell
-    align="top"
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={null}
-    xlarge={null}
-    xsmall={null}
+<DocumentFragment>
+  <div
+    class="o-grid u-text demo"
+    data-name="grid"
   >
     <div
-      className="text"
+      class="o-grid__cell o-grid__cell--top"
+      data-name="grid-cell"
     >
-      first
+      <div
+        class="text"
+      >
+        first
+      </div>
     </div>
-  </Cell>
-  <Cell
-    align="center"
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={null}
-    xlarge={null}
-    xsmall={null}
-  >
     <div
-      className="text"
+      class="o-grid__cell o-grid__cell--center"
+      data-name="grid-cell"
     >
-      second
+      <div
+        class="text"
+      >
+        second
+      </div>
     </div>
-  </Cell>
-  <Cell
-    align="bottom"
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={null}
-    xlarge={null}
-    xsmall={null}
-  >
     <div
-      className="text"
+      class="o-grid__cell o-grid__cell--bottom"
+      data-name="grid-cell"
     >
-      third
+      <div
+        class="text"
+      >
+        third
+      </div>
     </div>
-  </Cell>
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={null}
-    xlarge={null}
-    xsmall={null}
-  >
     <div
-      className="text"
+      class="o-grid__cell"
+      data-name="grid-cell"
     >
-      fourth
-      <br />
-      fourth
-      <br />
-      fourth
-      <br />
-      fourth
-      <br />
-      fourth
-      <br />
+      <div
+        class="text"
+      >
+        fourth
+        <br />
+        fourth
+        <br />
+        fourth
+        <br />
+        fourth
+        <br />
+        fourth
+        <br />
+      </div>
     </div>
-  </Cell>
-</div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Cell renders correctly with responsive props 1`] = `
-<div
-  className="o-grid u-text o-grid--wrap demo"
->
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={33}
-    width={100}
-    xlarge={null}
-    xsmall={null}
+<DocumentFragment>
+  <div
+    class="o-grid u-text o-grid--wrap demo"
+    data-name="grid"
   >
     <div
-      className="text"
+      class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@small"
+      data-name="grid-cell"
     >
-      small
+      <div
+        class="text"
+      >
+        small
+      </div>
     </div>
-  </Cell>
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={null}
-    medium={33}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={100}
-    xlarge={null}
-    xsmall={null}
+    <div
+      class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@medium"
+      data-name="grid-cell"
+    >
+      <div
+        class="text"
+      >
+        medium
+      </div>
+    </div>
+    <div
+      class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-33@large"
+      data-name="grid-cell"
+    >
+      <div
+        class="text"
+      >
+        large
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell renders correctly without gutters 1`] = `
+<DocumentFragment>
+  <div
+    class="o-grid u-text demo"
+    data-name="grid"
   >
     <div
-      className="text"
+      class="o-grid__cell"
+      data-name="grid-cell"
     >
-      medium
+      <div
+        class="text"
+      >
+        first
+      </div>
     </div>
-  </Cell>
-  <Cell
-    align={null}
-    className={null}
-    fixedWidth={false}
-    huge={null}
-    large={33}
-    medium={null}
-    noGutter={false}
-    offset={null}
-    small={null}
-    width={100}
-    xlarge={null}
-    xsmall={null}
-  >
     <div
-      className="text"
+      class="o-grid__cell"
+      data-name="grid-cell"
     >
-      large
+      <div
+        class="text"
+      >
+        second
+      </div>
     </div>
-  </Cell>
-</div>
+    <div
+      class="o-grid__cell o-grid__cell--no-gutter"
+      data-name="grid-cell"
+    >
+      <div
+        class="text"
+      >
+        third
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;

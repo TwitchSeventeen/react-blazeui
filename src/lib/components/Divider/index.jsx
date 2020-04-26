@@ -4,11 +4,15 @@ import classNames from 'classnames';
 
 function Divider(props) {
   const {
-    children, type, className, ...other
+    children, type, className, dataName, ...other
   } = props;
   const classes = classNames('c-divider', { [`c-divider--${type}`]: type }, className);
   return (
-    <div {...other} className={classes}>
+    <div
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       <div className="c-divider__content">
         { children }
       </div>
@@ -32,12 +36,18 @@ Divider.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Divider.defaultProps = {
   children: null,
   type: 'solid',
   className: null,
+  dataName: 'divider',
 };
 
 export default Divider;

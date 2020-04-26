@@ -4,11 +4,15 @@ import classNames from 'classnames';
 
 function Code(props) {
   const {
-    children, multiline, className, ...other
+    children, multiline, className, dataName, ...other
   } = props;
   const classes = classNames('u-code', { 'u-code--multiline': multiline }, className);
   return (
-    <code {...other} className={classes}>
+    <code
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </code>
   );
@@ -27,12 +31,18 @@ Code.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Code.defaultProps = {
   children: null,
   multiline: false,
   className: null,
+  dataName: 'code',
 };
 
 export default Code;

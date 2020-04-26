@@ -1,26 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Code renders correctly 1`] = `
-<div
-  className="c-divider c-divider--solid"
->
+<DocumentFragment>
   <div
-    className="c-divider__content"
+    class="c-divider c-divider--solid"
+    data-name="divider"
   >
-    lorem ipsum dolor
+    <div
+      class="c-divider__content"
+    >
+      lorem ipsum dolor
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
-exports[`Code renders correctly a multi-line code snippet 1`] = `
-<div
-  className="c-divider c-divider--solid"
-  multiline={true}
->
+exports[`Code renders correctly a dashed divider 1`] = `
+<DocumentFragment>
   <div
-    className="c-divider__content"
+    class="c-divider c-divider--dashed"
+    data-name="divider"
   >
-    lorem ipsum dolor sit amet
+    <div
+      class="c-divider__content"
+    >
+      lorem ipsum dolor
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

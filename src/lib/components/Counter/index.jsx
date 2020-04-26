@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 
 function Counter(props) {
   const {
-    className, start, value, duration, delay, prefix, suffix, onStart, onEnd, ...other
+    className, start, value, duration, delay, prefix, dataName, suffix, onStart, onEnd, ...other
   } = props;
   const classes = classNames(
     'c-counter',
@@ -15,7 +15,7 @@ function Counter(props) {
   );
 
   return (
-    <div className={classes}>
+    <div className={classes} data-name={dataName}>
 
       { prefix
             && <span className="c-counter__prefix">{prefix}</span>}
@@ -75,6 +75,11 @@ Counter.propTypes = {
    * Function called on transition end
    */
   onEnd: PropTypes.func,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Counter.defaultProps = {
@@ -85,8 +90,9 @@ Counter.defaultProps = {
   delay: null,
   prefix: null,
   suffix: null,
-  onStart: null,
-  onEnd: null,
+  onStart: undefined,
+  onEnd: undefined,
+  dataName: 'counter',
 };
 
 export default Counter;

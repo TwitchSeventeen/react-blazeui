@@ -1,24 +1,23 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Cell from './index';
 import Grid from '../index';
 
 describe('Cell', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Cell).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<Cell>lorem</Cell>);
+    const { asFragment } = render(<Cell>lorem</Cell>);
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with correct alignment', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid className="demo">
         <Grid.Cell align="top">
           <div className="text">first</div>
@@ -46,13 +45,11 @@ describe('Cell', () => {
       </Grid>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with responsive props', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid wrap className="demo">
         <Grid.Cell width={100} small={33}>
           <div className="text">small</div>
@@ -66,13 +63,11 @@ describe('Cell', () => {
       </Grid>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly without gutters', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Grid className="demo">
         <Grid.Cell>
           <div className="text">first</div>
@@ -85,5 +80,7 @@ describe('Cell', () => {
         </Grid.Cell>
       </Grid>,
     );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,34 +1,31 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
-import Code from './index';
+import { render, cleanup } from '@testing-library/react';
+import Divider from './index';
 
 describe('Code', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
-    expect(Code).toBeDefined();
+    expect(Divider).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
-      <Code>
+    const { asFragment } = render(
+      <Divider>
         lorem ipsum dolor
-      </Code>,
+      </Divider>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly a multi-line code snippet', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
-      <Code multiline>
+  it('renders correctly a dashed divider', () => {
+    const { asFragment } = render(
+      <Divider type="dashed">
         lorem ipsum dolor
-        sit amet
-      </Code>,
+      </Divider>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
