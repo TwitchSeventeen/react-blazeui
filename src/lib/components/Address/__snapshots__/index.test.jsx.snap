@@ -6,8 +6,10 @@ exports[`Address renders correctly 1`] = `
 >
   10010 The Street,
   <br />
-   Binary Town,
+   
+  Binary Town,
   <br />
-   Offandon City,
+   
+  Offandon City,
 </address>
 `;

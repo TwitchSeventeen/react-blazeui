@@ -12,7 +12,7 @@ exports[`Breadcrumbs renders correctly 1`] = `
       className={null}
     >
       <a
-        href="#"
+        href="/lorem"
       >
         lorem
       </a>
@@ -22,7 +22,7 @@ exports[`Breadcrumbs renders correctly 1`] = `
       className={null}
     >
       <a
-        href="#"
+        href="/ipsum"
       >
         ipsum
       </a>

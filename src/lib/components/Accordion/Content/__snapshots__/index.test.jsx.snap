@@ -6,6 +6,10 @@ exports[`Content renders correctly 1`] = `
     class="c-card__item c-card__item--pane"
     data-name="accordion-content"
   >
+    lorem 
+    <p>
+      lo
+    </p>
     lorem ipsum dolor
   </div>
 </DocumentFragment>
