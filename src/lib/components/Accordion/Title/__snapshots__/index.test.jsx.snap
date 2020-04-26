@@ -5,6 +5,7 @@ exports[`Title renders correctly 1`] = `
   <button
     aria-expanded="true"
     class="c-card__control"
+    data-name="accordion-title"
     type="button"
   >
     lorem ipsum dolor

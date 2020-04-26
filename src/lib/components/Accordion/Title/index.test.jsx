@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, getByTestId, fireEvent } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import Title from './index';
 
@@ -24,12 +24,23 @@ describe('Title', () => {
    * handleClick
    */
   it('can handle handleClick', () => {
-    const onClickProp = jest.fn();
-    const wrapper = shallow(<Title active onClick={onClickProp}/>);
+    const onClick = jest.fn();
 
-    wrapper.instance().handleClick();
+    render(
+        <Title
+            active
+            onClick={onClick}
+            data-testid="accordion-title"
+        >
+          lorem ipsum dolor
+        </Title>
+    );
 
-    expect(onClickProp).toHaveBeenCalled();
+    const container = document.body;
+    const clickTitle = getByTestId(container, 'accordion-title');
+    fireEvent.click(clickTitle);
+
+    expect(onClick).toHaveBeenCalled();
   });
 });
 

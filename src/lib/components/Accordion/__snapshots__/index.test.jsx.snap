@@ -4,6 +4,7 @@ exports[`Accordion renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="c-card c-card--accordion"
+    data-name="accordion"
   >
     lorem ipsum dolor
   </div>

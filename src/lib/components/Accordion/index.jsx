@@ -6,12 +6,13 @@ import Title from './Title';
 import Content from './Content';
 
 function Accordion(props) {
-  const { children, className, ...other } = props;
+  const { children, className, dataName, ...other } = props;
   const classes = classNames('c-card--accordion', className);
   return (
     <Card
       {...other}
       className={classes}
+      data-name={dataName}
     >
       { children }
     </Card>
@@ -27,11 +28,17 @@ Accordion.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Accordion.defaultProps = {
   children: null,
   className: null,
+  dataName: 'accordion',
 };
 
 Accordion.Title = Title;

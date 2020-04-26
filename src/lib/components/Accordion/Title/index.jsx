@@ -21,7 +21,7 @@ class Title extends React.Component {
 
   render() {
     const {
-      children, className, active, index, ...other
+      children, className, active, dataName, index, ...other
     } = this.props;
     const classes = classNames('c-card__control', className);
     return (
@@ -32,6 +32,7 @@ class Title extends React.Component {
         className={classes}
         onClick={this.handleClick}
         index={index}
+        data-name={dataName}
       >
         {children}
       </button>
@@ -63,6 +64,11 @@ Title.propTypes = {
    * Function called when button is clicked
    */
   onClick: PropTypes.func,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Title.defaultProps = {
@@ -71,6 +77,7 @@ Title.defaultProps = {
   active: false,
   index: null,
   onClick: null,
+  dataName: 'accordion-title',
 };
 
 export default Title;
