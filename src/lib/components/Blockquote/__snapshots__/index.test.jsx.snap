@@ -1,30 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blockquote renders correctly 1`] = `
-<blockquote
-  className="u-blockquote"
->
-  <div
-    className="u-blockquote__body"
+<DocumentFragment>
+  <blockquote
+    class="u-blockquote"
+    data-name="blockquote"
   >
-    lorem ipsum dolor
-  </div>
-  <footer
-    className="u-blockquote__footer"
-  >
-    ~ Greg
-  </footer>
-</blockquote>
+    <div
+      class="u-blockquote__body"
+    >
+      lorem ipsum dolor
+    </div>
+    <footer
+      class="u-blockquote__footer"
+    >
+      ~ Greg
+    </footer>
+  </blockquote>
+</DocumentFragment>
 `;
 
 exports[`Blockquote renders correctly without a footer 1`] = `
-<blockquote
-  className="u-blockquote"
->
-  <div
-    className="u-blockquote__body"
+<DocumentFragment>
+  <blockquote
+    class="u-blockquote"
+    data-name="blockquote"
   >
-    lorem ipsum dolor
-  </div>
-</blockquote>
+    <div
+      class="u-blockquote__body"
+    >
+      lorem ipsum dolor
+    </div>
+  </blockquote>
+</DocumentFragment>
 `;

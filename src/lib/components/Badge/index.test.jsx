@@ -1,41 +1,43 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Badge from './index';
 
 describe('Badge', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Badge).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<Badge>lorem</Badge>);
+    const { asFragment } = render(
+      <Badge>lorem</Badge>,
+    );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with a type', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<Badge type="success">lorem</Badge>);
+    const { asFragment } = render(
+      <Badge type="success">lorem</Badge>,
+    );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with rounded corners', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<Badge type="error" rounded>lorem</Badge>);
+    const { asFragment } = render(
+      <Badge type="error" rounded>lorem</Badge>,
+    );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders correctly with rounded corners', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(<Badge ghost>lorem</Badge>);
+  it('renders correctly a ghost button', () => {
+    const { asFragment } = render(
+      <Badge ghost>lorem</Badge>,
+    );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

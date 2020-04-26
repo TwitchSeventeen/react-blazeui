@@ -1,54 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar renders correctly 1`] = `
-<div
-  className="c-avatar u-super"
-  data-text={null}
->
-  <Image
-    alt="placeholder"
-    className="c-avatar__img"
-    filter={null}
-    height={null}
-    likes={false}
-    src="http://placehold.it/1024x963/3B6DC6/FFF"
-    user={null}
-    width={null}
-  />
-</div>
+<DocumentFragment>
+  <div
+    class="c-avatar u-super"
+    data-name="avatar"
+  >
+    <img
+      alt="placeholder"
+      class="o-image c-avatar__img"
+      src="http://placehold.it/1024x963/3B6DC6/FFF"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with initials 1`] = `
-<div
-  className="c-avatar u-null"
-  data-text="LKO"
-/>
+<DocumentFragment>
+  <div
+    class="c-avatar u-null"
+    data-name="avatar"
+    data-text="LKO"
+  />
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with two images 1`] = `
-<div
-  className="c-avatar u-super"
-  data-text={null}
->
-  <Image
-    alt="placeholder"
-    className="c-avatar__img"
-    filter={null}
-    height={null}
-    likes={false}
-    src="http://placehold.it/1024x963/3B6DC6/FFF"
-    user={null}
-    width={null}
-  />
-  <Image
-    alt="placeholder"
-    className="c-avatar__img"
-    filter={null}
-    height={null}
-    likes={false}
-    src="http://placehold.it/1024x963/BADA55/FFF"
-    user={null}
-    width={null}
-  />
-</div>
+<DocumentFragment>
+  <div
+    class="c-avatar u-super"
+    data-name="avatar"
+  >
+    <img
+      alt="placeholder"
+      class="o-image c-avatar__img"
+      src="http://placehold.it/1024x963/3B6DC6/FFF"
+    />
+    <img
+      alt="placeholder"
+      class="o-image c-avatar__img"
+      src="http://placehold.it/1024x963/BADA55/FFF"
+    />
+  </div>
+</DocumentFragment>
 `;

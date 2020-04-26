@@ -1,26 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert renders correctly 1`] = `
-<div
-  className="c-alert"
-  role="alert"
->
-  lorem
-</div>
+<DocumentFragment>
+  <div
+    class="c-alert"
+    data-name="alert"
+    role="alert"
+  >
+    lorem
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Alert renders correctly a dismissable success alert 1`] = `
-<div
-  className="c-alert c-alert--success"
-  role="alert"
->
-  lorem
-  <button
-    className="c-button c-button--close"
-    onClick={[MockFunction]}
-    type="button"
+<DocumentFragment>
+  <div
+    class="c-alert c-alert--success"
+    data-name="alert"
+    role="alert"
   >
-    ×
-  </button>
-</div>
+    lorem
+    <button
+      class="c-button c-button--close"
+      type="button"
+    >
+      ×
+    </button>
+  </div>
+</DocumentFragment>
 `;

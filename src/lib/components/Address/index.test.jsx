@@ -1,15 +1,16 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Address from './index';
 
 describe('Address', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Address).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Address>
         10010 The Street,
         <br />
@@ -21,7 +22,6 @@ describe('Address', () => {
       </Address>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

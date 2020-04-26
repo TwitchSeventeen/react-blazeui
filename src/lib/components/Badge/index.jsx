@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Badge(props) {
   const {
-    children, type, rounded, ghost, ...other
+    children, type, rounded, ghost, dataName, ...other
   } = props;
   const classes = classNames(
     'c-badge',
@@ -14,7 +14,11 @@ function Badge(props) {
   );
 
   return (
-    <span {...other} className={classes}>
+    <span
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </span>
   );
@@ -43,6 +47,11 @@ Badge.propTypes = {
     'success',
     'error',
   ]),
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Badge.defaultProps = {
@@ -50,6 +59,7 @@ Badge.defaultProps = {
   rounded: false,
   ghost: false,
   type: null,
+  dataName: 'badge',
 };
 
 export default Badge;

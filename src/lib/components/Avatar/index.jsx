@@ -5,7 +5,7 @@ import Image from '../Image';
 
 function Avatar(props) {
   const {
-    initials, className, size, src, alt, src2, alt2, ...other
+    initials, className, size, src, alt, src2, alt2, dataName, ...other
   } = props;
   const classes = classNames(
     'c-avatar',
@@ -13,7 +13,12 @@ function Avatar(props) {
     className,
   );
   return (
-    <div className={classes} data-text={initials} {...other}>
+    <div
+      className={classes}
+      data-text={initials}
+      data-name={dataName}
+      {...other}
+    >
       { src
           && <Image className="c-avatar__img" src={src} alt={alt} />}
 
@@ -59,6 +64,11 @@ Avatar.propTypes = {
    * Alternate text for the secondary image
    */
   alt2: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Avatar.defaultProps = {
@@ -69,6 +79,7 @@ Avatar.defaultProps = {
   alt: null,
   src2: null,
   alt2: null,
+  dataName: 'avatar',
 };
 
 export default Avatar;

@@ -10,11 +10,16 @@ import classNames from 'classnames';
  */
 function Alert(props) {
   const {
-    children, dismissable, onDismiss, type, ...other
+    children, dismissable, onDismiss, type, dataName, ...other
   } = props;
   const classes = classNames('c-alert', { [`c-alert--${type}`]: type });
   return (
-    <div role="alert" {...other} className={classes}>
+    <div
+      role="alert"
+      {...other}
+      data-name={dataName}
+      className={classes}
+    >
       {children}
       { dismissable
         && <button className="c-button c-button--close" onClick={onDismiss} type="button">&times;</button>}
@@ -45,6 +50,11 @@ Alert.propTypes = {
     'success',
     'error',
   ]),
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Alert.defaultProps = {
@@ -52,6 +62,7 @@ Alert.defaultProps = {
   dismissable: false,
   onDismiss: null,
   type: null,
+  dataName: 'alert',
 };
 
 export default Alert;

@@ -4,11 +4,15 @@ import classNames from 'classnames';
 
 function Blockquote(props) {
   const {
-    children, cite, className, ...other
+    children, cite, className, dataName, ...other
   } = props;
   const classes = classNames('u-blockquote', className);
   return (
-    <blockquote {...other} className={classes}>
+    <blockquote
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       <div className="u-blockquote__body">
         { children }
       </div>
@@ -31,12 +35,18 @@ Blockquote.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Blockquote.defaultProps = {
   children: null,
   cite: null,
   className: null,
+  dataName: 'blockquote',
 };
 
 export default Blockquote;
