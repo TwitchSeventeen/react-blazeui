@@ -1,15 +1,16 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Breadcrumbs from './index';
 
 describe('Breadcrumbs', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Breadcrumbs).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Breadcrumbs>
         <Breadcrumbs.Item>
           <a href="/lorem">lorem</a>
@@ -23,7 +24,6 @@ describe('Breadcrumbs', () => {
       </Breadcrumbs>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

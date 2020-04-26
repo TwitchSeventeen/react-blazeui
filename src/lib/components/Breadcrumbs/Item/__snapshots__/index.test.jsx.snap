@@ -1,23 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumbs.Item renders correctly 1`] = `
-<li
-  aria-current={null}
-  className="c-breadcrumbs__crumb"
->
-  <a
-    href="/lorem"
+<DocumentFragment>
+  <li
+    class="c-breadcrumbs__crumb"
+    data-name="breadcrumbs-item"
   >
-    lorem
-  </a>
-</li>
+    <a
+      href="/lorem"
+    >
+      lorem
+    </a>
+  </li>
+</DocumentFragment>
 `;
 
 exports[`Breadcrumbs.Item renders correctly an active Item 1`] = `
-<li
-  aria-current="page"
-  className="c-breadcrumbs__crumb"
->
-  lorem
-</li>
+<DocumentFragment>
+  <li
+    aria-current="page"
+    class="c-breadcrumbs__crumb"
+    data-name="breadcrumbs-item"
+  >
+    lorem
+  </li>
+</DocumentFragment>
 `;

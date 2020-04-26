@@ -1,38 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumbs renders correctly 1`] = `
-<nav
-  aria-label="Breadcrumb"
->
-  <ol
-    className="c-breadcrumbs"
+<DocumentFragment>
+  <nav
+    aria-label="Breadcrumb"
+    data-name="breadcrumbs"
   >
-    <Item
-      active={false}
-      className={null}
+    <ol
+      class="c-breadcrumbs"
     >
-      <a
-        href="/lorem"
+      <li
+        class="c-breadcrumbs__crumb"
+        data-name="breadcrumbs-item"
       >
-        lorem
-      </a>
-    </Item>
-    <Item
-      active={false}
-      className={null}
-    >
-      <a
-        href="/ipsum"
+        <a
+          href="/lorem"
+        >
+          lorem
+        </a>
+      </li>
+      <li
+        class="c-breadcrumbs__crumb"
+        data-name="breadcrumbs-item"
       >
-        ipsum
-      </a>
-    </Item>
-    <Item
-      active={true}
-      className={null}
-    >
-      dolor
-    </Item>
-  </ol>
-</nav>
+        <a
+          href="/ipsum"
+        >
+          ipsum
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        class="c-breadcrumbs__crumb"
+        data-name="breadcrumbs-item"
+      >
+        dolor
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
 `;

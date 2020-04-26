@@ -5,7 +5,7 @@ import Group from '../Input/Group';
 
 function Button(props) {
   const {
-    children, className, buttonType, type, size, fluid, ghost, rounded, active, ...other
+    children, className, buttonType, type, size, fluid, ghost, rounded, active, dataName, ...other
   } = props;
   const classes = classNames(
     'c-button',
@@ -20,7 +20,12 @@ function Button(props) {
   );
 
   return (
-    <button {...other} type={buttonType} className={classes}>
+    <button
+      {...other}
+      type={buttonType}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </button>
   );
@@ -80,6 +85,11 @@ Button.propTypes = {
    * Defines an ghost state
    */
   ghost: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -92,6 +102,7 @@ Button.defaultProps = {
   active: false,
   className: null,
   ghost: false,
+  dataName: 'button',
 };
 
 Button.Group = Group;

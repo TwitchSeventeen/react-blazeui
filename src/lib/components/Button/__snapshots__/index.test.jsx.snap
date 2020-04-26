@@ -1,37 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders correctly 1`] = `
-<button
-  className="c-button"
-  type="button"
->
-  lorem ipsum dolor
-</button>
+<DocumentFragment>
+  <button
+    class="c-button"
+    data-name="button"
+    type="button"
+  >
+    lorem ipsum dolor
+  </button>
+</DocumentFragment>
 `;
 
 exports[`Button renders correctly a button with a type 1`] = `
-<button
-  className="c-button c-button--success"
-  type="button"
->
-  lorem ipsum dolor
-</button>
+<DocumentFragment>
+  <button
+    class="c-button c-button--success"
+    data-name="button"
+    type="button"
+  >
+    lorem ipsum dolor
+  </button>
+</DocumentFragment>
 `;
 
 exports[`Button renders correctly a ghost button 1`] = `
-<button
-  className="c-button c-button--ghost"
-  type="button"
->
-  lorem ipsum dolor
-</button>
+<DocumentFragment>
+  <button
+    class="c-button c-button--ghost"
+    data-name="button"
+    type="button"
+  >
+    lorem ipsum dolor
+  </button>
+</DocumentFragment>
 `;
 
 exports[`Button renders correctly a ghost button with a type 1`] = `
-<button
-  className="c-button c-button--ghost-success"
-  type="button"
->
-  lorem ipsum dolor
-</button>
+<DocumentFragment>
+  <button
+    class="c-button c-button--ghost-success"
+    data-name="button"
+    type="button"
+  >
+    lorem ipsum dolor
+  </button>
+</DocumentFragment>
 `;
