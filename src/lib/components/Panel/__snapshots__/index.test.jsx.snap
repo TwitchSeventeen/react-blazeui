@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel renders correctly 1`] = `
-<div
-  className="o-panel-container"
-  style={
-    Object {
-      "height": "200px",
-    }
-  }
->
+<DocumentFragment>
   <div
-    className="o-panel"
+    class="o-panel-container"
+    data-name="panel"
+    style="height: 200px;"
   >
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate harum iure molestias nihil quasi? Delectus impedit minus molestiae, possimus provident quidem vero. Ab dignissimos reprehenderit voluptatem. Assumenda commodi explicabo ullam!
+    <div
+      class="o-panel"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate harum iure molestias nihil quasi? Delectus impedit minus molestiae, possimus provident quidem vero. Ab dignissimos reprehenderit voluptatem. Assumenda commodi explicabo ullam!
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

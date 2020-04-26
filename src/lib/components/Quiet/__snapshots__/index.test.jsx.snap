@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Quiet renders correctly 1`] = `
-<span
-  className="u-text--quiet"
->
-  lorem ipsum dolor
-</span>
+<DocumentFragment>
+  <span
+    class="u-text--quiet"
+    data-name="quiet"
+  >
+    lorem ipsum dolor
+  </span>
+</DocumentFragment>
 `;

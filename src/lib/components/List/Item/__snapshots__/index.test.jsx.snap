@@ -1,17 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Item renders correctly 1`] = `
-<li
-  className="c-list__item"
->
-  ipsum
-</li>
+<DocumentFragment>
+  <li
+    class="c-list__item"
+    data-name="list-item"
+  >
+    ipsum
+  </li>
+</DocumentFragment>
 `;
 
 exports[`Item renders correctly an unstyled Item 1`] = `
-<li
-  className="c-list__item c-list__item--unstyled"
->
-  ipsum
-</li>
+<DocumentFragment>
+  <li
+    class="c-list__item c-list__item--unstyled"
+    data-name="list-item"
+  >
+    ipsum
+  </li>
+</DocumentFragment>
 `;

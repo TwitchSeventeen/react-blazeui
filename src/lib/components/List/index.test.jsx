@@ -1,15 +1,16 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import List from './index';
 
 describe('List', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(List).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <List>
         <List.Item>lorem</List.Item>
         <List.Item>ipsum</List.Item>
@@ -17,13 +18,11 @@ describe('List', () => {
       </List>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly an ordered list', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <List ordered>
         <List.Item>lorem</List.Item>
         <List.Item>ipsum</List.Item>
@@ -31,13 +30,11 @@ describe('List', () => {
       </List>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly an unstyled list', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <List unstyled>
         <List.Item>lorem</List.Item>
         <List.Item>ipsum</List.Item>
@@ -45,13 +42,11 @@ describe('List', () => {
       </List>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly an inline list', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <List inline>
         <List.Item>lorem</List.Item>
         <List.Item>ipsum</List.Item>
@@ -59,7 +54,6 @@ describe('List', () => {
       </List>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

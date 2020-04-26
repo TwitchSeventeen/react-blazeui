@@ -1,101 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List renders correctly 1`] = `
-<ul
-  className="c-list"
->
-  <Item
-    className={null}
-    unstyled={false}
+<DocumentFragment>
+  <ul
+    class="c-list"
+    data-name="list"
   >
-    lorem
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    ipsum
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    dolor
-  </Item>
-</ul>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      lorem
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      ipsum
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      dolor
+    </li>
+  </ul>
+</DocumentFragment>
 `;
 
 exports[`List renders correctly an inline list 1`] = `
-<ul
-  className="c-list c-list--inline"
->
-  <Item
-    className={null}
-    unstyled={false}
+<DocumentFragment>
+  <ul
+    class="c-list c-list--inline"
+    data-name="list"
   >
-    lorem
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    ipsum
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    dolor
-  </Item>
-</ul>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      lorem
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      ipsum
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      dolor
+    </li>
+  </ul>
+</DocumentFragment>
 `;
 
 exports[`List renders correctly an ordered list 1`] = `
-<ol
-  className="c-list c-list--ordered"
->
-  <Item
-    className={null}
-    unstyled={false}
+<DocumentFragment>
+  <ol
+    class="c-list c-list--ordered"
+    data-name="list"
   >
-    lorem
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    ipsum
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    dolor
-  </Item>
-</ol>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      lorem
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      ipsum
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      dolor
+    </li>
+  </ol>
+</DocumentFragment>
 `;
 
 exports[`List renders correctly an unstyled list 1`] = `
-<ul
-  className="c-list c-list--unstyled"
->
-  <Item
-    className={null}
-    unstyled={false}
+<DocumentFragment>
+  <ul
+    class="c-list c-list--unstyled"
+    data-name="list"
   >
-    lorem
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    ipsum
-  </Item>
-  <Item
-    className={null}
-    unstyled={false}
-  >
-    dolor
-  </Item>
-</ul>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      lorem
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      ipsum
+    </li>
+    <li
+      class="c-list__item"
+      data-name="list-item"
+    >
+      dolor
+    </li>
+  </ul>
+</DocumentFragment>
 `;

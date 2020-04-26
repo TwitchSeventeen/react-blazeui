@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loud renders correctly 1`] = `
-<span
-  className="u-text--loud"
->
-  lorem ipsum dolor
-</span>
+<DocumentFragment>
+  <span
+    class="u-text--loud"
+    data-name="loud"
+  >
+    lorem ipsum dolor
+  </span>
+</DocumentFragment>
 `;
