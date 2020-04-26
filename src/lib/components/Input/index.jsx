@@ -10,7 +10,7 @@ import Label from './Label';
 
 function Input(props) {
   const {
-    className, success, error, size, ...other
+    className, success, error, size, dataName, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -21,7 +21,11 @@ function Input(props) {
   );
 
   return (
-    <input {...other} className={classes} />
+    <input
+      {...other}
+      className={classes}
+      data-name={dataName}
+    />
   );
 }
 
@@ -53,6 +57,11 @@ Input.propTypes = {
     'xlarge',
     'super',
   ]),
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -61,6 +70,7 @@ Input.defaultProps = {
   error: false,
   type: 'text',
   size: null,
+  dataName: 'input',
 };
 
 Input.Textarea = Textarea;

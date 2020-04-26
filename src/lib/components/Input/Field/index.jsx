@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Field(props) {
   const {
-    className, iconLeft, iconRight, children, fixed, ...other
+    className, iconLeft, iconRight, children, fixed, dataName, ...other
   } = props;
   const classes = classNames(
     'o-field',
@@ -15,7 +15,11 @@ function Field(props) {
   );
 
   return (
-    <div {...other} className={classes}>
+    <div
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </div>
   );
@@ -42,6 +46,11 @@ Field.propTypes = {
    * Defines a fixed with field
    */
   fixed: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Field.defaultProps = {
@@ -50,6 +59,7 @@ Field.defaultProps = {
   iconRight: false,
   children: null,
   fixed: false,
+  dataName: 'input-field',
 };
 
 export default Field;

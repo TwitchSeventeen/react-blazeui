@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Checkbox(props) {
   const {
-    className, success, error, radio, ...other
+    className, success, error, radio, dataName, ...other
   } = props;
   const classes = classNames(
     { 'c-field--success': success },
@@ -14,12 +14,22 @@ function Checkbox(props) {
 
   if (radio) {
     return (
-      <input {...other} className={classes} type="radio" />
+      <input
+        {...other}
+        className={classes}
+        type="radio"
+        data-name={dataName}
+      />
     );
   }
 
   return (
-    <input {...other} className={classes} type="checkbox" />
+    <input
+      {...other}
+      className={classes}
+      type="checkbox"
+      data-name={dataName}
+    />
   );
 }
 
@@ -40,6 +50,11 @@ Checkbox.propTypes = {
    * Defines a radio input
    */
   radio: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
@@ -47,6 +62,7 @@ Checkbox.defaultProps = {
   success: false,
   error: false,
   radio: false,
+  dataName: 'input-checkbox',
 };
 
 export default Checkbox;

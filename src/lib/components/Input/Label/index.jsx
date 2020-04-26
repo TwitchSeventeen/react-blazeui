@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Label(props) {
   const {
-    className, choice, children, inputId, ...other
+    className, choice, children, inputId, dataName, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,7 +14,12 @@ function Label(props) {
   );
 
   return (
-    <label {...other} className={classes} htmlFor={inputId}>
+    <label
+      {...other}
+      className={classes}
+      htmlFor={inputId}
+      data-name={dataName}
+    >
       { children }
     </label>
   );
@@ -37,6 +42,11 @@ Label.propTypes = {
    * ID to link to input for accessibility
    */
   inputId: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Label.defaultProps = {
@@ -44,6 +54,7 @@ Label.defaultProps = {
   className: null,
   choice: false,
   inputId: null,
+  dataName: 'input-label',
 };
 
 export default Label;

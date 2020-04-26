@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+<DocumentFragment>
+  <select
+    class="c-field"
+    data-name="input-select"
+  >
+    <option>
+      Choose me...
+    </option>
+  </select>
+</DocumentFragment>
+`;

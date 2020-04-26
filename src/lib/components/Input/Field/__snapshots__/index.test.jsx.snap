@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Field renders correctly 1`] = `
-<div
-  className="o-field"
->
-  lorem ipsum dolor
-</div>
+<DocumentFragment>
+  <div
+    class="o-field"
+    data-name="input-field"
+  >
+    lorem ipsum dolor
+  </div>
+</DocumentFragment>
 `;

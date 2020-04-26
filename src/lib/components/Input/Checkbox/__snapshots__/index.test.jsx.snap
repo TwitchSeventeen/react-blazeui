@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+<DocumentFragment>
+  <label
+    class="c-field c-field--choice c-field"
+    data-name="input-label"
+  >
+    <input
+      class=""
+      data-name="input-checkbox"
+      type="checkbox"
+    />
+     Tick the box
+  </label>
+</DocumentFragment>
+`;

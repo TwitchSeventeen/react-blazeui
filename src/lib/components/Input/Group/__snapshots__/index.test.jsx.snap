@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Field.Group renders correctly 1`] = `
-<div
-  className="c-input-group"
->
-  lorem ipsum dolor
-</div>
+<DocumentFragment>
+  <div
+    class="c-input-group"
+    data-name="input-group"
+  >
+    lorem ipsum dolor
+  </div>
+</DocumentFragment>
 `;

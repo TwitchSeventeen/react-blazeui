@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Select(props) {
   const {
-    children, className, success, error, ...other
+    children, className, success, error, dataName, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,7 +14,11 @@ function Select(props) {
   );
 
   return (
-    <select {...other} className={classes}>
+    <select
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </select>
   );
@@ -37,6 +41,11 @@ Select.propTypes = {
    * Defines error styling
    */
   error: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -44,6 +53,7 @@ Select.defaultProps = {
   className: null,
   success: false,
   error: false,
+  dataName: 'input-select',
 };
 
 export default Select;

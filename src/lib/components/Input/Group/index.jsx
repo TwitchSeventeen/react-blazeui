@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Group(props) {
   const {
-    className, children, stacked, rounded, roundedLeft, roundedRight, ...other
+    className, children, stacked, rounded, roundedLeft, roundedRight, dataName, ...other
   } = props;
   const classes = classNames(
     'c-input-group',
@@ -16,7 +16,11 @@ function Group(props) {
   );
 
   return (
-    <div {...other} className={classes}>
+    <div
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </div>
   );
@@ -47,6 +51,11 @@ Group.propTypes = {
    * Defines a group with rounded right corners
    */
   roundedRight: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Group.defaultProps = {
@@ -56,6 +65,7 @@ Group.defaultProps = {
   rounded: false,
   roundedLeft: false,
   roundedRight: false,
+  dataName: 'input-group',
 };
 
 export default Group;

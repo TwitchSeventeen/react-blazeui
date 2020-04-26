@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<DocumentFragment>
+  <input
+    class="c-field"
+    data-name="input"
+    name="type"
+    placeholder="Type in here..."
+    type="text"
+  />
+</DocumentFragment>
+`;

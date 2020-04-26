@@ -1,19 +1,17 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import Field from './index';
+import Input from '../index';
 
-describe('Field', () => {
+describe('Textarea', () => {
   afterEach(cleanup);
 
   it('should be defined', () => {
-    expect(Field).toBeDefined();
+    expect(Input.Textarea).toBeDefined();
   });
 
   it('renders correctly', () => {
     const { asFragment } = render(
-      <Field>
-        lorem ipsum dolor
-      </Field>,
+      <Input.Textarea placeholder="Type in here..." />,
     );
 
     expect(asFragment()).toMatchSnapshot();
