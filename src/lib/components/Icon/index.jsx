@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Icon(props) {
   const {
-    className, name, type, size, flipped, rotate, spin, pulse, ...other
+    className, name, type, size, flipped, rotate, spin, pulse, dataName, ...other
   } = props;
   const classes = classNames(
     'c-icon',
@@ -19,7 +19,12 @@ function Icon(props) {
   );
 
   return (
-    <i {...other} className={classes} aria-hidden />
+    <i
+      {...other}
+      className={classes}
+      aria-hidden
+      data-name={dataName}
+    />
   );
 }
 
@@ -76,6 +81,11 @@ Icon.propTypes = {
    * Spins the Icon with 8 steps
    */
   pulse: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Icon.defaultProps = {
@@ -86,6 +96,7 @@ Icon.defaultProps = {
   rotate: null,
   spin: false,
   pulse: false,
+  dataName: 'icon',
 };
 
 export default Icon;

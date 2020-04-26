@@ -1,50 +1,68 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Image from './index';
 
 describe('Image', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Image).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Image
         height={100}
         width={50}
       />,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('renders correctly without a width', () => {
+    const { asFragment } = render(
+      <Image
+        height={100}
+        filter="lorem"
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('renders correctly with dimensions and a filter', () => {
+    const { asFragment } = render(
+      <Image
+        height={100}
+        width={50}
+        filter="lorem"
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with a picture liked by a user', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Image
         user="twitchseventeen"
         filter="lorem"
         likes
-
       />,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with a explicit picture', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Image
         src="https://via.placeholder.com/150"
         alt="alt text"
       />,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,25 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image renders correctly 1`] = `
-<img
-  alt="random placeholder image"
-  className="o-image"
-  src="https://source.unsplash.com/random/50x100/"
-/>
+<DocumentFragment>
+  <img
+    alt="random placeholder image"
+    class="o-image"
+    data-name="image"
+    src="https://source.unsplash.com/random/50x100/"
+  />
+</DocumentFragment>
 `;
 
 exports[`Image renders correctly with a explicit picture 1`] = `
-<img
-  alt="alt text"
-  className="o-image"
-  src="https://via.placeholder.com/150"
-/>
+<DocumentFragment>
+  <img
+    alt="alt text"
+    class="o-image"
+    data-name="image"
+    src="https://via.placeholder.com/150"
+  />
+</DocumentFragment>
 `;
 
 exports[`Image renders correctly with a picture liked by a user 1`] = `
-<img
-  alt="random placeholder image"
-  className="o-image"
-  src="https://source.unsplash.com/user/twitchseventeen/likes/featured/?lorem"
-/>
+<DocumentFragment>
+  <img
+    alt="random placeholder image"
+    class="o-image"
+    data-name="image"
+    src="https://source.unsplash.com/user/twitchseventeen/likes/featured/?lorem"
+  />
+</DocumentFragment>
+`;
+
+exports[`Image renders correctly with dimensions and a filter 1`] = `
+<DocumentFragment>
+  <img
+    alt="random placeholder image"
+    class="o-image"
+    data-name="image"
+    src="https://source.unsplash.com/50x100/?lorem"
+  />
+</DocumentFragment>
+`;
+
+exports[`Image renders correctly without a width 1`] = `
+<DocumentFragment>
+  <img
+    alt="random placeholder image"
+    class="o-image"
+    data-name="image"
+    src="https://source.unsplash.com/featured/?lorem"
+  />
+</DocumentFragment>
 `;

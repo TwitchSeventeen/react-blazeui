@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Image(props) {
   const {
-    className, src, alt, user, filter, likes, height, width, ...other
+    className, src, alt, user, filter, likes, height, width, dataName, ...other
   } = props;
   const classes = classNames(
     'o-image',
@@ -25,7 +25,13 @@ function Image(props) {
   }
 
   return (
-    <img {...other} className={classes} src={source} alt={alt} />
+    <img
+      {...other}
+      className={classes}
+      src={source}
+      alt={alt}
+      data-name={dataName}
+    />
   );
 }
 
@@ -64,6 +70,11 @@ Image.propTypes = {
    * Width of the image to fetch
    */
   width: PropTypes.number,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Image.defaultProps = {
@@ -75,6 +86,7 @@ Image.defaultProps = {
   filter: null,
   height: null,
   width: null,
+  dataName: 'image',
 };
 
 export default Image;

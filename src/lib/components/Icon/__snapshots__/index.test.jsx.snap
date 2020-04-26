@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon renders correctly 1`] = `
-<i
-  aria-hidden={true}
-  className="c-icon fa-spinner fas"
-/>
+<DocumentFragment>
+  <i
+    aria-hidden="true"
+    class="c-icon fa-spinner fas"
+    data-name="icon"
+  />
+</DocumentFragment>
 `;
