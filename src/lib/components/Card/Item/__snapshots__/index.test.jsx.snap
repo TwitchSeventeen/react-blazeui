@@ -1,21 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card.Item renders correctly 1`] = `
-<div
-  className="c-card__item"
->
-  <p>
-    lorem
-  </p>
-</div>
+<DocumentFragment>
+  <div
+    class="c-card__item"
+    data-name="card-item"
+  >
+    <p>
+      lorem
+    </p>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Card.Item renders correctly with a colour 1`] = `
-<div
-  className="c-card__item c-card__item--success"
->
-  <p>
-    lorem
-  </p>
-</div>
+<DocumentFragment>
+  <div
+    class="c-card__item c-card__item--success"
+    data-name="card-item"
+  >
+    <p>
+      lorem
+    </p>
+  </div>
+</DocumentFragment>
 `;

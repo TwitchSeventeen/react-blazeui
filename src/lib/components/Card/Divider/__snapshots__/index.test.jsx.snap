@@ -1,26 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card.Divider renders correctly 1`] = `
-<div
-  className="c-card__item c-card__item--divider"
-  role="separator"
->
-  lorem
-</div>
+<DocumentFragment>
+  <div
+    class="c-card__item c-card__item--divider"
+    data-name="card-divider"
+    role="separator"
+  >
+    lorem
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Card.Divider renders correctly as a separator 1`] = `
-<div
-  className="c-card__divider"
-  role="separator"
-/>
+<DocumentFragment>
+  <div
+    class="c-card__divider"
+    data-name="card-divider"
+    role="separator"
+  />
+</DocumentFragment>
 `;
 
 exports[`Card.Divider renders correctly with a colour 1`] = `
-<div
-  className="c-card__item c-card__item--divider c-card__item--brand"
-  role={null}
->
-  lorem
-</div>
+<DocumentFragment>
+  <div
+    class="c-card__item c-card__item--divider c-card__item--brand"
+    data-name="card-divider"
+  >
+    lorem
+  </div>
+</DocumentFragment>
 `;

@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card.Header renders correctly 1`] = `
-<header
-  className="c-card__header"
->
-  lorem
-</header>
+<DocumentFragment>
+  <header
+    class="c-card__header"
+    data-name="card-header"
+  >
+    lorem
+  </header>
+</DocumentFragment>
 `;

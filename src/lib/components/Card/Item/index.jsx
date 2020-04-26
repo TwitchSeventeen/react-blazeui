@@ -4,11 +4,15 @@ import classNames from 'classnames';
 
 function Item(props) {
   const {
-    children, type, className, ...other
+    children, type, className, dataName, ...other
   } = props;
   const classes = classNames('c-card__item', { [`c-card__item--${type}`]: type }, className);
   return (
-    <div {...other} className={classes}>
+    <div
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </div>
   );
@@ -33,12 +37,18 @@ Item.propTypes = {
     'success',
     'error',
   ]),
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Item.defaultProps = {
   children: null,
   type: null,
   className: null,
+  dataName: 'card-item',
 };
 
 export default Item;

@@ -14,7 +14,7 @@ function Accordion(props) {
     <Card
       {...other}
       className={classes}
-      data-name={dataName}
+      dataName={dataName}
     >
       { children }
     </Card>

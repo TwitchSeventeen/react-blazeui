@@ -1,17 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card.Footer renders correctly 1`] = `
-<footer
-  className="c-card__footer"
->
-  lorem
-</footer>
+<DocumentFragment>
+  <footer
+    class="c-card__footer"
+    data-name="card-footer"
+  >
+    lorem
+  </footer>
+</DocumentFragment>
 `;
 
 exports[`Card.Footer renders correctly as a block 1`] = `
-<footer
-  className="c-card__footer c-card__footer--block"
->
-  lorem
-</footer>
+<DocumentFragment>
+  <footer
+    class="c-card__footer c-card__footer--block"
+    data-name="card-footer"
+  >
+    lorem
+  </footer>
+</DocumentFragment>
 `;

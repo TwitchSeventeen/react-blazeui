@@ -12,11 +12,8 @@ function Content(props) {
     <Card.Item
       {...other}
       className={classes}
-      data-name={dataName}
+      dataName={dataName}
     >
-      lorem
-      {' '}
-      <p>lo</p>
       { children }
     </Card.Item>
   );
