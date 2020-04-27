@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Card from "../../Card";
 
 class Title extends React.Component {
   constructor(props) {

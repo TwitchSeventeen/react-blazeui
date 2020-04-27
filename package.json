@@ -2,7 +2,7 @@
   "name": "react-blazeui",
   "description": "Blaze UI components built with React JS",
   "main": "build/index.js",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
