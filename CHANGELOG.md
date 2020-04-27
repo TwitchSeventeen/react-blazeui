@@ -1,3 +1,9 @@
+### v0.3.0 - Mon 27th Apr '20
+* Updated dependencies
+* Replaced enzyme unit tests with react testing library
+* All components now have a dataName prop and default value (used for testing/styling)
+* As components now have an as prop (used to override the element type)
+
 ### v0.2.3 - Sat 2nd Jan '19
 * Added new Table component
 * Added new Counter component
