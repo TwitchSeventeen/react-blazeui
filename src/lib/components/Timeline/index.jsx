@@ -5,7 +5,7 @@ import Item from './Item';
 
 function Timeline(props) {
   const {
-    children, className, loading, alternate, ...other
+    children, className, loading, alternate, dataName, ...other
   } = props;
   const classes = classNames(
     'o-timeline',
@@ -15,7 +15,11 @@ function Timeline(props) {
   );
 
   return (
-    <ul {...other} className={classes}>
+    <ul
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       { children }
     </ul>
   );
@@ -38,6 +42,11 @@ Timeline.propTypes = {
    * The items on this Timeline can alternate between left and right side
    */
   alternate: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Timeline.defaultProps = {
@@ -45,6 +54,7 @@ Timeline.defaultProps = {
   className: null,
   loading: false,
   alternate: false,
+  dataName: 'timeline',
 };
 
 Timeline.Item = Item;

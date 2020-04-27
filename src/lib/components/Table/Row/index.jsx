@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Row(props) {
   const {
-    children, className, head, disabled, clickable, ...other
+    children, className, head, disabled, clickable, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -16,7 +16,11 @@ function Row(props) {
   );
 
   return (
-    <tr className={classes} {...other}>
+    <tr
+      className={classes}
+      {...other}
+      data-name={dataName}
+    >
       { children }
     </tr>
   );
@@ -43,6 +47,11 @@ Row.propTypes = {
    * Defines a clickable row
    */
   clickable: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Row.defaultProps = {
@@ -51,6 +60,7 @@ Row.defaultProps = {
   head: false,
   disabled: false,
   clickable: false,
+  dataName: 'table-row',
 };
 
 export default Row;

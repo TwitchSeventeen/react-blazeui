@@ -1,117 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders a condensed table 1`] = `
-<table
-  className="c-table c-table--condensed"
->
-  <Caption
-    className={null}
+<DocumentFragment>
+  <table
+    class="c-table c-table--condensed"
+    data-name="table"
   >
-    Small table and text
-  </Caption>
-  <Header
-    className={null}
-  >
-    <Row
-      className={null}
-      clickable={false}
-      disabled={false}
-      head={true}
+    <caption
+      class="c-table__caption"
+      data-name="table-caption"
     >
-      <HeaderCell
-        className={null}
-      >
-        First name
-      </HeaderCell>
-      <HeaderCell
-        className={null}
-      >
-        Last name
-      </HeaderCell>
-      <HeaderCell
-        className={null}
-      >
-        Username
-      </HeaderCell>
-    </Row>
-  </Header>
-  <Body
-    className={null}
-  >
-    <Row
-      className={null}
-      clickable={false}
-      disabled={false}
-      head={false}
+      Small table and text
+    </caption>
+    <thead
+      class="c-table__head"
+      data-name="table-header"
     >
-      <Cell
-        className={null}
+      <tr
+        class="c-table__row c-table__row--heading"
+        data-name="table-row"
       >
-        Jim
-      </Cell>
-      <Cell
-        className={null}
-      >
-        Kirk
-      </Cell>
-      <Cell
-        className={null}
-      >
-        @captaink
-      </Cell>
-    </Row>
-    <Row
-      className={null}
-      clickable={false}
-      disabled={false}
-      head={false}
+        <th
+          class="c-table__cell"
+          data-name="table-headercell"
+        >
+          First name
+        </th>
+        <th
+          class="c-table__cell"
+          data-name="table-headercell"
+        >
+          Last name
+        </th>
+        <th
+          class="c-table__cell"
+          data-name="table-headercell"
+        >
+          Username
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="c-table__body"
+      data-name="table-body"
     >
-      <Cell
-        className={null}
+      <tr
+        class="c-table__row"
+        data-name="table-row"
       >
-        Mr.
-      </Cell>
-      <Cell
-        className={null}
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          Jim
+        </td>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          Kirk
+        </td>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          @captaink
+        </td>
+      </tr>
+      <tr
+        class="c-table__row"
+        data-name="table-row"
       >
-        Spock
-      </Cell>
-      <Cell
-        className={null}
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          Mr.
+        </td>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          Spock
+        </td>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          @science101
+        </td>
+      </tr>
+      <tr
+        class="c-table__row"
+        data-name="table-row"
       >
-        @science101
-      </Cell>
-    </Row>
-    <Row
-      className={null}
-      clickable={false}
-      disabled={false}
-      head={false}
-    >
-      <Cell
-        className={null}
-      >
-        Nyota
-      </Cell>
-      <Cell
-        className={null}
-      >
-        Uhura
-      </Cell>
-      <Cell
-        className={null}
-      >
-        @comms
-      </Cell>
-    </Row>
-  </Body>
-</table>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          Nyota
+        </td>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          Uhura
+        </td>
+        <td
+          class="c-table__cell"
+          data-name="table-cell"
+        >
+          @comms
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
 `;
 
 exports[`Table renders correctly 1`] = `
-<table
-  className="c-table"
->
+<DocumentFragment>
   lorem ipsum dolor
-</table>
+  <table
+    class="c-table"
+    data-name="table"
+  />
+</DocumentFragment>
 `;

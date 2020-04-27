@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`HeaderCell renders correctly 1`] = `
-<th
-  className="c-table__cell"
->
-  lorem ipsum dolor
-</th>
-`;

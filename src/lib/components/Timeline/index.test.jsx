@@ -1,15 +1,16 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Timeline from './index';
 
 describe('Timeline', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Timeline).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Timeline>
         <Timeline.Item>
           lorem ipsum dolor
@@ -17,13 +18,11 @@ describe('Timeline', () => {
       </Timeline>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with a loading item', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Timeline loading>
         <Timeline.Item>
           lorem ipsum dolor
@@ -34,13 +33,11 @@ describe('Timeline', () => {
       </Timeline>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders correctly with left Items', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Timeline alternate>
         <Timeline.Item>
           lorem ipsum dolor
@@ -51,7 +48,6 @@ describe('Timeline', () => {
       </Timeline>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

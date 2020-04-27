@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Caption renders correctly 1`] = `
-<caption
-  className="c-table__caption"
->
-  lorem ipsum dolor
-</caption>
-`;

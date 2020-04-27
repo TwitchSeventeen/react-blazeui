@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Caption(props) {
   const {
-    children, className, ...other
+    children, className, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,7 +13,11 @@ function Caption(props) {
   );
 
   return (
-    <caption className={classes} {...other}>
+    <caption
+      className={classes}
+      {...other}
+      data-name={dataName}
+    >
       { children }
     </caption>
   );
@@ -28,11 +32,17 @@ Caption.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Caption.defaultProps = {
   className: null,
   children: null,
+  dataName: 'table-caption',
 };
 
 export default Caption;

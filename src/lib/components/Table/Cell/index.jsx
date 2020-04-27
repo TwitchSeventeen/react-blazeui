@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Cell(props) {
   const {
-    children, className, ...other
+    children, className, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,7 +13,11 @@ function Cell(props) {
   );
 
   return (
-    <td className={classes} {...other}>
+    <td
+      className={classes}
+      {...other}
+      data-name={dataName}
+    >
       { children }
     </td>
   );
@@ -28,11 +32,17 @@ Cell.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Cell.defaultProps = {
   className: null,
   children: null,
+  dataName: 'table-cell',
 };
 
 export default Cell;

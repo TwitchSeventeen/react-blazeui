@@ -33,17 +33,17 @@ class Home extends React.Component {
 
         <Accordion>
           <Accordion.Title active={activeItem === 0} index={0} onClick={this.handleClick}>
-              Heading one
+            Heading one
           </Accordion.Title>
           <Accordion.Content>
-              This is the body
+            This is the body
           </Accordion.Content>
 
           <Accordion.Title active={activeItem === 1} index={1} onClick={this.handleClick}>
-              Heading two
+            Heading two
           </Accordion.Title>
           <Accordion.Content>
-              This is the second body
+            This is the second body
           </Accordion.Content>
         </Accordion>
 

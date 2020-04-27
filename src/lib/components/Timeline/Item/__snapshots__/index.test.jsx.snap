@@ -1,61 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Item renders correctly 1`] = `
-<li
-  className="c-timeline-item"
->
-  <div
-    className="c-timeline-item__body"
+<DocumentFragment>
+  <li
+    class="c-timeline-item"
+    data-name="timeline-item"
   >
-    lorem ipsum dolor
-  </div>
-</li>
+    <div
+      class="c-timeline-item__body"
+    >
+      lorem ipsum dolor
+    </div>
+  </li>
+</DocumentFragment>
 `;
 
 exports[`Item renders correctly as the last item 1`] = `
-<li
-  className="c-timeline-item c-timeline-item--last"
->
-  <div
-    className="c-timeline-item__body"
+<DocumentFragment>
+  <li
+    class="c-timeline-item c-timeline-item--last"
+    data-name="timeline-item"
   >
-    lorem ipsum dolor
-  </div>
-</li>
+    <div
+      class="c-timeline-item__body"
+    >
+      lorem ipsum dolor
+    </div>
+  </li>
+</DocumentFragment>
 `;
 
 exports[`Item renders correctly with left styling 1`] = `
-<li
-  className="c-timeline-item c-timeline-item--left"
->
-  <div
-    className="c-timeline-item__body"
+<DocumentFragment>
+  <li
+    class="c-timeline-item c-timeline-item--left"
+    data-name="timeline-item"
   >
-    lorem ipsum dolor
-  </div>
-</li>
+    <div
+      class="c-timeline-item__body"
+    >
+      lorem ipsum dolor
+    </div>
+  </li>
+</DocumentFragment>
 `;
 
 exports[`Item renders correctly with loading styling 1`] = `
-<li
-  className="c-timeline-item c-timeline-item--loading"
->
-  <div
-    className="c-timeline-item__body"
+<DocumentFragment>
+  <li
+    class="c-timeline-item c-timeline-item--loading"
+    data-name="timeline-item"
   >
-    lorem ipsum dolor
-  </div>
-</li>
+    <div
+      class="c-timeline-item__body"
+    >
+      lorem ipsum dolor
+    </div>
+  </li>
+</DocumentFragment>
 `;
 
 exports[`Item renders correctly with success styling 1`] = `
-<li
-  className="c-timeline-item c-timeline-item--success"
->
-  <div
-    className="c-timeline-item__body"
+<DocumentFragment>
+  <li
+    class="c-timeline-item c-timeline-item--success"
+    data-name="timeline-item"
   >
-    lorem ipsum dolor
-  </div>
-</li>
+    <div
+      class="c-timeline-item__body"
+    >
+      lorem ipsum dolor
+    </div>
+  </li>
+</DocumentFragment>
 `;

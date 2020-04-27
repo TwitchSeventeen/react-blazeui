@@ -1,27 +1,26 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { render, cleanup } from '@testing-library/react';
 import Table from './index';
 
 describe('Table', () => {
+  afterEach(cleanup);
+
   it('should be defined', () => {
     expect(Table).toBeDefined();
   });
 
   it('renders correctly', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Table>
         lorem ipsum dolor
       </Table>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders a condensed table', () => {
-    const renderer = new ShallowRenderer();
-    renderer.render(
+    const { asFragment } = render(
       <Table condensed>
         <Table.Caption>Small table and text</Table.Caption>
         <Table.Header>
@@ -51,7 +50,6 @@ describe('Table', () => {
       </Table>,
     );
 
-    const tree = renderer.getRenderOutput();
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

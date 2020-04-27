@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Header(props) {
   const {
-    children, className, ...other
+    children, className, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,7 +13,11 @@ function Header(props) {
   );
 
   return (
-    <thead className={classes} {...other}>
+    <thead
+      className={classes}
+      {...other}
+      data-name={dataName}
+    >
       { children }
     </thead>
   );
@@ -28,11 +32,17 @@ Header.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Header.defaultProps = {
   className: null,
   children: null,
+  dataName: 'table-header',
 };
 
 export default Header;

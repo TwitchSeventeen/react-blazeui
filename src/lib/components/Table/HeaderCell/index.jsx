@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function HeaderCell(props) {
   const {
-    children, className, ...other
+    children, className, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,7 +13,11 @@ function HeaderCell(props) {
   );
 
   return (
-    <th className={classes} {...other}>
+    <th
+      className={classes}
+      {...other}
+      data-name={dataName}
+    >
       { children }
     </th>
   );
@@ -28,11 +32,17 @@ HeaderCell.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 HeaderCell.defaultProps = {
   className: null,
   children: null,
+  dataName: 'table-headercell',
 };
 
 export default HeaderCell;

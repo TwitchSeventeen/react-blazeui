@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Item(props) {
   const {
-    children, className, last, type, loading, left, ...other
+    children, className, last, type, loading, left, dataName, ...other
   } = props;
   const classes = classNames(
     'c-timeline-item',
@@ -16,7 +16,11 @@ function Item(props) {
   );
 
   return (
-    <li {...other} className={classes}>
+    <li
+      {...other}
+      className={classes}
+      data-name={dataName}
+    >
       <div className="c-timeline-item__body">
         { children }
       </div>
@@ -55,6 +59,11 @@ Item.propTypes = {
    * Displays an item on the left side of the Timeline
    */
   left: PropTypes.bool,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Item.defaultProps = {
@@ -64,6 +73,7 @@ Item.defaultProps = {
   type: null,
   loading: false,
   left: false,
+  dataName: 'timeline-item',
 };
 
 export default Item;

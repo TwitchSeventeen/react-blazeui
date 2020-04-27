@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Body(props) {
   const {
-    children, className, ...other
+    children, className, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,7 +13,11 @@ function Body(props) {
   );
 
   return (
-    <tbody className={classes} {...other}>
+    <tbody
+      className={classes}
+      {...other}
+      data-name={dataName}
+    >
       { children }
     </tbody>
   );
@@ -28,11 +32,17 @@ Body.propTypes = {
    * Additional classes
    */
   className: PropTypes.string,
+  /**
+   * Optional data-name attribute
+   * (use for testing/selection)
+   */
+  dataName: PropTypes.string,
 };
 
 Body.defaultProps = {
   className: null,
   children: null,
+  dataName: 'table-body',
 };
 
 export default Body;
