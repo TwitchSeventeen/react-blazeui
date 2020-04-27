@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Card from "../../Card";
 
 class Title extends React.Component {
   constructor(props) {
@@ -21,11 +22,11 @@ class Title extends React.Component {
 
   render() {
     const {
-      children, className, active, dataName, index, ...other
+      children, className, active, as: Component, dataName, index, ...other
     } = this.props;
     const classes = classNames('c-card__control', className);
     return (
-      <button
+      <Component
         {...other}
         type="button"
         aria-expanded={active.toString()}
@@ -35,7 +36,7 @@ class Title extends React.Component {
         data-name={dataName}
       >
         {children}
-      </button>
+      </Component>
     );
   }
 }
@@ -69,6 +70,10 @@ Title.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Title.defaultProps = {
@@ -78,6 +83,7 @@ Title.defaultProps = {
   index: null,
   onClick: null,
   dataName: 'accordion-title',
+  as: 'button',
 };
 
 export default Title;

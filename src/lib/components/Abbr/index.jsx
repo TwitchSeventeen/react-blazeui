@@ -4,18 +4,18 @@ import classNames from 'classnames';
 
 function Abbr(props) {
   const {
-    children, title, className, dataName, ...other
+    children, title, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('u-text--help', className);
   return (
-    <abbr
+    <Component
       {...other}
       className={classes}
       title={title}
       data-name={dataName}
     >
       { children }
-    </abbr>
+    </Component>
   );
 }
 
@@ -37,12 +37,17 @@ Abbr.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Abbr.defaultProps = {
   children: null,
   className: null,
   dataName: 'abbr',
+  as: 'abbr',
 };
 
 export default Abbr;

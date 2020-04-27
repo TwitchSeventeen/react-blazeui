@@ -9,17 +9,17 @@ import Footer from './Footer';
 
 function Card(props) {
   const {
-    children, grouped, className, dataName, ...other
+    children, grouped, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('c-card', { 'c-card--grouped': grouped }, className);
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -41,6 +41,10 @@ Card.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Card.defaultProps = {
@@ -48,6 +52,7 @@ Card.defaultProps = {
   children: null,
   grouped: false,
   dataName: 'card',
+  as: 'div',
 };
 
 Card.Body = Body;

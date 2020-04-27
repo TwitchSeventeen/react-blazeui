@@ -7,17 +7,17 @@ import Content from './Content';
 
 function Accordion(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('c-card--accordion', className);
   return (
-    <Card
+    <Component
       {...other}
       className={classes}
       dataName={dataName}
     >
       { children }
-    </Card>
+    </Component>
   );
 }
 
@@ -35,12 +35,17 @@ Accordion.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Accordion.defaultProps = {
   children: null,
   className: null,
   dataName: 'accordion',
+  as: Card,
 };
 
 Accordion.Title = Title;

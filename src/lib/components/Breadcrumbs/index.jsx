@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Item from './Item';
 
 function Breadcrumbs(props) {
-  const { children, dataName, ...other } = props;
+  const { children, dataName,  as: Component, ...other } = props;
   return (
-    <nav
+    <Component
       {...other}
       aria-label="Breadcrumb"
       data-name={dataName}
@@ -13,7 +13,7 @@ function Breadcrumbs(props) {
       <ol className="c-breadcrumbs">
         { children }
       </ol>
-    </nav>
+    </Component>
   );
 }
 
@@ -27,11 +27,16 @@ Breadcrumbs.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Breadcrumbs.defaultProps = {
   children: null,
   dataName: 'breadcrumbs',
+  as: 'nav',
 };
 
 Breadcrumbs.Item = Item;

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Field(props) {
   const {
-    className, iconLeft, iconRight, children, fixed, dataName, ...other
+    className, iconLeft, as: Component, iconRight, children, fixed, dataName, ...other
   } = props;
   const classes = classNames(
     'o-field',
@@ -15,13 +15,13 @@ function Field(props) {
   );
 
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -51,6 +51,10 @@ Field.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Field.defaultProps = {
@@ -60,6 +64,7 @@ Field.defaultProps = {
   children: null,
   fixed: false,
   dataName: 'input-field',
+  as: 'div',
 };
 
 export default Field;

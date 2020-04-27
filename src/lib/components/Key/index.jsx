@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Key(props) {
   const {
-    children, className, dataName, ...other
+    children, className, dataName, as: Component, ...other
   } = props;
   const classes = classNames('u-kbd', className);
   return (
-    <kbd
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </kbd>
+    </Component>
   );
 }
 
@@ -32,12 +32,17 @@ Key.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Key.defaultProps = {
   children: null,
   className: null,
   dataName: 'key',
+  as: 'kbd',
 };
 
 export default Key;

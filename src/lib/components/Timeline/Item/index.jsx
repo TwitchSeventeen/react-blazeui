@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Item(props) {
   const {
-    children, className, last, type, loading, left, dataName, ...other
+    children, as: Component, className, last, type, loading, left, dataName, ...other
   } = props;
   const classes = classNames(
     'c-timeline-item',
@@ -16,7 +16,7 @@ function Item(props) {
   );
 
   return (
-    <li
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
@@ -24,7 +24,7 @@ function Item(props) {
       <div className="c-timeline-item__body">
         { children }
       </div>
-    </li>
+    </Component>
   );
 }
 
@@ -64,6 +64,10 @@ Item.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Item.defaultProps = {
@@ -74,6 +78,7 @@ Item.defaultProps = {
   loading: false,
   left: false,
   dataName: 'timeline-item',
+  as: 'li',
 };
 
 export default Item;

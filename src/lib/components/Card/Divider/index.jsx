@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Divider(props) {
   const {
-    children, type, separator, className, dataName, ...other
+    children, type, separator, as: Component, className, dataName, ...other
   } = props;
 
   const classes = classNames('c-card__item', 'c-card__item--divider', { [`c-card__item--${type}`]: type }, className);
@@ -12,7 +12,7 @@ function Divider(props) {
 
   if (separator) {
     return (
-      <div
+      <Component
         role="separator"
         className={separatorClasses}
         data-name={dataName}
@@ -21,14 +21,14 @@ function Divider(props) {
   }
 
   return (
-    <div
+    <Component
       {...other}
       role={type ? null : 'separator'}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -60,6 +60,10 @@ Divider.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Divider.defaultProps = {
@@ -68,6 +72,7 @@ Divider.defaultProps = {
   separator: false,
   className: null,
   dataName: 'card-divider',
+  as: 'div',
 };
 
 export default Divider;

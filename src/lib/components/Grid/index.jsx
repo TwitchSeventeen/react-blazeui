@@ -18,6 +18,7 @@ function Grid(props) {
     huge,
     noGutter,
     dataName,
+    as: Component,
     ...other
   } = props;
   const classes = classNames(
@@ -36,13 +37,13 @@ function Grid(props) {
     className,
   );
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -122,6 +123,10 @@ Grid.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Grid.defaultProps = {
@@ -138,6 +143,7 @@ Grid.defaultProps = {
   huge: null,
   noGutter: false,
   dataName: 'grid',
+  as: 'div',
 };
 
 Grid.Cell = Cell;

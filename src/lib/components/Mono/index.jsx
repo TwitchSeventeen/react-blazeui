@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Mono(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('u-text--mono', className);
   return (
-    <span
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </span>
+    </Component>
   );
 }
 
@@ -32,12 +32,17 @@ Mono.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Mono.defaultProps = {
   children: null,
   className: null,
   dataName: 'mono',
+  as: 'span',
 };
 
 export default Mono;

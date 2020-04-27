@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Code(props) {
   const {
-    children, multiline, className, dataName, ...other
+    children, multiline, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('u-code', { 'u-code--multiline': multiline }, className);
   return (
-    <code
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </code>
+    </Component>
   );
 }
 
@@ -36,6 +36,10 @@ Code.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Code.defaultProps = {
@@ -43,6 +47,7 @@ Code.defaultProps = {
   multiline: false,
   className: null,
   dataName: 'code',
+  as: 'code',
 };
 
 export default Code;

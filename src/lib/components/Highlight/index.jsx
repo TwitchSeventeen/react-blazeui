@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Highlight(props) {
   const {
-    children, className, dataName, ...other
+    children, className, dataName, as: Component, ...other
   } = props;
   const classes = classNames('u-text--highlight', className);
   return (
-    <span
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </span>
+    </Component>
   );
 }
 
@@ -32,12 +32,17 @@ Highlight.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Highlight.defaultProps = {
   children: null,
   className: null,
   dataName: 'highlight',
+  as: 'span',
 };
 
 export default Highlight;

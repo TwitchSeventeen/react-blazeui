@@ -10,11 +10,11 @@ import classNames from 'classnames';
  */
 function Alert(props) {
   const {
-    children, dismissable, onDismiss, type, dataName, ...other
+    children, dismissable, as: Component, onDismiss, type, dataName, ...other
   } = props;
   const classes = classNames('c-alert', { [`c-alert--${type}`]: type });
   return (
-    <div
+    <Component
       role="alert"
       {...other}
       data-name={dataName}
@@ -23,7 +23,7 @@ function Alert(props) {
       {children}
       { dismissable
         && <button className="c-button c-button--close" onClick={onDismiss} type="button">&times;</button>}
-    </div>
+    </Component>
   );
 }
 
@@ -55,6 +55,10 @@ Alert.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Alert.defaultProps = {
@@ -63,6 +67,7 @@ Alert.defaultProps = {
   onDismiss: null,
   type: null,
   dataName: 'alert',
+  as: 'div',
 };
 
 export default Alert;

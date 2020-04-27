@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Address(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('c-address', className);
   return (
-    <address
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </address>
+    </Component>
   );
 }
 
@@ -32,12 +32,17 @@ Address.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Address.defaultProps = {
   children: null,
   className: null,
   dataName: 'address',
+  as: 'address',
 };
 
 export default Address;

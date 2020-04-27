@@ -5,7 +5,7 @@ import Item from './Item';
 
 function Timeline(props) {
   const {
-    children, className, loading, alternate, dataName, ...other
+    children, as: Component, className, loading, alternate, dataName, ...other
   } = props;
   const classes = classNames(
     'o-timeline',
@@ -15,13 +15,13 @@ function Timeline(props) {
   );
 
   return (
-    <ul
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </ul>
+    </Component>
   );
 }
 
@@ -47,6 +47,10 @@ Timeline.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Timeline.defaultProps = {
@@ -55,6 +59,7 @@ Timeline.defaultProps = {
   loading: false,
   alternate: false,
   dataName: 'timeline',
+  as: 'ul',
 };
 
 Timeline.Item = Item;

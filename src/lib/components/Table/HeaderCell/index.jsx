@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function HeaderCell(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,13 +13,13 @@ function HeaderCell(props) {
   );
 
   return (
-    <th
+    <Component
       className={classes}
       {...other}
       data-name={dataName}
     >
       { children }
-    </th>
+    </Component>
   );
 }
 
@@ -37,12 +37,17 @@ HeaderCell.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 HeaderCell.defaultProps = {
   className: null,
   children: null,
   dataName: 'table-headercell',
+  as: 'th',
 };
 
 export default HeaderCell;

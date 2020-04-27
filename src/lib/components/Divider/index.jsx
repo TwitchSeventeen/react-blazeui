@@ -4,11 +4,11 @@ import classNames from 'classnames';
 
 function Divider(props) {
   const {
-    children, type, className, dataName, ...other
+    children, type, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('c-divider', { [`c-divider--${type}`]: type }, className);
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
@@ -16,7 +16,7 @@ function Divider(props) {
       <div className="c-divider__content">
         { children }
       </div>
-    </div>
+    </Component>
   );
 }
 
@@ -41,6 +41,10 @@ Divider.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Divider.defaultProps = {
@@ -48,6 +52,7 @@ Divider.defaultProps = {
   type: 'solid',
   className: null,
   dataName: 'divider',
+  as: 'div',
 };
 
 export default Divider;

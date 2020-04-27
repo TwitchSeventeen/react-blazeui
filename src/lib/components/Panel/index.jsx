@@ -4,14 +4,14 @@ import classNames from 'classnames';
 
 function Panel(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames(
     'o-panel-container',
     className,
   );
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
@@ -19,7 +19,7 @@ function Panel(props) {
       <div className="o-panel">
         { children }
       </div>
-    </div>
+    </Component>
   );
 }
 
@@ -37,12 +37,17 @@ Panel.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Panel.defaultProps = {
   children: null,
   className: null,
   dataName: 'panel',
+  as: 'div',
 };
 
 export default Panel;

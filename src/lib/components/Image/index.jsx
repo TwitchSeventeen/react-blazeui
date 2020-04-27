@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Image(props) {
   const {
-    className, src, alt, user, filter, likes, height, width, dataName, ...other
+    className, src, alt, user, filter, as: Component, likes, height, width, dataName, ...other
   } = props;
   const classes = classNames(
     'o-image',
@@ -25,7 +25,7 @@ function Image(props) {
   }
 
   return (
-    <img
+    <Component
       {...other}
       className={classes}
       src={source}
@@ -75,6 +75,10 @@ Image.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Image.defaultProps = {
@@ -87,6 +91,7 @@ Image.defaultProps = {
   height: null,
   width: null,
   dataName: 'image',
+  as: 'img',
 };
 
 export default Image;

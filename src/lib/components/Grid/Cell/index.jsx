@@ -18,6 +18,7 @@ function Cell(props) {
     noGutter,
     fixedWidth,
     dataName,
+    as: Component,
     ...other
   } = props;
   const classes = classNames(
@@ -36,13 +37,13 @@ function Cell(props) {
     className,
   );
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -116,6 +117,10 @@ Cell.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Cell.defaultProps = {
@@ -133,6 +138,7 @@ Cell.defaultProps = {
   noGutter: false,
   fixedWidth: false,
   dataName: 'grid-cell',
+  as: 'div',
 };
 
 export default Cell;

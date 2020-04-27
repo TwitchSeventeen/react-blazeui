@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Footer(props) {
   const {
-    children, block, className, dataName, ...other
+    children, block, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('c-card__footer', { 'c-card__footer--block': block }, className);
   return (
-    <footer
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </footer>
+    </Component>
   );
 }
 
@@ -36,6 +36,10 @@ Footer.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Footer.defaultProps = {
@@ -43,6 +47,7 @@ Footer.defaultProps = {
   children: null,
   className: null,
   dataName: 'card-footer',
+  as: 'footer',
 };
 
 export default Footer;

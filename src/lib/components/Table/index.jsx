@@ -10,7 +10,7 @@ import Body from './Body';
 
 function Table(props) {
   const {
-    children, className, striped, clickable, condensed, dataName, ...other
+    children, as: Component, className, striped, clickable, condensed, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -22,13 +22,13 @@ function Table(props) {
   );
 
   return (
-    <table
+    <Component
       className={classes}
       {...other}
       data-name={dataName}
     >
       { children }
-    </table>
+    </Component>
   );
 }
 
@@ -58,6 +58,10 @@ Table.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Table.defaultProps = {
@@ -67,6 +71,7 @@ Table.defaultProps = {
   clickable: false,
   condensed: false,
   dataName: 'table',
+  as: 'table',
 };
 
 Table.Caption = Caption;

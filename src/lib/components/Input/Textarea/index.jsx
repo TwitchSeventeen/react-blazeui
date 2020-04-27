@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Textarea(props) {
   const {
-    children, className, success, error, dataName, ...other
+    children, className, success, error, as: Component, dataName, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,13 +14,13 @@ function Textarea(props) {
   );
 
   return (
-    <textarea
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </textarea>
+    </Component>
   );
 }
 
@@ -46,6 +46,10 @@ Textarea.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Textarea.defaultProps = {
@@ -54,6 +58,7 @@ Textarea.defaultProps = {
   success: false,
   error: false,
   dataName: 'input-textarea',
+  as: 'textarea',
 };
 
 export default Textarea;

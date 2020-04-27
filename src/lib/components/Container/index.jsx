@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Container(props) {
   const {
-    children, className, size, dataName, ...other
+    children, className, size, dataName, as: Component, ...other
   } = props;
   const classes = classNames(
     'u-text',
@@ -12,13 +12,13 @@ function Container(props) {
     `o-container--${size}`, className,
   );
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -47,6 +47,10 @@ Container.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Container.defaultProps = {
@@ -54,6 +58,7 @@ Container.defaultProps = {
   className: null,
   size: 'xlarge',
   dataName: 'container',
+  as: 'div',
 };
 
 

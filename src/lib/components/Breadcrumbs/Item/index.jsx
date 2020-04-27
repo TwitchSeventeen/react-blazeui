@@ -4,18 +4,18 @@ import classNames from 'classnames';
 
 function Item(props) {
   const {
-    children, active, className, dataName, ...other
+    children, active, className, dataName, as: Component, ...other
   } = props;
   const classes = classNames('c-breadcrumbs__crumb', className);
   return (
-    <li
+    <Component
       {...other}
       className={classes}
       aria-current={active ? 'page' : null}
       data-name={dataName}
     >
       { children }
-    </li>
+    </Component>
   );
 }
 
@@ -37,6 +37,10 @@ Item.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Item.defaultProps = {
@@ -44,6 +48,7 @@ Item.defaultProps = {
   active: false,
   className: null,
   dataName: 'breadcrumbs-item',
+  as: 'li',
 };
 
 export default Item;

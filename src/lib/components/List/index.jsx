@@ -5,7 +5,7 @@ import Item from './Item';
 
 function List(props) {
   const {
-    children, className, ordered, unstyled, inline, dataName, ...other
+    children, className, as: Component, ordered, unstyled, inline, dataName, ...other
   } = props;
   const classes = classNames(
     'c-list',
@@ -17,13 +17,13 @@ function List(props) {
 
   if (ordered) {
     return (
-      <ol
+      <Component
         {...other}
         className={classes}
         data-name={dataName}
       >
         { children }
-      </ol>
+      </Component>
     );
   }
 
@@ -64,6 +64,10 @@ List.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 List.defaultProps = {
@@ -73,6 +77,7 @@ List.defaultProps = {
   unstyled: false,
   inline: false,
   dataName: 'list',
+  as: 'ol',
 };
 
 

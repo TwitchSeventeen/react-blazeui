@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Group(props) {
   const {
-    className, children, stacked, rounded, roundedLeft, roundedRight, dataName, ...other
+    className, children, stacked, as: Component, rounded, roundedLeft, roundedRight, dataName, ...other
   } = props;
   const classes = classNames(
     'c-input-group',
@@ -16,13 +16,13 @@ function Group(props) {
   );
 
   return (
-    <div
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </div>
+    </Component>
   );
 }
 
@@ -56,6 +56,10 @@ Group.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Group.defaultProps = {
@@ -66,6 +70,7 @@ Group.defaultProps = {
   roundedLeft: false,
   roundedRight: false,
   dataName: 'input-group',
+  as: 'div',
 };
 
 export default Group;

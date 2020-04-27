@@ -5,17 +5,17 @@ import Card from '../../Card';
 
 function Content(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('c-card__item--pane', className);
   return (
-    <Card.Item
+    <Component
       {...other}
       className={classes}
       dataName={dataName}
     >
       { children }
-    </Card.Item>
+    </Component>
   );
 }
 
@@ -33,12 +33,17 @@ Content.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Content.defaultProps = {
   children: null,
   className: null,
   dataName: 'accordion-content',
+  as: Card.Item,
 };
 
 export default Content;

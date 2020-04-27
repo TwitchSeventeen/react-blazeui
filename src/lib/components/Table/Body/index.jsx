@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Body(props) {
   const {
-    children, className, dataName, ...other
+    children, className, dataName, as: Component, ...other
   } = props;
 
   const classes = classNames(
@@ -13,13 +13,13 @@ function Body(props) {
   );
 
   return (
-    <tbody
+    <Component
       className={classes}
       {...other}
       data-name={dataName}
     >
       { children }
-    </tbody>
+    </Component>
   );
 }
 
@@ -37,12 +37,17 @@ Body.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Body.defaultProps = {
   className: null,
   children: null,
   dataName: 'table-body',
+  as: 'tbody',
 };
 
 export default Body;

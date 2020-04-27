@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Select(props) {
   const {
-    children, className, success, error, dataName, ...other
+    children, className, success, error, as: Component, dataName, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,13 +14,13 @@ function Select(props) {
   );
 
   return (
-    <select
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </select>
+    </Component>
   );
 }
 
@@ -46,6 +46,10 @@ Select.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Select.defaultProps = {
@@ -54,6 +58,7 @@ Select.defaultProps = {
   success: false,
   error: false,
   dataName: 'input-select',
+  as: 'select',
 };
 
 export default Select;

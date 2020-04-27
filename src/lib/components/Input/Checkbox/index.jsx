@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Checkbox(props) {
   const {
-    className, success, error, radio, dataName, ...other
+    className, as: Component, success, error, radio, dataName, ...other
   } = props;
   const classes = classNames(
     { 'c-field--success': success },
@@ -14,7 +14,7 @@ function Checkbox(props) {
 
   if (radio) {
     return (
-      <input
+      <Component
         {...other}
         className={classes}
         type="radio"
@@ -24,7 +24,7 @@ function Checkbox(props) {
   }
 
   return (
-    <input
+    <Component
       {...other}
       className={classes}
       type="checkbox"
@@ -55,6 +55,10 @@ Checkbox.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Checkbox.defaultProps = {
@@ -63,6 +67,7 @@ Checkbox.defaultProps = {
   error: false,
   radio: false,
   dataName: 'input-checkbox',
+  as: 'input',
 };
 
 export default Checkbox;

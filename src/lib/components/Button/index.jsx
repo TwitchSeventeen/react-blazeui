@@ -5,7 +5,7 @@ import Group from '../Input/Group';
 
 function Button(props) {
   const {
-    children, className, buttonType, type, size, fluid, ghost, rounded, active, dataName, ...other
+    children, className, buttonType, as: Component, type, size, fluid, ghost, rounded, active, dataName, ...other
   } = props;
   const classes = classNames(
     'c-button',
@@ -20,14 +20,14 @@ function Button(props) {
   );
 
   return (
-    <button
+    <Component
       {...other}
       type={buttonType}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </button>
+    </Component>
   );
 }
 
@@ -90,6 +90,10 @@ Button.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Button.defaultProps = {
@@ -103,6 +107,7 @@ Button.defaultProps = {
   className: null,
   ghost: false,
   dataName: 'button',
+  as: 'button',
 };
 
 Button.Group = Group;

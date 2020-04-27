@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Item(props) {
   const {
-    children, className, unstyled, dataName, ...other
+    children, className, unstyled, as: Component, dataName, ...other
   } = props;
   const classes = classNames(
     'c-list__item',
@@ -13,13 +13,13 @@ function Item(props) {
   );
 
   return (
-    <li
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </li>
+    </Component>
   );
 }
 
@@ -41,6 +41,10 @@ Item.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Item.defaultProps = {
@@ -48,6 +52,7 @@ Item.defaultProps = {
   className: null,
   unstyled: false,
   dataName: 'list-item',
+  as: 'li',
 };
 
 export default Item;

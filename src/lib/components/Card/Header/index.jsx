@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Header(props) {
   const {
-    children, className, dataName, ...other
+    children, className, dataName, as: Component, ...other
   } = props;
   const classes = classNames('c-card__header', className);
   return (
-    <header
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </header>
+    </Component>
   );
 }
 
@@ -32,12 +32,17 @@ Header.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Header.defaultProps = {
   children: null,
   className: null,
   dataName: 'card-header',
+  as: 'header',
 };
 
 export default Header;

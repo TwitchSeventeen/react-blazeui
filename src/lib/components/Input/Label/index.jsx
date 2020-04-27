@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Label(props) {
   const {
-    className, choice, children, inputId, dataName, ...other
+    className, choice, children, as: Component, inputId, dataName, ...other
   } = props;
   const classes = classNames(
     'c-field',
@@ -14,14 +14,14 @@ function Label(props) {
   );
 
   return (
-    <label
+    <Component
       {...other}
       className={classes}
       htmlFor={inputId}
       data-name={dataName}
     >
       { children }
-    </label>
+    </Component>
   );
 }
 
@@ -47,6 +47,10 @@ Label.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Label.defaultProps = {
@@ -55,6 +59,7 @@ Label.defaultProps = {
   choice: false,
   inputId: null,
   dataName: 'input-label',
+  as: 'label',
 };
 
 export default Label;

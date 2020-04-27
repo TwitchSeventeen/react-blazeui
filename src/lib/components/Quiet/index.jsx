@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 function Quiet(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
   const classes = classNames('u-text--quiet', className);
   return (
-    <span
+    <Component
       {...other}
       className={classes}
       data-name={dataName}
     >
       { children }
-    </span>
+    </Component>
   );
 }
 
@@ -32,12 +32,17 @@ Quiet.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Quiet.defaultProps = {
   children: null,
   className: null,
   dataName: 'quiet',
+  as: 'span',
 };
 
 export default Quiet;

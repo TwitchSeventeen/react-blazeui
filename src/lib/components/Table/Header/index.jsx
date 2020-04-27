@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 function Header(props) {
   const {
-    children, className, dataName, ...other
+    children, className, as: Component, dataName, ...other
   } = props;
 
   const classes = classNames(
@@ -13,13 +13,13 @@ function Header(props) {
   );
 
   return (
-    <thead
+    <Component
       className={classes}
       {...other}
       data-name={dataName}
     >
       { children }
-    </thead>
+    </Component>
   );
 }
 
@@ -37,12 +37,17 @@ Header.propTypes = {
    * (use for testing/selection)
    */
   dataName: PropTypes.string,
+  /**
+   * Element type to render as
+   */
+  as: PropTypes.elementType,
 };
 
 Header.defaultProps = {
   className: null,
   children: null,
   dataName: 'table-header',
+  as: 'thead',
 };
 
 export default Header;
