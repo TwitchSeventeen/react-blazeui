@@ -120,10 +120,14 @@ exports[`Table renders a condensed table 1`] = `
 
 exports[`Table renders correctly 1`] = `
 <DocumentFragment>
-  lorem ipsum dolor
   <table
     class="c-table"
     data-name="table"
   />
+  lorem
+   
+  ipsum
+   
+  dolor
 </DocumentFragment>
 `;
