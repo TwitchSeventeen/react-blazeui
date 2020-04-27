@@ -4,7 +4,15 @@ import classNames from 'classnames';
 
 function Group(props) {
   const {
-    className, children, stacked, as: Component, rounded, roundedLeft, roundedRight, dataName, ...other
+    className,
+    children,
+    stacked,
+    as: Component,
+    rounded,
+    roundedLeft,
+    roundedRight,
+    dataName,
+    ...other
   } = props;
   const classes = classNames(
     'c-input-group',

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Item from './Item';
 
 function Breadcrumbs(props) {
-  const { children, dataName,  as: Component, ...other } = props;
+  const {
+    children, dataName, as: Component, ...other
+  } = props;
   return (
     <Component
       {...other}

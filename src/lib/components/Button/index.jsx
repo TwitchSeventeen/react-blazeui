@@ -5,7 +5,18 @@ import Group from '../Input/Group';
 
 function Button(props) {
   const {
-    children, className, buttonType, as: Component, type, size, fluid, ghost, rounded, active, dataName, ...other
+    children,
+    className,
+    buttonType,
+    as: Component,
+    type,
+    size,
+    fluid,
+    ghost,
+    rounded,
+    active,
+    dataName,
+    ...other
   } = props;
   const classes = classNames(
     'c-button',

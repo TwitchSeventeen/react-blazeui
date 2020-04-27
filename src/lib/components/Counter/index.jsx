@@ -5,7 +5,18 @@ import CountUp from 'react-countup';
 
 function Counter(props) {
   const {
-    className, start, value, duration, delay, prefix,  as: Component, dataName, suffix, onStart, onEnd, ...other
+    className,
+    start,
+    value,
+    duration,
+    delay,
+    prefix,
+    as: Component,
+    dataName,
+    suffix,
+    onStart,
+    onEnd,
+    ...other
   } = props;
   const classes = classNames(
     'c-counter',
