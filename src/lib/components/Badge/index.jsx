@@ -4,13 +4,14 @@ import classNames from 'classnames';
 
 function Badge(props) {
   const {
-    children, type, rounded, as: Component, ghost, dataName, ...other
+    children, type, className, rounded, as: Component, ghost, dataName, ...other
   } = props;
   const classes = classNames(
     'c-badge',
     { [`c-badge--${type}`]: type },
     { 'c-badge--rounded': rounded },
     { 'c-badge--ghost': ghost },
+    className,
   );
 
   return (
@@ -56,6 +57,10 @@ Badge.propTypes = {
    * Element type to render as
    */
   as: PropTypes.elementType,
+  /**
+   * Additional classes
+   */
+  className: PropTypes.string,
 };
 
 Badge.defaultProps = {
@@ -65,6 +70,7 @@ Badge.defaultProps = {
   type: null,
   dataName: 'badge',
   as: 'span',
+  className: null,
 };
 
 export default Badge;

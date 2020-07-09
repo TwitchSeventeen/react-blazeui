@@ -80,7 +80,6 @@ List.defaultProps = {
   as: 'ol',
 };
 
-
 List.Item = Item;
 
 export default List;
